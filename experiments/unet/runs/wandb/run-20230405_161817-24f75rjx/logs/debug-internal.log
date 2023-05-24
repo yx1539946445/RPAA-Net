@@ -1,0 +1,355 @@
+2023-04-05 16:18:17,201 INFO    StreamThr :17808 [internal.py:wandb_internal():88] W&B internal server running at pid: 17808, started at: 2023-04-05 16:18:17.199664
+2023-04-05 16:18:17,203 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: status
+2023-04-05 16:18:17,206 DEBUG   SenderThread:17808 [sender.py:send_request():317] send_request: status
+2023-04-05 16:18:17,207 DEBUG   SenderThread:17808 [sender.py:send():303] send: header
+2023-04-05 16:18:17,207 INFO    WriterThread:17808 [datastore.py:open_for_write():75] open: ./runs/wandb/run-20230405_161817-24f75rjx/run-24f75rjx.wandb
+2023-04-05 16:18:17,214 DEBUG   SenderThread:17808 [sender.py:send():303] send: run
+2023-04-05 16:18:17,220 INFO    SenderThread:17808 [sender.py:_maybe_setup_resume():593] checking resume status for None/segmentation/24f75rjx
+2023-04-05 16:18:18,883 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: check_version
+2023-04-05 16:18:18,886 INFO    SenderThread:17808 [dir_watcher.py:__init__():216] watching files in: ./runs/wandb/run-20230405_161817-24f75rjx/files
+2023-04-05 16:18:18,886 INFO    SenderThread:17808 [sender.py:_start_run_threads():928] run started: 24f75rjx with start time 1680682697.200357
+2023-04-05 16:18:18,887 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:18:18,888 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:18:18,889 DEBUG   SenderThread:17808 [sender.py:send_request():317] send_request: check_version
+2023-04-05 16:18:19,901 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_created():275] file/dir created: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-summary.json
+2023-04-05 16:18:21,388 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: run_start
+2023-04-05 16:18:21,472 DEBUG   HandlerThread:17808 [system_info.py:__init__():31] System info init
+2023-04-05 16:18:21,472 DEBUG   HandlerThread:17808 [system_info.py:__init__():46] System info init done
+2023-04-05 16:18:21,472 INFO    HandlerThread:17808 [system_monitor.py:start():150] Starting system monitor
+2023-04-05 16:18:21,473 INFO    SystemMonitor:17808 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2023-04-05 16:18:21,473 INFO    HandlerThread:17808 [system_monitor.py:probe():168] Collecting system info
+2023-04-05 16:18:21,473 INFO    SystemMonitor:17808 [interfaces.py:start():168] Started cpu
+2023-04-05 16:18:21,475 INFO    SystemMonitor:17808 [interfaces.py:start():168] Started disk
+2023-04-05 16:18:21,475 INFO    SystemMonitor:17808 [interfaces.py:start():168] Started gpu
+2023-04-05 16:18:21,476 INFO    SystemMonitor:17808 [interfaces.py:start():168] Started memory
+2023-04-05 16:18:21,476 INFO    SystemMonitor:17808 [interfaces.py:start():168] Started network
+2023-04-05 16:18:21,489 DEBUG   HandlerThread:17808 [system_info.py:probe():195] Probing system
+2023-04-05 16:18:21,496 DEBUG   HandlerThread:17808 [git.py:repo():40] git repository is invalid
+2023-04-05 16:18:21,496 DEBUG   HandlerThread:17808 [system_info.py:probe():241] Probing system done
+2023-04-05 16:18:21,496 DEBUG   HandlerThread:17808 [system_monitor.py:probe():177] {'os': 'Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-glibc2.31', 'python': '3.9.15', 'heartbeatAt': '2023-04-05T08:18:21.489306', 'startedAt': '2023-04-05T08:18:17.114950', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/mnt/c/kust/kust/python_code/python_code/code/experiments/unet/myunet.py', 'codePath': 'myunet.py', 'host': 'yangxiao', 'username': 'yx', 'executable': '/home/yx/miniconda3/envs/mat/bin/python', 'cpu_count': 8, 'cpu_count_logical': 16, 'cpu_freq': {'current': 3686.398999999999, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 3686.399, 'min': 0.0, 'max': 0.0}, {'current': 3686.399, 'min': 0.0, 'max': 0.0}, {'current': 3686.399, 'min': 0.0, 'max': 0.0}, {'current': 3686.399, 'min': 0.0, 'max': 0.0}, {'current': 3686.399, 'min': 0.0, 'max': 0.0}, {'current': 3686.399, 'min': 0.0, 'max': 0.0}, {'current': 3686.399, 'min': 0.0, 'max': 0.0}, {'current': 3686.399, 'min': 0.0, 'max': 0.0}, {'current': 3686.399, 'min': 0.0, 'max': 0.0}, {'current': 3686.399, 'min': 0.0, 'max': 0.0}, {'current': 3686.399, 'min': 0.0, 'max': 0.0}, {'current': 3686.399, 'min': 0.0, 'max': 0.0}, {'current': 3686.399, 'min': 0.0, 'max': 0.0}, {'current': 3686.399, 'min': 0.0, 'max': 0.0}, {'current': 3686.399, 'min': 0.0, 'max': 0.0}, {'current': 3686.399, 'min': 0.0, 'max': 0.0}], 'disk': {'total': 250.98248672485352, 'used': 16.916370391845703}, 'gpu': 'NVIDIA GeForce RTX 3060', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3060', 'memory_total': 12884901888}], 'memory': {'total': 15.537948608398438}}
+2023-04-05 16:18:21,496 INFO    HandlerThread:17808 [system_monitor.py:probe():178] Finished collecting system info
+2023-04-05 16:18:21,496 INFO    HandlerThread:17808 [system_monitor.py:probe():181] Publishing system info
+2023-04-05 16:18:21,496 DEBUG   HandlerThread:17808 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-04-05 16:18:21,499 DEBUG   HandlerThread:17808 [system_info.py:_save_pip():67] Saving pip packages done
+2023-04-05 16:18:21,499 DEBUG   HandlerThread:17808 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-04-05 16:18:21,906 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_created():275] file/dir created: ./runs/wandb/run-20230405_161817-24f75rjx/files/requirements.txt
+2023-04-05 16:18:21,907 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_created():275] file/dir created: ./runs/wandb/run-20230405_161817-24f75rjx/files/conda-environment.yaml
+2023-04-05 16:18:22,625 DEBUG   HandlerThread:17808 [system_info.py:_save_conda():86] Saving conda packages done
+2023-04-05 16:18:22,625 DEBUG   HandlerThread:17808 [system_info.py:_save_code():89] Saving code
+2023-04-05 16:18:22,644 DEBUG   HandlerThread:17808 [system_info.py:_save_code():110] Saving code done
+2023-04-05 16:18:22,648 INFO    HandlerThread:17808 [system_monitor.py:probe():183] Finished publishing system info
+2023-04-05 16:18:22,662 DEBUG   SenderThread:17808 [sender.py:send():303] send: files
+2023-04-05 16:18:22,662 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2023-04-05 16:18:22,668 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file code/myunet.py with policy now
+2023-04-05 16:18:22,669 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: stop_status
+2023-04-05 16:18:22,677 DEBUG   SenderThread:17808 [sender.py:send_request():317] send_request: stop_status
+2023-04-05 16:18:22,981 DEBUG   SenderThread:17808 [sender.py:send():303] send: telemetry
+2023-04-05 16:18:22,988 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:22,989 DEBUG   SenderThread:17808 [sender.py:send():303] send: telemetry
+2023-04-05 16:18:22,989 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:22,990 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:18:22,990 DEBUG   SenderThread:17808 [sender.py:send():303] send: config
+2023-04-05 16:18:22,998 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/conda-environment.yaml
+2023-04-05 16:18:22,999 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_created():275] file/dir created: ./runs/wandb/run-20230405_161817-24f75rjx/files/code/myunet.py
+2023-04-05 16:18:23,000 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_created():275] file/dir created: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-metadata.json
+2023-04-05 16:18:23,001 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_created():275] file/dir created: ./runs/wandb/run-20230405_161817-24f75rjx/files/code
+2023-04-05 16:18:23,579 INFO    Thread-16 :17808 [upload_job.py:push():143] Uploaded file /tmp/tmp53lljp03wandb/9a4k06g0-wandb-metadata.json
+2023-04-05 16:18:23,594 INFO    Thread-17 :17808 [upload_job.py:push():143] Uploaded file /tmp/tmp53lljp03wandb/1jizth0s-code/myunet.py
+2023-04-05 16:18:24,007 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_created():275] file/dir created: ./runs/wandb/run-20230405_161817-24f75rjx/files/output.log
+2023-04-05 16:18:25,012 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/output.log
+2023-04-05 16:18:26,042 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:26,042 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:18:26,042 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:26,043 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:18:26,043 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:26,044 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:26,044 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:18:26,044 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:18:26,046 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:18:27,025 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-summary.json
+2023-04-05 16:18:28,422 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:28,422 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:18:28,422 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:28,423 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:18:28,423 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:18:28,423 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:18:28,425 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:18:29,050 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-summary.json
+2023-04-05 16:18:31,038 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:31,038 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:31,039 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:18:31,039 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:18:31,040 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:18:31,040 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:18:31,044 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:18:31,066 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-summary.json
+2023-04-05 16:18:33,616 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:33,617 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:18:33,617 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:33,617 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:18:33,617 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:18:33,618 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:18:33,619 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:18:34,082 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-summary.json
+2023-04-05 16:18:36,180 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:36,180 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:18:36,180 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:36,181 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:18:36,182 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:18:36,182 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:18:36,185 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:18:37,123 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-summary.json
+2023-04-05 16:18:37,984 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: stop_status
+2023-04-05 16:18:37,984 DEBUG   SenderThread:17808 [sender.py:send_request():317] send_request: stop_status
+2023-04-05 16:18:38,665 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:18:38,714 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:38,715 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:38,715 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:18:38,715 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:18:38,716 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:18:38,723 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:18:39,133 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-summary.json
+2023-04-05 16:18:41,051 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:41,051 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:18:41,051 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:41,052 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:18:41,052 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:18:41,052 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:18:41,054 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:18:41,151 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-summary.json
+2023-04-05 16:18:43,566 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:43,566 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:18:43,566 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:43,567 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:18:43,567 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:18:43,567 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:18:43,570 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:18:44,183 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-summary.json
+2023-04-05 16:18:46,157 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:46,204 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:46,204 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:18:46,205 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:18:46,205 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:18:46,206 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:18:46,208 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:18:47,213 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-summary.json
+2023-04-05 16:18:48,218 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/config.yaml
+2023-04-05 16:18:48,532 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:48,532 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:18:48,532 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:48,533 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:18:48,533 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:48,534 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:18:48,534 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:18:48,535 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:18:48,537 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:18:48,537 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:48,538 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:48,538 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:18:48,538 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:18:48,538 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:18:48,547 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:18:49,229 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-summary.json
+2023-04-05 16:18:49,935 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:49,935 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:18:49,935 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:49,937 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:18:49,944 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:49,945 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:18:49,947 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:18:49,952 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:18:50,255 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-summary.json
+2023-04-05 16:18:52,454 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:52,454 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:52,455 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:18:52,455 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:18:52,455 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:18:52,455 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:18:52,457 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:18:53,275 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-summary.json
+2023-04-05 16:18:53,729 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: stop_status
+2023-04-05 16:18:53,730 DEBUG   SenderThread:17808 [sender.py:send_request():317] send_request: stop_status
+2023-04-05 16:18:55,024 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:55,024 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:18:55,024 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:55,025 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:18:55,025 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:18:55,025 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:18:55,027 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:18:55,303 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-summary.json
+2023-04-05 16:18:57,586 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:57,586 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:18:57,587 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:18:57,588 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:18:57,588 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:18:57,589 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:18:57,591 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:18:58,331 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-summary.json
+2023-04-05 16:19:00,237 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:00,237 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:19:00,237 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:00,237 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:19:00,238 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:19:00,238 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:19:00,239 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:19:00,395 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-summary.json
+2023-04-05 16:19:02,681 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:02,682 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:19:02,682 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:02,683 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:19:02,683 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:19:02,683 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:19:02,685 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:19:03,415 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-summary.json
+2023-04-05 16:19:05,063 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:05,104 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:19:05,104 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:05,105 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:19:05,106 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:19:05,106 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:19:05,117 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:19:05,438 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-summary.json
+2023-04-05 16:19:07,939 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:07,939 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:19:07,939 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:07,940 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:19:07,940 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:19:07,940 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:19:07,942 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:19:08,472 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-summary.json
+2023-04-05 16:19:09,081 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: stop_status
+2023-04-05 16:19:09,081 DEBUG   SenderThread:17808 [sender.py:send_request():317] send_request: stop_status
+2023-04-05 16:19:10,454 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:10,455 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:19:10,474 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:10,479 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:19:10,479 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:19:10,480 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:19:10,493 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:19:10,642 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-summary.json
+2023-04-05 16:19:12,951 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:12,951 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:19:12,951 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:12,952 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:19:12,952 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:19:12,952 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:19:12,956 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:19:13,659 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-summary.json
+2023-04-05 16:19:15,341 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:15,341 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:19:15,341 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:15,342 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:19:15,342 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:19:15,343 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:19:15,343 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:19:15,344 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:19:15,345 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:15,345 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:15,346 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:19:15,346 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:19:15,346 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:19:15,348 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:19:15,671 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-summary.json
+2023-04-05 16:19:16,587 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:16,588 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:19:16,588 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:16,591 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:19:16,592 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:19:16,592 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:19:16,594 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:19:16,691 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-summary.json
+2023-04-05 16:19:18,701 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/config.yaml
+2023-04-05 16:19:18,921 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:18,921 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:18,921 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:19:18,921 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:19:18,922 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:19:18,922 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:19:18,924 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:19:19,706 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-summary.json
+2023-04-05 16:19:21,258 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:21,258 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:21,258 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:19:21,259 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:19:21,259 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:19:21,260 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:19:21,264 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:19:21,477 DEBUG   SystemMonitor:17808 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2023-04-05 16:19:21,478 DEBUG   SenderThread:17808 [sender.py:send():303] send: stats
+2023-04-05 16:19:21,720 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-summary.json
+2023-04-05 16:19:23,596 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:19:23,596 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:23,597 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:23,597 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:19:23,597 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:19:23,598 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:19:23,603 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:19:23,733 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-summary.json
+2023-04-05 16:19:24,512 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: stop_status
+2023-04-05 16:19:24,513 DEBUG   SenderThread:17808 [sender.py:send_request():317] send_request: stop_status
+2023-04-05 16:19:25,921 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:25,921 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:19:25,922 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:25,923 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:19:25,923 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:19:25,923 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:19:25,926 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:19:26,751 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-summary.json
+2023-04-05 16:19:28,330 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:28,330 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:19:28,330 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:28,331 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:19:28,332 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:19:28,332 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:19:28,335 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:19:28,761 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-summary.json
+2023-04-05 16:19:30,735 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:30,784 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:30,784 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:19:30,785 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:19:30,786 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:19:30,786 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:19:30,788 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:19:31,778 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-summary.json
+2023-04-05 16:19:33,127 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:33,127 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:33,128 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:19:33,127 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:19:33,128 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:19:33,129 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:19:33,134 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:19:33,805 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-summary.json
+2023-04-05 16:19:35,481 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:35,482 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:19:35,482 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:35,482 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:19:35,482 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:19:35,483 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:19:35,485 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:19:35,816 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-summary.json
+2023-04-05 16:19:37,892 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:37,892 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:37,893 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:19:37,892 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:19:37,893 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:19:37,893 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:19:37,896 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:19:38,834 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-summary.json
+2023-04-05 16:19:39,836 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: stop_status
+2023-04-05 16:19:39,837 DEBUG   SenderThread:17808 [sender.py:send_request():317] send_request: stop_status
+2023-04-05 16:19:40,310 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:40,310 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:19:40,310 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:40,311 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:19:40,312 DEBUG   HandlerThread:17808 [handler.py:handle_request():139] handle_request: partial_history
+2023-04-05 16:19:40,312 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:19:40,312 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:19:40,314 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:19:40,315 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:40,315 DEBUG   SenderThread:17808 [sender.py:send():303] send: metric
+2023-04-05 16:19:40,315 WARNING SenderThread:17808 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-04-05 16:19:40,315 DEBUG   SenderThread:17808 [sender.py:send():303] send: history
+2023-04-05 16:19:40,316 DEBUG   SenderThread:17808 [sender.py:send():303] send: summary
+2023-04-05 16:19:40,319 INFO    SenderThread:17808 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-04-05 16:19:40,850 INFO    Thread-13 :17808 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs/wandb/run-20230405_161817-24f75rjx/files/wandb-summary.json
+2023-04-05 16:19:43,407 INFO    MainThread:17808 [internal.py:handle_exit():78] Internal process exited

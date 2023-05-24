@@ -1,0 +1,99 @@
+  | Name               | Type             | Params
+--------------------------------------------------------
+0 | u_encoder          | U_encoder        | 1.1 M
+1 | u_decoder          | U_decoder        | 345 K
+2 | SegmentationHead_1 | Conv2d           | 64
+3 | loss_func          | CrossEntropyLoss | 0
+--------------------------------------------------------
+1.4 M     Trainable params
+0         Non-trainable params
+1.4 M     Total params
+5.682     Total estimated model params size (MB)
+Global seed set to 2202
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 95.94it/s]
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+Using native 16bit precision.
+Loading dataset: 100%|██████████| 50/50 [00:00<00:00, 117.71it/s]
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 102.46it/s]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+  | Name               | Type             | Params
+--------------------------------------------------------
+0 | u_encoder          | U_encoder        | 1.1 M
+1 | u_decoder          | U_decoder        | 345 K
+2 | SegmentationHead_1 | Conv2d           | 64
+3 | loss_func          | CrossEntropyLoss | 0
+--------------------------------------------------------
+1.4 M     Trainable params
+0         Non-trainable params
+1.4 M     Total params
+5.682     Total estimated model params size (MB)
+Global seed set to 2202
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 75.20it/s]
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+Using native 16bit precision.
+Loading dataset: 100%|██████████| 50/50 [00:00<00:00, 114.09it/s]
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 90.32it/s]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+  | Name               | Type             | Params
+--------------------------------------------------------
+0 | u_encoder          | U_encoder        | 1.1 M
+1 | u_decoder          | U_decoder        | 345 K
+2 | SegmentationHead_1 | Conv2d           | 64
+3 | loss_func          | CrossEntropyLoss | 0
+--------------------------------------------------------
+1.4 M     Trainable params
+0         Non-trainable params
+1.4 M     Total params
+5.682     Total estimated model params size (MB)
+Global seed set to 2202
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 29.55it/s]
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+Using native 16bit precision.
+Loading dataset: 100%|██████████| 50/50 [00:00<00:00, 68.85it/s]
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 78.71it/s]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+  | Name               | Type             | Params
+--------------------------------------------------------
+0 | u_encoder          | U_encoder        | 1.1 M
+1 | u_decoder          | U_decoder        | 345 K
+2 | SegmentationHead_1 | Conv2d           | 64
+3 | loss_func          | CrossEntropyLoss | 0
+--------------------------------------------------------
+1.4 M     Trainable params
+0         Non-trainable params
+1.4 M     Total params
+5.682     Total estimated model params size (MB)
+Global seed set to 2202
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 30.45it/s]
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+Using native 16bit precision.
+Loading dataset: 100%|██████████| 50/50 [00:00<00:00, 61.24it/s]
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 60.90it/s]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+  | Name               | Type             | Params
+--------------------------------------------------------
+0 | u_encoder          | U_encoder        | 1.1 M
+1 | u_decoder          | U_decoder        | 345 K
+2 | SegmentationHead_1 | Conv2d           | 64
+3 | loss_func          | CrossEntropyLoss | 0
+--------------------------------------------------------
+1.4 M     Trainable params
+0         Non-trainable params
+1.4 M     Total params
+5.682     Total estimated model params size (MB)
+Global seed set to 2202
+
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 25.98it/s]
+result:              fold_1  fold_2  fold_3  fold_4  fold_5   mean
+Dice          95.15   95.78   93.94   95.49   94.27  94.93
+Jaccard       90.74   91.91   88.56   91.37   89.17  90.35
+Sensitivity   93.80   97.59   94.44   94.66   93.62  94.82
+Specificity   99.11   98.66   99.03   99.08   98.96  98.97
+Accuracy      98.00   98.47   98.44   98.17   98.04  98.22
+AJI           74.99   78.76   81.04   78.66   80.93  78.88
+ObjDice       89.82   93.57   91.44   92.84   92.41  92.02
+end:

@@ -1,0 +1,259 @@
+2023-05-05 22:25:16,000 INFO    StreamThr :3778 [internal.py:wandb_internal():88] W&B internal server running at pid: 3778, started at: 2023-05-05 22:25:15.998029
+2023-05-05 22:25:16,001 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: status
+2023-05-05 22:25:16,003 DEBUG   SenderThread:3778 [sender.py:send_request():317] send_request: status
+2023-05-05 22:25:16,004 DEBUG   SenderThread:3778 [sender.py:send():303] send: header
+2023-05-05 22:25:16,004 INFO    WriterThread:3778 [datastore.py:open_for_write():75] open: ./runs/wandb/run-20230505_222515-2duyij4y/run-2duyij4y.wandb
+2023-05-05 22:25:16,008 DEBUG   SenderThread:3778 [sender.py:send():303] send: run
+2023-05-05 22:25:16,011 INFO    SenderThread:3778 [sender.py:_maybe_setup_resume():593] checking resume status for None/segmentation/2duyij4y
+2023-05-05 22:25:21,012 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: keepalive
+2023-05-05 22:25:26,018 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: keepalive
+2023-05-05 22:25:31,026 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: keepalive
+2023-05-05 22:25:36,034 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: keepalive
+2023-05-05 22:25:41,041 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: keepalive
+2023-05-05 22:25:46,044 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: keepalive
+2023-05-05 22:25:51,050 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: keepalive
+2023-05-05 22:25:51,095 ERROR   SenderThread:3778 [retry.py:__call__():154] Retry attempt failed:
+Traceback (most recent call last):
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connection.py", line 179, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x7f17cb61f760>, 'Connection to api.wandb.ai timed out. (connect timeout=10)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f17cb61f760>, 'Connection to api.wandb.ai timed out. (connect timeout=10)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/wandb/sdk/lib/retry.py", line 113, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 210, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/transport/requests.py", line 38, in execute
+    request = requests.post(self.url, **post_args)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/requests/api.py", line 119, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/requests/adapters.py", line 504, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f17cb61f760>, 'Connection to api.wandb.ai timed out. (connect timeout=10)'))
+2023-05-05 22:25:56,052 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: keepalive
+2023-05-05 22:26:01,055 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: keepalive
+2023-05-05 22:26:06,058 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: keepalive
+2023-05-05 22:26:11,067 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: keepalive
+2023-05-05 22:26:17,081 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: poll_exit
+2023-05-05 22:26:22,082 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: keepalive
+2023-05-05 22:26:27,084 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: keepalive
+2023-05-05 22:26:32,087 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: keepalive
+2023-05-05 22:26:37,088 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: keepalive
+2023-05-05 22:26:39,822 ERROR   SenderThread:3778 [retry.py:__call__():154] Retry attempt failed:
+Traceback (most recent call last):
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/http/client.py", line 1377, in getresponse
+    response.begin()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/http/client.py", line 320, in begin
+    version, status, reason = self._read_status()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/http/client.py", line 289, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/http/client.py", line 1377, in getresponse
+    response.begin()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/http/client.py", line 320, in begin
+    version, status, reason = self._read_status()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/http/client.py", line 289, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/wandb/sdk/lib/retry.py", line 113, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 210, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/transport/requests.py", line 38, in execute
+    request = requests.post(self.url, **post_args)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/requests/api.py", line 119, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2023-05-05 22:26:42,089 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: keepalive
+2023-05-05 22:26:47,090 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: keepalive
+2023-05-05 22:26:52,092 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: keepalive
+2023-05-05 22:26:57,093 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: keepalive
+2023-05-05 22:27:02,094 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: keepalive
+2023-05-05 22:27:07,095 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: keepalive
+2023-05-05 22:27:12,097 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: keepalive
+2023-05-05 22:27:14,096 INFO    SenderThread:3778 [dir_watcher.py:__init__():216] watching files in: ./runs/wandb/run-20230505_222515-2duyij4y/files
+2023-05-05 22:27:14,097 INFO    SenderThread:3778 [sender.py:_start_run_threads():928] run started: 2duyij4y with start time 1683296715.997776
+2023-05-05 22:27:14,097 DEBUG   SenderThread:3778 [sender.py:send():303] send: exit
+2023-05-05 22:27:14,097 INFO    SenderThread:3778 [sender.py:send_exit():442] handling exit code: 1
+2023-05-05 22:27:14,097 INFO    SenderThread:3778 [sender.py:send_exit():444] handling runtime: 0
+2023-05-05 22:27:14,100 INFO    SenderThread:3778 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-05-05 22:27:14,102 INFO    SenderThread:3778 [sender.py:send_exit():450] send defer
+2023-05-05 22:27:14,102 DEBUG   SenderThread:3778 [sender.py:send_request():317] send_request: poll_exit
+2023-05-05 22:27:14,102 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: defer
+2023-05-05 22:27:14,103 INFO    HandlerThread:3778 [handler.py:handle_request_defer():162] handle defer: 0
+2023-05-05 22:27:14,103 DEBUG   SenderThread:3778 [sender.py:send_request():317] send_request: defer
+2023-05-05 22:27:14,103 INFO    SenderThread:3778 [sender.py:send_request_defer():459] handle sender defer: 0
+2023-05-05 22:27:14,103 INFO    SenderThread:3778 [sender.py:transition_state():463] send defer: 1
+2023-05-05 22:27:14,103 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: defer
+2023-05-05 22:27:14,104 INFO    HandlerThread:3778 [handler.py:handle_request_defer():162] handle defer: 1
+2023-05-05 22:27:14,104 DEBUG   SenderThread:3778 [sender.py:send_request():317] send_request: defer
+2023-05-05 22:27:14,104 INFO    SenderThread:3778 [sender.py:send_request_defer():459] handle sender defer: 1
+2023-05-05 22:27:14,104 INFO    SenderThread:3778 [sender.py:transition_state():463] send defer: 2
+2023-05-05 22:27:14,104 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: defer
+2023-05-05 22:27:14,104 INFO    HandlerThread:3778 [handler.py:handle_request_defer():162] handle defer: 2
+2023-05-05 22:27:14,105 DEBUG   SenderThread:3778 [sender.py:send_request():317] send_request: defer
+2023-05-05 22:27:14,105 INFO    SenderThread:3778 [sender.py:send_request_defer():459] handle sender defer: 2
+2023-05-05 22:27:14,105 INFO    SenderThread:3778 [sender.py:transition_state():463] send defer: 3
+2023-05-05 22:27:14,105 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: defer
+2023-05-05 22:27:14,105 INFO    HandlerThread:3778 [handler.py:handle_request_defer():162] handle defer: 3
+2023-05-05 22:27:14,105 DEBUG   SenderThread:3778 [sender.py:send_request():317] send_request: defer
+2023-05-05 22:27:14,105 INFO    SenderThread:3778 [sender.py:send_request_defer():459] handle sender defer: 3
+2023-05-05 22:27:14,106 INFO    SenderThread:3778 [sender.py:transition_state():463] send defer: 4
+2023-05-05 22:27:14,106 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: defer
+2023-05-05 22:27:14,106 INFO    HandlerThread:3778 [handler.py:handle_request_defer():162] handle defer: 4
+2023-05-05 22:27:14,106 DEBUG   SenderThread:3778 [sender.py:send():303] send: summary
+2023-05-05 22:27:14,108 INFO    SenderThread:3778 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-05-05 22:27:14,109 DEBUG   SenderThread:3778 [sender.py:send_request():317] send_request: defer
+2023-05-05 22:27:14,109 INFO    SenderThread:3778 [sender.py:send_request_defer():459] handle sender defer: 4
+2023-05-05 22:27:14,109 INFO    SenderThread:3778 [sender.py:transition_state():463] send defer: 5
+2023-05-05 22:27:14,109 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: defer
+2023-05-05 22:27:14,109 INFO    HandlerThread:3778 [handler.py:handle_request_defer():162] handle defer: 5
+2023-05-05 22:27:14,110 DEBUG   SenderThread:3778 [sender.py:send_request():317] send_request: defer
+2023-05-05 22:27:14,110 INFO    SenderThread:3778 [sender.py:send_request_defer():459] handle sender defer: 5
+2023-05-05 22:27:14,110 INFO    SenderThread:3778 [sender.py:transition_state():463] send defer: 6
+2023-05-05 22:27:14,110 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: defer
+2023-05-05 22:27:14,110 INFO    HandlerThread:3778 [handler.py:handle_request_defer():162] handle defer: 6
+2023-05-05 22:27:14,111 DEBUG   SenderThread:3778 [sender.py:send_request():317] send_request: defer
+2023-05-05 22:27:14,111 INFO    SenderThread:3778 [sender.py:send_request_defer():459] handle sender defer: 6
+2023-05-05 22:27:14,111 INFO    SenderThread:3778 [sender.py:transition_state():463] send defer: 7
+2023-05-05 22:27:14,111 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: defer
+2023-05-05 22:27:14,111 INFO    HandlerThread:3778 [handler.py:handle_request_defer():162] handle defer: 7
+2023-05-05 22:27:14,112 DEBUG   SenderThread:3778 [sender.py:send_request():317] send_request: defer
+2023-05-05 22:27:14,112 INFO    SenderThread:3778 [sender.py:send_request_defer():459] handle sender defer: 7
+2023-05-05 22:27:14,112 INFO    SenderThread:3778 [dir_watcher.py:finish():362] shutting down directory watcher
+2023-05-05 22:27:15,103 INFO    SenderThread:3778 [dir_watcher.py:_on_file_created():275] file/dir created: ./runs/wandb/run-20230505_222515-2duyij4y/files/wandb-summary.json
+2023-05-05 22:27:15,104 INFO    SenderThread:3778 [dir_watcher.py:finish():392] scan: ./runs/wandb/run-20230505_222515-2duyij4y/files
+2023-05-05 22:27:15,105 INFO    SenderThread:3778 [dir_watcher.py:finish():406] scan save: ./runs/wandb/run-20230505_222515-2duyij4y/files/config.yaml config.yaml
+2023-05-05 22:27:15,108 INFO    SenderThread:3778 [dir_watcher.py:finish():406] scan save: ./runs/wandb/run-20230505_222515-2duyij4y/files/wandb-summary.json wandb-summary.json
+2023-05-05 22:27:15,116 INFO    SenderThread:3778 [sender.py:transition_state():463] send defer: 8
+2023-05-05 22:27:15,117 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: defer
+2023-05-05 22:27:15,117 INFO    HandlerThread:3778 [handler.py:handle_request_defer():162] handle defer: 8
+2023-05-05 22:27:15,119 DEBUG   SenderThread:3778 [sender.py:send_request():317] send_request: defer
+2023-05-05 22:27:15,119 INFO    SenderThread:3778 [sender.py:send_request_defer():459] handle sender defer: 8
+2023-05-05 22:27:15,120 INFO    SenderThread:3778 [file_pusher.py:finish():168] shutting down file pusher
+2023-05-05 22:27:17,098 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: keepalive
+2023-05-05 22:27:20,426 INFO    Thread-16 :3778 [upload_job.py:push():143] Uploaded file ./runs/wandb/run-20230505_222515-2duyij4y/files/wandb-summary.json
+2023-05-05 22:27:20,488 INFO    Thread-15 :3778 [upload_job.py:push():143] Uploaded file ./runs/wandb/run-20230505_222515-2duyij4y/files/config.yaml
+2023-05-05 22:27:20,688 INFO    Thread-12 :3778 [sender.py:transition_state():463] send defer: 9
+2023-05-05 22:27:20,689 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: defer
+2023-05-05 22:27:20,689 INFO    HandlerThread:3778 [handler.py:handle_request_defer():162] handle defer: 9
+2023-05-05 22:27:20,690 DEBUG   SenderThread:3778 [sender.py:send_request():317] send_request: defer
+2023-05-05 22:27:20,690 INFO    SenderThread:3778 [sender.py:send_request_defer():459] handle sender defer: 9
+2023-05-05 22:27:20,690 INFO    SenderThread:3778 [file_pusher.py:join():173] waiting for file pusher
+2023-05-05 22:27:20,690 INFO    SenderThread:3778 [sender.py:transition_state():463] send defer: 10
+2023-05-05 22:27:20,691 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: defer
+2023-05-05 22:27:20,691 INFO    HandlerThread:3778 [handler.py:handle_request_defer():162] handle defer: 10
+2023-05-05 22:27:20,691 DEBUG   SenderThread:3778 [sender.py:send_request():317] send_request: defer
+2023-05-05 22:27:20,691 INFO    SenderThread:3778 [sender.py:send_request_defer():459] handle sender defer: 10
+2023-05-05 22:27:22,011 INFO    SenderThread:3778 [sender.py:transition_state():463] send defer: 11
+2023-05-05 22:27:22,011 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: defer
+2023-05-05 22:27:22,012 INFO    HandlerThread:3778 [handler.py:handle_request_defer():162] handle defer: 11
+2023-05-05 22:27:22,012 DEBUG   SenderThread:3778 [sender.py:send_request():317] send_request: defer
+2023-05-05 22:27:22,012 INFO    SenderThread:3778 [sender.py:send_request_defer():459] handle sender defer: 11
+2023-05-05 22:27:22,013 INFO    SenderThread:3778 [sender.py:transition_state():463] send defer: 12
+2023-05-05 22:27:22,013 DEBUG   SenderThread:3778 [sender.py:send():303] send: final
+2023-05-05 22:27:22,013 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: defer
+2023-05-05 22:27:22,013 DEBUG   SenderThread:3778 [sender.py:send():303] send: footer
+2023-05-05 22:27:22,014 INFO    HandlerThread:3778 [handler.py:handle_request_defer():162] handle defer: 12
+2023-05-05 22:27:22,014 DEBUG   SenderThread:3778 [sender.py:send_request():317] send_request: defer
+2023-05-05 22:27:22,014 INFO    SenderThread:3778 [sender.py:send_request_defer():459] handle sender defer: 12
+2023-05-05 22:27:22,015 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: poll_exit
+2023-05-05 22:27:22,016 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: server_info
+2023-05-05 22:27:22,016 DEBUG   SenderThread:3778 [sender.py:send_request():317] send_request: poll_exit
+2023-05-05 22:27:22,017 DEBUG   SenderThread:3778 [sender.py:send_request():317] send_request: server_info
+2023-05-05 22:27:22,017 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: get_summary
+2023-05-05 22:27:22,019 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: sampled_history
+2023-05-05 22:27:22,808 INFO    MainThread:3778 [wandb_run.py:_footer_history_summary_info():3377] rendering history
+2023-05-05 22:27:22,808 INFO    MainThread:3778 [wandb_run.py:_footer_history_summary_info():3409] rendering summary
+2023-05-05 22:27:22,809 INFO    MainThread:3778 [wandb_run.py:_footer_sync_info():3333] logging synced files
+2023-05-05 22:27:22,811 DEBUG   HandlerThread:3778 [handler.py:handle_request():139] handle_request: shutdown
+2023-05-05 22:27:22,811 INFO    HandlerThread:3778 [handler.py:finish():814] shutting down handler
+2023-05-05 22:27:23,013 INFO    WriterThread:3778 [datastore.py:close():279] close: ./runs/wandb/run-20230505_222515-2duyij4y/run-2duyij4y.wandb
+2023-05-05 22:27:23,807 INFO    SenderThread:3778 [sender.py:finish():1331] shutting down sender
+2023-05-05 22:27:23,808 INFO    SenderThread:3778 [file_pusher.py:finish():168] shutting down file pusher
+2023-05-05 22:27:23,809 INFO    SenderThread:3778 [file_pusher.py:join():173] waiting for file pusher
+2023-05-05 22:27:23,813 INFO    MainThread:3778 [internal.py:handle_exit():78] Internal process exited

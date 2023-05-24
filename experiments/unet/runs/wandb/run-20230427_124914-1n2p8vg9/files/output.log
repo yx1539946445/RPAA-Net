@@ -1,0 +1,114 @@
+  | Name      | Type             | Params
+-----------------------------------------------
+0 | fcn       | base_resnet      | 25.6 M
+1 | aux_head  | Aux_Head         | 5.9 M
+2 | cls_seg   | Sequential       | 23.1 M
+3 | loss_func | CrossEntropyLoss | 0
+-----------------------------------------------
+54.5 M    Trainable params
+0         Non-trainable params
+54.5 M    Total params
+218.150   Total estimated model params size (MB)
+Global seed set to 2202
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/data_loading.py:322: UserWarning: The number of training samples (5) is smaller than the logging interval Trainer(log_every_n_steps=50). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+  rank_zero_warn(
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:689: UserWarning: ModelCheckpoint(monitor='val_loss') not found in the returned metrics: ['train_loss', 'train_loss_step', 'train_loss_epoch']. HINT: Did you call self.log('val_loss', value) in the LightningModule?
+  warning_cache.warn(m)
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 56.54it/s]
+Using native 16bit precision.
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+Loading dataset: 100%|██████████| 50/50 [00:00<00:00, 102.32it/s]
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 100.48it/s]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+  | Name      | Type             | Params
+-----------------------------------------------
+0 | fcn       | base_resnet      | 25.6 M
+1 | aux_head  | Aux_Head         | 5.9 M
+2 | cls_seg   | Sequential       | 23.1 M
+3 | loss_func | CrossEntropyLoss | 0
+-----------------------------------------------
+54.5 M    Trainable params
+0         Non-trainable params
+54.5 M    Total params
+218.150   Total estimated model params size (MB)
+Global seed set to 2202
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/data_loading.py:322: UserWarning: The number of training samples (5) is smaller than the logging interval Trainer(log_every_n_steps=50). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+  rank_zero_warn(
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 81.78it/s]
+Using native 16bit precision.
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+Loading dataset: 100%|██████████| 50/50 [00:00<00:00, 108.65it/s]
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 94.06it/s]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+  | Name      | Type             | Params
+-----------------------------------------------
+0 | fcn       | base_resnet      | 25.6 M
+1 | aux_head  | Aux_Head         | 5.9 M
+2 | cls_seg   | Sequential       | 23.1 M
+3 | loss_func | CrossEntropyLoss | 0
+-----------------------------------------------
+54.5 M    Trainable params
+0         Non-trainable params
+54.5 M    Total params
+218.150   Total estimated model params size (MB)
+Global seed set to 2202
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/data_loading.py:322: UserWarning: The number of training samples (5) is smaller than the logging interval Trainer(log_every_n_steps=50). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+  rank_zero_warn(
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 78.06it/s]
+Using native 16bit precision.
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+Loading dataset: 100%|██████████| 50/50 [00:00<00:00, 111.88it/s]
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 122.63it/s]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+  | Name      | Type             | Params
+-----------------------------------------------
+0 | fcn       | base_resnet      | 25.6 M
+1 | aux_head  | Aux_Head         | 5.9 M
+2 | cls_seg   | Sequential       | 23.1 M
+3 | loss_func | CrossEntropyLoss | 0
+-----------------------------------------------
+54.5 M    Trainable params
+0         Non-trainable params
+54.5 M    Total params
+218.150   Total estimated model params size (MB)
+Global seed set to 2202
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/data_loading.py:322: UserWarning: The number of training samples (5) is smaller than the logging interval Trainer(log_every_n_steps=50). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+  rank_zero_warn(
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 76.99it/s]
+Using native 16bit precision.
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+Loading dataset: 100%|██████████| 50/50 [00:00<00:00, 102.77it/s]
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 90.76it/s]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+  | Name      | Type             | Params
+-----------------------------------------------
+0 | fcn       | base_resnet      | 25.6 M
+1 | aux_head  | Aux_Head         | 5.9 M
+2 | cls_seg   | Sequential       | 23.1 M
+3 | loss_func | CrossEntropyLoss | 0
+-----------------------------------------------
+54.5 M    Trainable params
+0         Non-trainable params
+54.5 M    Total params
+218.150   Total estimated model params size (MB)
+Global seed set to 2202
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/data_loading.py:322: UserWarning: The number of training samples (5) is smaller than the logging interval Trainer(log_every_n_steps=50). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+  rank_zero_warn(
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 72.90it/s]
+result:              fold_1  fold_2  fold_3  fold_4  fold_5   mean
+Dice          94.82   95.83   93.57   94.54   93.49  94.45
+Jaccard       90.15   92.00   87.91   89.65   87.77  89.50
+Sensitivity   93.57   96.49   94.16   93.67   92.54  94.08
+Specificity   98.99   98.94   98.96   98.85   98.87  98.92
+Accuracy      97.86   98.51   98.34   97.79   97.78  98.06
+AJI           74.61   78.04   77.82   67.79   73.21  74.30
+ObjDice       89.97   93.20   90.32   88.15   89.63  90.25
+end:

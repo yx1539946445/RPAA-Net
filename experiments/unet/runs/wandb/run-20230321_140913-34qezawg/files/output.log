@@ -1,0 +1,1745 @@
+  | Name               | Type             | Params
+--------------------------------------------------------
+0 | u_encoder          | U_encoder        | 1.0 M
+1 | u_decoder          | U_decoder        | 150 K
+2 | SegmentationHead_1 | Conv2d           | 64
+3 | loss_func          | CrossEntropyLoss | 0
+--------------------------------------------------------
+1.2 M     Trainable params
+0         Non-trainable params
+1.2 M     Total params
+4.798     Total estimated model params size (MB)
+Global seed set to 2202
+img_dict['label']img_dict['label'] img_dict['label']img_dict['label']  (256, 256, 3) (256, 256, 3)(256, 256, 3)
+(256, 256, 3)
+maskmaskmaskimg_dict['label'] mask  (256, 256) (256, 256, 3)(256, 256) (256, 256)(256, 256)
+mask (256, 256)
+img_dict['label']img_dict['label']  (256, 256, 3)(256, 256, 3)
+img_dict['label'] (256, 256, 3)
+mask maskmask (256, 256) (256, 256)img_dict['label']
+(256, 256)
+(256, 256, 3)
+mask (256, 256)
+img_dict['label']img_dict['label']  (256, 256, 3)(256, 256, 3)img_dict['label']
+ img_dict['label']mask(256, 256, 3)img_dict['label'] mask
+ (256, 256, 3) (256, 256)(256, 256, 3)mask
+(256, 256)
+ mask(256, 256) (256, 256)
+mask
+ img_dict['label'](256, 256)img_dict['label']
+(256, 256, 3) (256, 256, 3)
+img_dict['label'] mask(256, 256, 3) (256, 256)
+img_dict['label']
+maskmaskimg_dict['label']    (256, 256, 3)(256, 256)(256, 256)(256, 256, 3)
+mask (256, 256)mask
+ (256, 256)
+img_dict['label']img_dict['label']  (256, 256, 3)(256, 256, 3)
+maskmask  img_dict['label'] (256, 256)(256, 256)(256, 256, 3)img_dict['label']
+ (256, 256, 3)mask
+ (256, 256)mask
+ (256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label'] (256, 256, 3)
+maskimg_dict['label']  mask(256, 256)(256, 256, 3)
+mask (256, 256)img_dict['label'](256, 256)img_dict['label']
+ (256, 256, 3)
+ mask(256, 256, 3)
+ img_dict['label']mask(256, 256)img_dict['label'] (256, 256, 3)
+ (256, 256)
+mask(256, 256, 3)
+(256, 256)maskimg_dict['label']
+ (256, 256)(256, 256, 3)
+img_dict['label']mask  (256, 256)
+(256, 256, 3)
+img_dict['label']mask (256, 256)
+ (256, 256, 3)
+img_dict['label'] mask(256, 256, 3) (256, 256)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label'] (256, 256, 3)
+img_dict['label']mask  mask(256, 256, 3)(256, 256)
+(256, 256)mask
+ (256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label']img_dict['label']mask   (256, 256, 3)(256, 256, 3)(256, 256)
+img_dict['label']mask mask (256, 256, 3) (256, 256)
+(256, 256)img_dict['label']
+ mask(256, 256, 3)
+mask(256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label']img_dict['label']  (256, 256, 3)(256, 256, 3)
+mask mask(256, 256)img_dict['label']
+ (256, 256)(256, 256, 3)img_dict['label']
+ (256, 256, 3)
+img_dict['label']mask mask (256, 256, 3) (256, 256)
+(256, 256)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] img_dict['label']img_dict['label'] img_dict['label'](256, 256, 3) img_dict['label'](256, 256, 3)
+(256, 256, 3)
+(256, 256, 3)
+(256, 256, 3)
+maskmask
+ mask mask(256, 256) (256, 256)
+mask(256, 256)
+(256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)img_dict['label']
+img_dict['label']  (256, 256, 3)mask(256, 256, 3)img_dict['label']
+ (256, 256)
+ img_dict['label'] mask (256, 256, 3)
+mask(256, 256, 3)(256, 256)
+img_dict['label']
+mask (256, 256) (256, 256, 3)
+mask(256, 256)
+img_dict['label']
+ (256, 256, 3)(256, 256)
+img_dict['label']mask
+  (256, 256, 3)(256, 256)
+mask
+ (256, 256)mask
+ (256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label']img_dict['label'] mask (256, 256)(256, 256, 3)
+img_dict['label'](256, 256, 3) maskimg_dict['label']
+(256, 256, 3)
+mask  mask (256, 256)
+(256, 256, 3)img_dict['label'] (256, 256)
+ (256, 256)
+(256, 256, 3)
+mask
+(256, 256)
+mask img_dict['label'](256, 256) img_dict['label']
+(256, 256, 3)
+ (256, 256, 3)
+mask (256, 256)mask
+ img_dict['label'](256, 256)img_dict['label']
+ (256, 256, 3)img_dict['label'](256, 256, 3)img_dict['label']
+(256, 256, 3)
+maskmask(256, 256, 3)
+(256, 256)img_dict['label'](256, 256)maskmask
+  (256, 256, 3)(256, 256)(256, 256)
+mask
+ (256, 256)img_dict['label']
+img_dict['label'] (256, 256, 3) img_dict['label']
+(256, 256, 3) (256, 256, 3)
+maskmaskmaskimg_dict['label']  (256, 256)  (256, 256, 3)
+img_dict['label'](256, 256)(256, 256)
+(256, 256, 3)maskimg_dict['label']
+  (256, 256)(256, 256, 3)mask
+img_dict['label']
+  (256, 256)(256, 256, 3)mask
+ (256, 256)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)img_dict['label'] img_dict['label']
+img_dict['label'](256, 256, 3)(256, 256, 3)mask
+img_dict['label'] (256, 256, 3) (256, 256)mask
+(256, 256, 3)mask
+ (256, 256)(256, 256)mask
+mask  (256, 256)(256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label']mask  (256, 256)img_dict['label']
+ (256, 256, 3)(256, 256, 3)img_dict['label']
+ mask (256, 256)img_dict['label'](256, 256, 3)mask
+(256, 256)(256, 256, 3)
+img_dict['label']mask
+  (256, 256, 3)(256, 256)
+maskmask  (256, 256)(256, 256)
+img_dict['label']img_dict['label']  (256, 256, 3)(256, 256, 3)
+mask (256, 256)mask
+ (256, 256)
+img_dict['label'] (256, 256, 3)img_dict['label']
+ (256, 256, 3)
+mask (256, 256)mask
+ (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label']img_dict['label']  img_dict['label'](256, 256, 3)img_dict['label'](256, 256, 3)
+ (256, 256, 3)img_dict['label'](256, 256, 3)mask
+ (256, 256, 3) mask
+(256, 256)mask mask
+ (256, 256)
+ mask(256, 256)(256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] img_dict['label'](256, 256, 3)
+ (256, 256, 3)maskimg_dict['label']
+  (256, 256, 3)(256, 256)
+mask
+img_dict['label'] mask  (256, 256)(256, 256)(256, 256, 3)img_dict['label']
+(256, 256, 3)
+maskmaskimg_dict['label']   (256, 256)(256, 256, 3)(256, 256)
+img_dict['label']mask  img_dict['label'](256, 256, 3)(256, 256)
+(256, 256, 3)
+maskmask  (256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label'] maskimg_dict['label']img_dict['label'](256, 256, 3)  (256, 256, 3) (256, 256, 3)
+(256, 256)
+img_dict['label']
+maskmask  (256, 256)mask (256, 256, 3)
+ (256, 256)
+mask (256, 256)
+img_dict['label'](256, 256)
+(256, 256, 3)
+mask (256, 256)
+img_dict['label']img_dict['label']img_dict['label']   (256, 256, 3)(256, 256, 3)(256, 256, 3)
+mask mask(256, 256)mask
+ img_dict['label'](256, 256)img_dict['label'](256, 256)
+(256, 256, 3)(256, 256, 3)
+mask maskimg_dict['label']img_dict['label'] (256, 256)  (256, 256, 3)
+(256, 256)(256, 256, 3)
+maskimg_dict['label']  (256, 256)mask(256, 256, 3)
+img_dict['label']
+(256, 256)(256, 256, 3)mask
+img_dict['label']  (256, 256, 3)mask(256, 256)
+ (256, 256)mask (256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label']mask  (256, 256, 3)(256, 256)
+img_dict['label']img_dict['label'] img_dict['label'] (256, 256, 3)
+ (256, 256, 3)
+mask(256, 256, 3)mask mask
+ (256, 256) mask(256, 256)
+(256, 256) img_dict['label']
+(256, 256)
+(256, 256, 3)
+mask img_dict['label']img_dict['label'](256, 256)
+(256, 256, 3)
+(256, 256, 3)
+mask (256, 256)
+mask (256, 256)
+img_dict['label']img_dict['label']img_dict['label'] (256, 256, 3)
+  img_dict['label'](256, 256, 3)(256, 256, 3)mask img_dict['label']
+ (256, 256, 3) (256, 256)
+mask(256, 256, 3)mask
+mask (256, 256) (256, 256)
+maskimg_dict['label'](256, 256)
+(256, 256)(256, 256, 3)
+mask (256, 256)img_dict['label']
+(256, 256, 3)
+mask (256, 256)
+img_dict['label']img_dict['label']  (256, 256, 3)(256, 256, 3)
+maskmask  (256, 256)(256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label']img_dict['label'] img_dict['label'] (256, 256, 3)(256, 256, 3)
+(256, 256, 3)
+img_dict['label']mask maskmask (256, 256, 3)img_dict['label']  (256, 256)
+ (256, 256)(256, 256)
+(256, 256, 3)
+mask
+ (256, 256)
+mask img_dict['label'](256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+(256, 256, 3)img_dict['label']
+ (256, 256, 3)img_dict['label']mask
+ img_dict['label']mask(256, 256)(256, 256, 3)
+  (256, 256)
+(256, 256, 3)
+img_dict['label'] mask(256, 256, 3)
+ maskmaskimg_dict['label'] (256, 256) img_dict['label'] (256, 256)
+(256, 256)
+ (256, 256, 3)
+(256, 256, 3)
+mask mask(256, 256)
+(256, 256)
+img_dict['label']img_dict['label']  (256, 256, 3)(256, 256, 3)
+maskimg_dict['label']mask   (256, 256)(256, 256, 3)(256, 256)img_dict['label']
+(256, 256, 3)
+mask (256, 256)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label']mask  (256, 256)img_dict['label'](256, 256, 3)
+img_dict['label']
+ (256, 256, 3)mask (256, 256)
+(256, 256, 3)
+img_dict['label']maskmask  (256, 256, 3)(256, 256)
+mask(256, 256)img_dict['label']img_dict['label']
+  img_dict['label'](256, 256)(256, 256, 3)(256, 256, 3)
+mask
+ img_dict['label'](256, 256, 3)(256, 256)
+mask
+(256, 256, 3) mask
+mask(256, 256)
+ (256, 256)
+ (256, 256)
+img_dict['label']img_dict['label'] (256, 256, 3)
+mask img_dict['label'] (256, 256) (256, 256, 3)
+img_dict['label'](256, 256, 3)mask
+ (256, 256, 3)(256, 256)
+mask mask(256, 256)
+img_dict['label'](256, 256) (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+maskimg_dict['label']  (256, 256)
+(256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)img_dict['label']
+ (256, 256, 3)maskimg_dict['label']
+img_dict['label']   (256, 256)(256, 256, 3)mask(256, 256, 3)
+img_dict['label']
+(256, 256)
+(256, 256, 3)mask
+mask img_dict['label'] mask(256, 256) (256, 256)
+(256, 256, 3)
+(256, 256)
+mask (256, 256)img_dict['label']
+ img_dict['label'] (256, 256, 3)(256, 256, 3)
+mask mask(256, 256)
+(256, 256)img_dict['label']
+ (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label'] (256, 256, 3)mask
+ (256, 256)
+mask (256, 256)
+img_dict['label'] img_dict['label'](256, 256, 3)img_dict['label']img_dict['label']
+   (256, 256, 3)img_dict['label'](256, 256, 3)(256, 256, 3)mask
+ (256, 256, 3)mask(256, 256)
+ mask
+(256, 256) mask
+mask(256, 256)
+(256, 256)(256, 256)
+img_dict['label']img_dict['label']img_dict['label']  (256, 256, 3) (256, 256, 3)(256, 256, 3)
+mask (256, 256)maskimg_dict['label']
+  img_dict['label'](256, 256)mask(256, 256, 3)
+(256, 256, 3)(256, 256)
+mask
+ (256, 256)mask
+img_dict['label']img_dict['label']   (256, 256)(256, 256, 3)
+(256, 256, 3)
+img_dict['label'] mask(256, 256, 3)mask
+ mask(256, 256)  (256, 256)
+img_dict['label'](256, 256)
+img_dict['label'] (256, 256, 3)
+mask
+  (256, 256, 3)(256, 256)
+img_dict['label']mask  (256, 256)img_dict['label'](256, 256, 3)
+ (256, 256, 3)mask
+img_dict['label']mask (256, 256)
+img_dict['label']   (256, 256, 3)(256, 256)(256, 256, 3)
+mask (256, 256)mask
+(256, 256)img_dict['label']
+ (256, 256, 3)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)mask
+img_dict['label'] (256, 256, 3)
+mask (256, 256) img_dict['label']img_dict['label']img_dict['label']
+(256, 256)
+(256, 256, 3)(256, 256, 3)(256, 256, 3)
+maskmask  mask(256, 256)(256, 256)
+(256, 256)
+img_dict['label']img_dict['label'] img_dict['label'] (256, 256, 3) (256, 256, 3)
+(256, 256, 3)
+mask
+ (256, 256)
+img_dict['label'] (256, 256, 3)
+mask mask(256, 256) (256, 256)
+mask
+ (256, 256)
+img_dict['label'] (256, 256, 3)img_dict['label']
+ (256, 256, 3)
+maskmask  (256, 256)(256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label']mask  (256, 256, 3)(256, 256)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label'] (256, 256, 3)mask
+ (256, 256)img_dict['label']
+mask(256, 256, 3)img_dict['label']
+ (256, 256)(256, 256, 3)mask
+ (256, 256)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+maskimg_dict['label'] (256, 256)
+(256, 256, 3)
+img_dict['label'] mask (256, 256, 3)
+img_dict['label'](256, 256)mask
+ (256, 256, 3)(256, 256)
+mask img_dict['label'](256, 256)
+(256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label'] mask (256, 256, 3)img_dict['label'](256, 256)
+(256, 256, 3)
+mask (256, 256)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label']img_dict['label'] img_dict['label']img_dict['label']img_dict['label'] (256, 256, 3)   (256, 256, 3)
+(256, 256, 3)(256, 256, 3)(256, 256, 3)
+mask
+ mask(256, 256)
+ maskmask(256, 256)mask
+ (256, 256)(256, 256)(256, 256)
+img_dict['label'] (256, 256, 3)img_dict['label']
+ (256, 256, 3)img_dict['label']mask
+  img_dict['label'](256, 256, 3)mask(256, 256)
+(256, 256, 3)(256, 256)mask
+mask  (256, 256)(256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label'] mask(256, 256, 3)img_dict['label']
+ (256, 256, 3)img_dict['label'] (256, 256, 3)
+(256, 256)
+maskmask  (256, 256)
+mask img_dict['label'](256, 256)(256, 256)
+ (256, 256, 3)
+img_dict['label']
+(256, 256, 3)
+maskimg_dict['label']  (256, 256, 3)
+mask (256, 256)mask(256, 256) img_dict['label']
+(256, 256)
+(256, 256, 3)
+img_dict['label']img_dict['label']  mask(256, 256, 3)
+(256, 256, 3) mask (256, 256)
+(256, 256)
+mask (256, 256)
+img_dict['label']img_dict['label']  (256, 256, 3)
+(256, 256, 3)
+mask (256, 256)mask
+(256, 256)
+img_dict['label'] (256, 256, 3)img_dict['label']
+ (256, 256, 3)mask
+ (256, 256)
+mask (256, 256)img_dict['label']
+ (256, 256, 3)img_dict['label']
+ (256, 256, 3)mask
+ (256, 256)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)img_dict['label']
+ img_dict['label'](256, 256, 3)
+(256, 256, 3)
+mask (256, 256)
+mask img_dict['label'](256, 256)img_dict['label']
+img_dict['label'] (256, 256, 3) (256, 256, 3)
+(256, 256, 3)
+img_dict['label']maskmask   mask(256, 256, 3)(256, 256)(256, 256)
+(256, 256)mask
+ (256, 256)
+img_dict['label'] (256, 256, 3)
+maskimg_dict['label']  (256, 256)
+(256, 256, 3)img_dict['label']img_dict['label']
+  (256, 256, 3)img_dict['label']maskimg_dict['label'](256, 256, 3)
+(256, 256, 3)(256, 256)mask(256, 256, 3)
+mask(256, 256)maskmask
+  (256, 256)(256, 256)(256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label']img_dict['label']
+  (256, 256, 3)(256, 256, 3)
+mask
+ mask (256, 256)(256, 256)img_dict['label']img_dict['label']
+ (256, 256, 3)(256, 256, 3)
+maskmask  mask(256, 256)(256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)
+mask img_dict['label'](256, 256)
+(256, 256, 3)
+img_dict['label'] img_dict['label'](256, 256, 3)mask
+ (256, 256, 3)(256, 256)
+mask
+ (256, 256)mask
+ (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label']img_dict['label']  img_dict['label']img_dict['label'](256, 256, 3)(256, 256, 3)
+(256, 256, 3)mask(256, 256, 3)img_dict['label']
+ mask
+ (256, 256) mask(256, 256, 3)
+(256, 256) mask
+(256, 256)
+(256, 256)
+mask (256, 256)img_dict['label']
+img_dict['label']img_dict['label'] (256, 256, 3)  (256, 256, 3)
+(256, 256, 3)
+maskmask  (256, 256)mask(256, 256)
+img_dict['label'](256, 256)
+(256, 256, 3)
+mask (256, 256)
+img_dict['label'] img_dict['label'](256, 256, 3) (256, 256, 3)
+maskmask (256, 256)
+ (256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label']mask  (256, 256, 3)(256, 256)
+img_dict['label'] (256, 256, 3)mask
+mask  (256, 256)(256, 256)
+img_dict['label']
+ img_dict['label'] (256, 256, 3)(256, 256, 3)
+mask mask(256, 256)
+(256, 256)img_dict['label']
+ (256, 256, 3)
+img_dict['label'] (256, 256, 3)
+mask mask (256, 256)
+(256, 256)img_dict['label']
+ (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label']img_dict['label']  (256, 256, 3)(256, 256, 3)
+mask (256, 256)mask
+ (256, 256)
+img_dict['label'] (256, 256, 3)img_dict['label']
+(256, 256, 3)
+maskmask  (256, 256)(256, 256)
+img_dict['label']img_dict['label']
+img_dict['label'] (256, 256, 3)
+img_dict['label'] (256, 256, 3) (256, 256, 3)maskimg_dict['label']
+(256, 256, 3)
+mask(256, 256)(256, 256, 3)mask
+mask
+ (256, 256) (256, 256)
+(256, 256)
+img_dict['label'] mask(256, 256, 3)
+maskimg_dict['label'](256, 256)
+  (256, 256)(256, 256, 3)
+img_dict['label']mask  (256, 256)(256, 256, 3)img_dict['label']
+ (256, 256, 3)mask (256, 256)
+img_dict['label'] img_dict['label'](256, 256, 3)mask (256, 256)
+mask (256, 256)
+(256, 256, 3)
+mask img_dict['label']img_dict['label'](256, 256)
+(256, 256, 3)(256, 256, 3)
+img_dict['label'] (256, 256, 3)mask
+mask (256, 256) mask
+(256, 256)
+img_dict['label'] (256, 256, 3)
+(256, 256)
+mask (256, 256)
+img_dict['label'] img_dict['label'] (256, 256, 3)
+(256, 256, 3)img_dict['label']
+ maskmask(256, 256, 3)
+ (256, 256) mask
+(256, 256)img_dict['label']
+ (256, 256)(256, 256, 3)
+maskimg_dict['label']  (256, 256)(256, 256, 3)
+img_dict['label'] mask(256, 256, 3)
+img_dict['label']img_dict['label'](256, 256) mask (256, 256)
+(256, 256, 3)
+img_dict['label'](256, 256, 3)
+(256, 256, 3)
+maskmask mask (256, 256)
+ (256, 256)(256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label']img_dict['label'] img_dict['label'](256, 256, 3) (256, 256, 3)img_dict['label']
+ (256, 256, 3)(256, 256, 3)
+mask
+img_dict['label'](256, 256)maskmaskmask
+   (256, 256)(256, 256, 3)(256, 256)(256, 256)
+maskimg_dict['label']img_dict['label']   (256, 256)(256, 256, 3)(256, 256, 3)
+maskimg_dict['label']mask (256, 256)
+(256, 256)(256, 256, 3)
+img_dict['label'] mask(256, 256, 3)
+(256, 256)maskimg_dict['label']
+ (256, 256, 3)img_dict['label'](256, 256)
+img_dict['label']
+  mask(256, 256, 3)(256, 256, 3) (256, 256)
+img_dict['label']
+maskimg_dict['label']  mask (256, 256, 3)(256, 256) (256, 256, 3)
+(256, 256)
+mask mask(256, 256)img_dict['label']
+ (256, 256)
+(256, 256, 3)
+mask img_dict['label']img_dict['label'] (256, 256, 3)
+img_dict['label']mask img_dict['label'](256, 256)  (256, 256)
+(256, 256, 3)(256, 256, 3)
+(256, 256, 3)
+mask (256, 256)
+img_dict['label']maskmask   (256, 256)(256, 256, 3)(256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label'] (256, 256, 3)
+maskimg_dict['label']maskimg_dict['label']    mask(256, 256)(256, 256)(256, 256, 3)
+(256, 256, 3)
+(256, 256)mask
+ mask(256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)img_dict['label']img_dict['label']
+ (256, 256, 3)(256, 256, 3)
+maskmaskmask  img_dict['label'] (256, 256)(256, 256)
+ (256, 256)
+(256, 256, 3)
+img_dict['label']mask  (256, 256)(256, 256, 3)
+maskimg_dict['label'] (256, 256, 3)
+ img_dict['label']mask (256, 256)
+img_dict['label'](256, 256)(256, 256, 3)
+(256, 256, 3)
+mask
+ (256, 256)mask (256, 256)
+img_dict['label']
+ (256, 256, 3)
+img_dict['label'] mask(256, 256, 3) (256, 256)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+maskimg_dict['label']  (256, 256)(256, 256, 3)
+img_dict['label'] (256, 256, 3)
+maskimg_dict['label']  (256, 256)
+(256, 256, 3)
+img_dict['label'] (256, 256, 3)maskmask
+  (256, 256)(256, 256)
+mask
+img_dict['label'] (256, 256, 3)
+mask (256, 256)img_dict['label'] img_dict['label'] (256, 256, 3)
+(256, 256)(256, 256, 3)
+maskmaskimg_dict['label']  (256, 256)
+ (256, 256)(256, 256, 3)
+img_dict['label']
+mask  (256, 256, 3)(256, 256)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label'] mask(256, 256, 3)img_dict['label']
+ (256, 256)(256, 256, 3)mask
+img_dict['label'] img_dict['label'] (256, 256)mask (256, 256, 3)
+ (256, 256, 3)
+(256, 256)
+mask mask(256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)img_dict['label']
+ (256, 256, 3)
+img_dict['label']mask mask (256, 256, 3) (256, 256)
+(256, 256)
+maskimg_dict['label']  img_dict['label'](256, 256)
+(256, 256, 3)
+img_dict['label']img_dict['label']   (256, 256, 3)(256, 256, 3)(256, 256, 3)
+maskmaskimg_dict['label']mask   (256, 256, 3)mask (256, 256)(256, 256)
+ (256, 256)
+(256, 256)
+mask
+ (256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+mask (256, 256)
+img_dict['label'] img_dict['label'](256, 256, 3)
+(256, 256, 3)
+maskimg_dict['label']  (256, 256)mask(256, 256, 3)
+(256, 256)img_dict['label']
+ mask(256, 256, 3)
+(256, 256)
+mask (256, 256)img_dict['label']img_dict['label']
+img_dict['label']   (256, 256, 3)(256, 256, 3)(256, 256, 3)
+maskmask mask (256, 256) (256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)img_dict['label']
+ (256, 256, 3)
+img_dict['label']mask img_dict['label'] (256, 256, 3) (256, 256, 3)(256, 256)mask
+ mask(256, 256) img_dict['label']
+(256, 256)
+ (256, 256, 3)img_dict['label']
+(256, 256, 3)mask
+mask img_dict['label'] (256, 256)mask (256, 256)
+ (256, 256, 3)
+img_dict['label'](256, 256)
+(256, 256, 3)
+mask (256, 256)
+mask (256, 256)img_dict['label']
+ img_dict['label'](256, 256, 3)
+(256, 256, 3)
+mask (256, 256)mask
+ (256, 256)img_dict['label']
+ (256, 256, 3)img_dict['label']
+mask  (256, 256, 3)(256, 256)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)img_dict['label']img_dict['label']
+ (256, 256, 3)(256, 256, 3)
+mask
+img_dict['label'] img_dict['label']mask (256, 256)  mask(256, 256, 3)
+(256, 256, 3)(256, 256)
+(256, 256)
+maskmask  (256, 256)
+(256, 256)img_dict['label']img_dict['label']
+  (256, 256, 3)(256, 256, 3)
+maskmask  (256, 256)(256, 256)
+img_dict['label'] img_dict['label'] (256, 256, 3)(256, 256, 3)
+mask (256, 256)mask
+(256, 256)img_dict['label']img_dict['label']
+ (256, 256, 3)(256, 256, 3)
+img_dict['label']
+ img_dict['label']img_dict['label'] (256, 256, 3)mask (256, 256, 3)
+ (256, 256, 3)
+(256, 256)mask
+mask
+ mask (256, 256) mask(256, 256)
+(256, 256)(256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)img_dict['label']
+ (256, 256, 3)
+mask (256, 256)img_dict['label']maskimg_dict['label']
+   (256, 256, 3)(256, 256)(256, 256, 3)
+mask mask(256, 256)
+(256, 256)img_dict['label']
+ (256, 256, 3)
+mask (256, 256)
+img_dict['label']img_dict['label']img_dict['label'] img_dict['label'] (256, 256, 3) (256, 256, 3)
+(256, 256, 3)
+(256, 256, 3)maskimg_dict['label']
+  (256, 256)mask(256, 256, 3)mask
+mask
+  (256, 256)(256, 256)(256, 256)
+mask img_dict['label'](256, 256)
+(256, 256, 3)
+mask img_dict['label'] (256, 256)(256, 256, 3)
+img_dict['label']
+img_dict['label'] (256, 256, 3)
+maskmask(256, 256, 3)img_dict['label']  (256, 256)
+ (256, 256)
+(256, 256, 3)
+mask
+ (256, 256)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask img_dict['label']img_dict['label'](256, 256)
+img_dict['label'] (256, 256, 3)
+ (256, 256, 3) img_dict['label']maskimg_dict['label']
+(256, 256, 3)
+(256, 256, 3)mask(256, 256)(256, 256, 3)
+ mask
+(256, 256) mask
+mask(256, 256)
+(256, 256)(256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label'] (256, 256, 3)mask
+ (256, 256)
+maskimg_dict['label'] (256, 256)
+(256, 256, 3)
+img_dict['label'] (256, 256, 3)
+img_dict['label']mask (256, 256, 3) (256, 256)
+mask
+ (256, 256)img_dict['label']
+img_dict['label'](256, 256, 3)mask img_dict['label']
+ (256, 256, 3) (256, 256)
+mask(256, 256, 3)
+ img_dict['label']
+(256, 256) mask
+(256, 256, 3)mask
+ (256, 256)(256, 256)
+mask (256, 256)
+img_dict['label']img_dict['label'] img_dict['label'] (256, 256, 3) (256, 256, 3)
+mask (256, 256, 3)mask(256, 256)
+ (256, 256)
+maskimg_dict['label']
+  (256, 256)(256, 256, 3)
+img_dict['label'] (256, 256, 3)
+mask maskimg_dict['label'](256, 256)
+img_dict['label'](256, 256)(256, 256, 3)
+(256, 256, 3)img_dict['label']
+ (256, 256, 3)
+maskmask mask (256, 256) (256, 256)(256, 256)
+img_dict['label']
+(256, 256, 3)img_dict['label']
+ img_dict['label'](256, 256, 3)mask
+ (256, 256, 3)
+(256, 256)
+maskmask  (256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)
+mask img_dict['label'](256, 256)img_dict['label']
+ (256, 256, 3)(256, 256, 3)
+img_dict['label'] mask(256, 256, 3)
+(256, 256)
+mask mask(256, 256) (256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label'] (256, 256, 3)mask
+mask  (256, 256)(256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label']mask  (256, 256, 3)(256, 256)
+img_dict['label'] mask (256, 256)
+img_dict['label'](256, 256, 3)img_dict['label']
+ (256, 256, 3)mask(256, 256, 3)
+(256, 256)mask
+img_dict['label']  mask(256, 256)(256, 256, 3)
+(256, 256)
+img_dict['label']mask  (256, 256, 3)(256, 256)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label']img_dict['label']  img_dict['label'](256, 256, 3)(256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)(256, 256, 3)mask
+ (256, 256)img_dict['label']mask
+mask  img_dict['label'] (256, 256, 3)
+(256, 256) (256, 256)
+(256, 256, 3)
+mask
+(256, 256)img_dict['label']
+mask img_dict['label'] (256, 256)
+ (256, 256, 3)(256, 256, 3)
+mask (256, 256)
+mask (256, 256)
+img_dict['label']img_dict['label']  (256, 256, 3)(256, 256, 3)
+mask (256, 256)maskimg_dict['label']
+ (256, 256, 3)(256, 256)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label'] (256, 256, 3)mask
+ mask(256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label']img_dict['label']img_dict['label']   (256, 256, 3)(256, 256, 3)(256, 256, 3)
+mask
+maskimg_dict['label']  img_dict['label'] (256, 256)(256, 256)mask (256, 256, 3)
+ (256, 256, 3)
+(256, 256)
+mask (256, 256)mask
+(256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label'] mask (256, 256, 3)(256, 256)
+img_dict['label']mask (256, 256, 3)
+(256, 256)
+maskimg_dict['label'] (256, 256, 3)
+mask (256, 256) img_dict['label']
+(256, 256)
+ (256, 256, 3)
+img_dict['label']img_dict['label']mask   (256, 256, 3)(256, 256)(256, 256, 3)
+mask mask(256, 256)
+(256, 256)img_dict['label']img_dict['label']
+ (256, 256, 3)
+(256, 256, 3)mask
+ (256, 256)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label']img_dict['label']  (256, 256, 3)(256, 256, 3)
+maskimg_dict['label'] mask  mask(256, 256)img_dict['label'](256, 256, 3)(256, 256)
+(256, 256)(256, 256, 3)
+mask (256, 256)mask
+ img_dict['label']img_dict['label'](256, 256)img_dict['label']
+ (256, 256, 3)(256, 256, 3)(256, 256, 3)
+mask mask (256, 256)
+mask(256, 256)
+(256, 256)
+img_dict['label']img_dict['label']  (256, 256, 3)(256, 256, 3)
+maskmask  (256, 256)(256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)img_dict['label']
+ img_dict['label'](256, 256, 3)img_dict['label']mask
+  (256, 256, 3)img_dict['label'](256, 256, 3)(256, 256)mask
+ (256, 256, 3)maskmask(256, 256)
+(256, 256)(256, 256)mask
+img_dict['label']
+ img_dict['label'] (256, 256, 3)(256, 256)(256, 256, 3)img_dict['label']
+ mask(256, 256, 3)
+(256, 256)mask
+ (256, 256)mask
+ (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label']img_dict['label'] img_dict['label'] (256, 256, 3)img_dict['label'] (256, 256, 3)
+(256, 256, 3)
+(256, 256, 3)
+mask (256, 256)mask
+maskimg_dict['label']mask    (256, 256)(256, 256)(256, 256, 3)(256, 256)
+img_dict['label']mask  (256, 256, 3)
+(256, 256)img_dict['label']mask
+ img_dict['label'](256, 256)(256, 256, 3)img_dict['label']
+ (256, 256, 3)
+(256, 256, 3)maskmask
+mask  (256, 256)
+ (256, 256)img_dict['label'] (256, 256)
+(256, 256, 3)
+img_dict['label']mask  (256, 256, 3)(256, 256)
+maskimg_dict['label']  (256, 256)(256, 256, 3)
+mask img_dict['label'](256, 256)img_dict['label']
+ (256, 256, 3)(256, 256, 3)
+maskimg_dict['label']maskimg_dict['label']    (256, 256)(256, 256, 3)(256, 256)(256, 256, 3)
+mask (256, 256)
+img_dict['label'] img_dict['label'] mask(256, 256, 3) (256, 256, 3)(256, 256)
+img_dict['label']
+ (256, 256, 3)maskmask
+  mask(256, 256)(256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)
+mask img_dict['label']img_dict['label'](256, 256)
+  (256, 256, 3)(256, 256, 3)
+img_dict['label']img_dict['label'] mask (256, 256, 3) (256, 256)
+img_dict['label'] (256, 256, 3)mask(256, 256, 3)
+mask(256, 256)mask (256, 256)
+ mask (256, 256)
+(256, 256)img_dict['label']
+ (256, 256, 3)
+mask (256, 256)
+img_dict['label']img_dict['label']  (256, 256, 3)(256, 256, 3)
+mask (256, 256)mask
+ (256, 256)
+img_dict['label'] (256, 256, 3)img_dict['label']
+ (256, 256, 3)mask
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)img_dict['label']
+ (256, 256, 3)mask
+  (256, 256)(256, 256)
+mask
+(256, 256)
+img_dict['label']img_dict['label']  (256, 256, 3)(256, 256, 3)
+mask mask(256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+mask (256, 256)img_dict['label']img_dict['label']
+  (256, 256, 3)(256, 256, 3)
+img_dict['label']
+ (256, 256, 3)mask
+mask  mask(256, 256)(256, 256)
+(256, 256)
+img_dict['label']img_dict['label']  (256, 256, 3)(256, 256, 3)
+img_dict['label']maskmask   (256, 256, 3)(256, 256)(256, 256)img_dict['label']
+ mask(256, 256, 3)
+(256, 256)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label'] (256, 256, 3)mask
+(256, 256)
+img_dict['label'] mask(256, 256, 3)
+(256, 256)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label']img_dict['label']  (256, 256, 3)(256, 256, 3)
+mask (256, 256)
+mask (256, 256)
+img_dict['label']img_dict['label']img_dict['label'] (256, 256, 3) (256, 256, 3)
+img_dict['label']
+(256, 256, 3)
+ maskmask(256, 256, 3)mask  img_dict['label']
+ (256, 256)(256, 256) (256, 256)mask
+(256, 256, 3)
+(256, 256)
+mask (256, 256)img_dict['label'] (256, 256, 3)
+img_dict['label']
+ img_dict['label']maskimg_dict['label'](256, 256, 3)
+(256, 256, 3)(256, 256)(256, 256, 3)mask
+ mask(256, 256)
+mask(256, 256) (256, 256)img_dict['label']
+ (256, 256, 3)
+img_dict['label'] (256, 256, 3)mask
+ (256, 256)
+mask (256, 256)
+img_dict['label']img_dict['label']  img_dict['label']img_dict['label'](256, 256, 3)(256, 256, 3)
+(256, 256, 3)(256, 256, 3)
+mask
+mask mask (256, 256) (256, 256)
+(256, 256)
+mask (256, 256)
+img_dict['label']img_dict['label']  (256, 256, 3)(256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)mask
+ mask(256, 256)
+ img_dict['label'](256, 256) img_dict['label']
+ (256, 256, 3)(256, 256, 3)
+mask maskimg_dict['label']img_dict['label'](256, 256) img_dict['label']
+(256, 256) (256, 256, 3)(256, 256, 3)
+(256, 256, 3)
+mask mask
+img_dict['label'](256, 256)  mask
+(256, 256)(256, 256, 3)
+(256, 256)
+img_dict['label'] (256, 256, 3)img_dict['label']
+maskmask  img_dict['label'] (256, 256, 3)(256, 256) (256, 256)
+(256, 256, 3)
+mask
+ mask(256, 256) img_dict['label']img_dict['label']
+(256, 256)
+(256, 256, 3)(256, 256, 3)
+img_dict['label'] (256, 256, 3)mask
+ maskmask(256, 256)
+(256, 256)img_dict['label']img_dict['label'](256, 256)
+(256, 256, 3)(256, 256, 3)
+img_dict['label']
+ (256, 256, 3)
+maskmask  (256, 256)mask(256, 256)img_dict['label']
+ (256, 256)(256, 256, 3)
+mask img_dict['label'](256, 256) (256, 256, 3)
+img_dict['label'] (256, 256, 3)
+img_dict['label']img_dict['label']maskimg_dict['label']    (256, 256, 3)mask(256, 256, 3) (256, 256)(256, 256, 3)
+(256, 256)
+mask mask(256, 256) mask
+(256, 256) img_dict['label']
+(256, 256)
+(256, 256, 3)
+mask (256, 256)img_dict['label']
+ (256, 256, 3)img_dict['label']
+ (256, 256, 3)
+mask (256, 256)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)img_dict['label']
+ (256, 256, 3)mask
+ (256, 256)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label']mask  img_dict['label'](256, 256, 3)(256, 256)
+(256, 256, 3)
+mask (256, 256)mask
+ (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label']img_dict['label'] img_dict['label'](256, 256, 3) (256, 256, 3)
+(256, 256, 3)maskimg_dict['label']
+  (256, 256)mask(256, 256, 3)
+maskimg_dict['label'](256, 256)  mask
+(256, 256)(256, 256, 3)
+img_dict['label'](256, 256)
+(256, 256, 3)
+maskmask img_dict['label'] (256, 256) (256, 256)
+(256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)img_dict['label']
+ (256, 256, 3)
+maskmask (256, 256)img_dict['label'] (256, 256, 3)
+mask  (256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)img_dict['label']
+ (256, 256, 3)
+mask (256, 256)
+maskimg_dict['label']  (256, 256)(256, 256, 3)
+mask (256, 256)
+img_dict['label']img_dict['label']  (256, 256, 3)
+img_dict['label'] (256, 256, 3)(256, 256, 3)mask
+ (256, 256)mask
+img_dict['label'] mask (256, 256, 3) (256, 256)
+(256, 256)
+maskimg_dict['label']  (256, 256)(256, 256, 3)
+img_dict['label'] mask (256, 256, 3)(256, 256)
+maskimg_dict['label'] img_dict['label'] (256, 256) (256, 256, 3)
+(256, 256, 3)
+img_dict['label']mask
+  (256, 256, 3)(256, 256)mask
+ (256, 256)mask
+ (256, 256)
+img_dict['label']img_dict['label'] (256, 256, 3)
+(256, 256, 3)
+mask mask(256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label'] (256, 256, 3)
+img_dict['label']img_dict['label']maskmask    (256, 256, 3)img_dict['label'](256, 256)(256, 256, 3)(256, 256)
+mask
+(256, 256, 3)
+(256, 256)mask
+ mask(256, 256)
+ (256, 256)
+img_dict['label']img_dict['label']  (256, 256, 3)(256, 256, 3)
+img_dict['label'] (256, 256, 3)
+maskimg_dict['label']  mask(256, 256, 3)mask(256, 256)  img_dict['label']
+(256, 256)(256, 256)
+mask
+(256, 256, 3)
+(256, 256)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)img_dict['label']
+ (256, 256, 3)
+maskimg_dict['label']mask (256, 256)
+  img_dict['label']img_dict['label'](256, 256, 3)(256, 256)
+(256, 256, 3)(256, 256, 3)
+mask maskmask(256, 256)  (256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label'] maskimg_dict['label'] (256, 256, 3) (256, 256, 3)
+(256, 256)
+img_dict['label']mask (256, 256)
+ maskimg_dict['label'](256, 256, 3)
+(256, 256)(256, 256, 3)
+mask (256, 256)
+maskimg_dict['label']  (256, 256)(256, 256, 3)
+img_dict['label']
+img_dict['label']  (256, 256, 3)(256, 256, 3)
+maskmask  (256, 256)(256, 256)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label']img_dict['label']  (256, 256, 3)(256, 256, 3)
+mask mask(256, 256)
+(256, 256)
+img_dict['label']img_dict['label'] img_dict['label']img_dict['label'](256, 256, 3)
+(256, 256, 3)img_dict['label'](256, 256, 3)mask(256, 256, 3)
+(256, 256, 3)(256, 256)
+maskmask
+ mask (256, 256)mask (256, 256)
+ (256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label']maskimg_dict['label'] img_dict['label']   (256, 256, 3)(256, 256, 3)(256, 256)(256, 256, 3)
+img_dict['label']maskmaskmask    (256, 256, 3)(256, 256)(256, 256)(256, 256)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+maskimg_dict['label']  (256, 256)
+(256, 256, 3)
+img_dict['label']img_dict['label']mask  (256, 256, 3) (256, 256)
+(256, 256, 3)
+img_dict['label']
+img_dict['label']mask mask  (256, 256, 3) (256, 256, 3)(256, 256)
+(256, 256)
+mask mask(256, 256)
+img_dict['label'](256, 256)
+(256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)img_dict['label'] (256, 256, 3)
+img_dict['label']mask img_dict['label'] (256, 256) (256, 256, 3)img_dict['label']mask
+(256, 256, 3)
+(256, 256, 3)(256, 256)mask
+ maskmaskimg_dict['label'](256, 256)
+(256, 256)(256, 256)(256, 256, 3)
+img_dict['label']
+ (256, 256, 3)
+mask (256, 256)
+mask (256, 256)
+img_dict['label']img_dict['label'] img_dict['label'] (256, 256, 3) (256, 256, 3)
+(256, 256, 3)
+maskmask (256, 256)maskimg_dict['label']
+ (256, 256) (256, 256)
+(256, 256, 3)
+img_dict['label']
+ (256, 256, 3)mask
+ mask(256, 256)
+ (256, 256)
+img_dict['label']img_dict['label'] (256, 256, 3)
+(256, 256, 3)
+mask img_dict['label'] (256, 256)mask(256, 256, 3)
+img_dict['label']
+mask  (256, 256, 3) (256, 256)
+img_dict['label'] (256, 256)
+(256, 256, 3)img_dict['label']img_dict['label']
+ mask (256, 256, 3) (256, 256, 3)
+(256, 256)
+mask
+ maskmask(256, 256)
+(256, 256)(256, 256)
+img_dict['label'] img_dict['label'] (256, 256, 3)(256, 256, 3)
+mask
+img_dict['label']  mask img_dict['label'](256, 256, 3) (256, 256)(256, 256)
+(256, 256, 3)
+img_dict['label']maskmask   (256, 256, 3)(256, 256)(256, 256)
+img_dict['label'] mask(256, 256, 3)
+(256, 256)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label']mask  (256, 256, 3)(256, 256)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] img_dict['label']img_dict['label']img_dict['label'] (256, 256, 3)img_dict['label']  (256, 256, 3)
+ (256, 256, 3)(256, 256, 3)
+(256, 256, 3)
+mask
+ (256, 256)mask
+maskmask mask  (256, 256) (256, 256)(256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)
+maskimg_dict['label'] (256, 256, 3) (256, 256)
+img_dict['label'] (256, 256, 3)
+maskimg_dict['label']
+mask (256, 256)
+img_dict['label']   (256, 256)img_dict['label'](256, 256, 3)img_dict['label'](256, 256, 3)
+(256, 256, 3)(256, 256, 3)mask
+ mask(256, 256) mask
+maskimg_dict['label'](256, 256)
+(256, 256, 3)(256, 256)
+(256, 256)
+img_dict['label']
+ (256, 256, 3)mask
+ (256, 256)
+maskimg_dict['label']img_dict['label']  (256, 256, 3) (256, 256)
+img_dict['label'](256, 256, 3)
+mask (256, 256)mask(256, 256, 3)
+ (256, 256)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)img_dict['label'] (256, 256, 3)
+mask
+(256, 256)img_dict['label'] img_dict['label'](256, 256, 3)
+maskimg_dict['label']
+(256, 256, 3)
+mask(256, 256)(256, 256, 3)
+img_dict['label']mask
+(256, 256) (256, 256, 3)mask
+(256, 256)
+img_dict['label'](256, 256)mask
+ (256, 256, 3)
+(256, 256)
+mask img_dict['label']img_dict['label'](256, 256)
+(256, 256, 3)(256, 256, 3)
+mask
+mask  (256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label'] (256, 256, 3)mask
+ (256, 256)
+maskimg_dict['label']  img_dict['label'](256, 256)(256, 256, 3)
+img_dict['label'](256, 256, 3)
+img_dict['label']img_dict['label']mask(256, 256, 3)   (256, 256, 3)mask
+(256, 256, 3)(256, 256)
+mask(256, 256)mask
+ mask(256, 256)(256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] img_dict['label'](256, 256, 3)
+(256, 256, 3)
+mask (256, 256)
+img_dict['label'] maskimg_dict['label'] (256, 256, 3) (256, 256)
+(256, 256, 3)
+mask
+img_dict['label']img_dict['label'] (256, 256) (256, 256, 3)
+(256, 256, 3)mask
+img_dict['label'] mask mask(256, 256) (256, 256, 3)
+(256, 256)
+(256, 256)img_dict['label']
+ mask(256, 256, 3)
+(256, 256)
+img_dict['label'] (256, 256, 3)mask
+ (256, 256)
+mask img_dict['label']img_dict['label']img_dict['label'](256, 256)
+(256, 256, 3)(256, 256, 3)(256, 256, 3)
+maskmaskmask   (256, 256)(256, 256)(256, 256)
+img_dict['label'] (256, 256, 3)img_dict['label']
+ (256, 256, 3)mask
+ (256, 256)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)img_dict['label']
+ (256, 256, 3)
+mask (256, 256)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label'] (256, 256, 3)
+img_dict['label']img_dict['label']  mask(256, 256, 3)(256, 256, 3)mask
+(256, 256)
+ (256, 256)
+maskimg_dict['label']mask
+   (256, 256)(256, 256, 3)(256, 256)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+maskimg_dict['label']  (256, 256)(256, 256, 3)img_dict['label']
+img_dict['label'](256, 256, 3)img_dict['label']mask
+  (256, 256, 3)mask(256, 256, 3)(256, 256)
+(256, 256)mask
+mask  (256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label']img_dict['label']img_dict['label']img_dict['label']img_dict['label']     (256, 256, 3)(256, 256, 3)(256, 256, 3)(256, 256, 3)(256, 256, 3)
+maskmask  (256, 256)maskmask(256, 256)
+mask
+ (256, 256)(256, 256)(256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)img_dict['label']
+ (256, 256, 3)mask
+ (256, 256)
+mask (256, 256)
+img_dict['label'] img_dict['label'](256, 256, 3) img_dict['label']img_dict['label']
+(256, 256, 3)
+  (256, 256, 3)
+maskmask(256, 256, 3)  mask
+(256, 256)img_dict['label'](256, 256)
+ mask
+(256, 256)(256, 256, 3)
+mask (256, 256)(256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+maskimg_dict['label']  (256, 256)(256, 256, 3)
+mask (256, 256)
+img_dict['label']img_dict['label']  img_dict['label'](256, 256, 3)(256, 256, 3)img_dict['label']
+ (256, 256, 3)maskimg_dict['label']mask(256, 256, 3)
+(256, 256)(256, 256, 3)(256, 256)mask
+mask  mask(256, 256)(256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label']img_dict['label'] img_dict['label'] mask(256, 256, 3) (256, 256, 3) (256, 256)img_dict['label'] (256, 256, 3)
+(256, 256, 3)
+maskmask mask (256, 256)mask (256, 256)
+ (256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label']img_dict['label']  (256, 256, 3)(256, 256, 3)
+maskmask  (256, 256)mask(256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label']img_dict['label']  (256, 256, 3)(256, 256, 3)
+mask mask(256, 256)
+ (256, 256)
+img_dict['label']img_dict['label']  img_dict['label'](256, 256, 3)(256, 256, 3)
+img_dict['label']
+ mask(256, 256, 3)(256, 256, 3)img_dict['label'] mask
+ (256, 256) (256, 256, 3)
+(256, 256)maskmask
+  (256, 256)(256, 256)
+mask
+ (256, 256)
+img_dict['label']img_dict['label']img_dict['label'] img_dict['label'] (256, 256, 3) (256, 256, 3)(256, 256, 3)
+ (256, 256, 3)
+mask
+ (256, 256)maskmask
+ mask (256, 256) img_dict['label'](256, 256)
+(256, 256)
+(256, 256, 3)
+img_dict['label'] (256, 256, 3)
+img_dict['label'] mask(256, 256, 3)
+(256, 256)
+mask (256, 256)
+img_dict['label']mask img_dict['label'] (256, 256, 3) (256, 256)
+(256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+mask
+ img_dict['label'](256, 256)
+ (256, 256, 3)
+mask img_dict['label'](256, 256)
+(256, 256, 3)img_dict['label']
+ mask(256, 256, 3)
+mask(256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)
+mask img_dict['label'](256, 256) (256, 256, 3)
+mask (256, 256)
+img_dict['label'] img_dict['label'](256, 256, 3)
+(256, 256, 3)
+mask (256, 256)
+img_dict['label']maskimg_dict['label']   (256, 256, 3)
+mask(256, 256, 3)(256, 256)
+maskimg_dict['label'](256, 256)  img_dict['label']
+(256, 256)(256, 256, 3)
+img_dict['label'](256, 256, 3)
+(256, 256, 3)
+maskmask (256, 256)
+mask  (256, 256)(256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label'] img_dict['label']img_dict['label']mask (256, 256, 3)  (256, 256, 3)
+(256, 256, 3)(256, 256)
+img_dict['label']
+mask  (256, 256, 3)mask(256, 256) mask
+(256, 256)
+(256, 256)maskimg_dict['label'] (256, 256) (256, 256, 3)
+img_dict['label']mask  (256, 256, 3)
+img_dict['label'] (256, 256, 3)
+mask(256, 256) img_dict['label']
+(256, 256) mask
+(256, 256, 3)
+ (256, 256)mask
+ (256, 256)img_dict['label']
+ (256, 256, 3)
+mask (256, 256)img_dict['label']
+(256, 256, 3)img_dict['label']
+ (256, 256, 3)mask
+ (256, 256)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)img_dict['label']
+ (256, 256, 3)
+mask (256, 256)
+mask (256, 256)
+img_dict['label'] img_dict['label'](256, 256, 3)
+(256, 256, 3)
+mask mask(256, 256) img_dict['label']
+ (256, 256)(256, 256, 3)
+mask (256, 256)
+img_dict['label']img_dict['label']  (256, 256, 3)(256, 256, 3)
+mask mask(256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask img_dict['label'](256, 256)
+ img_dict['label']img_dict['label'] (256, 256, 3) (256, 256, 3)
+(256, 256, 3)
+img_dict['label']
+img_dict['label']mask mask  (256, 256, 3) mask(256, 256, 3)(256, 256)
+(256, 256)
+(256, 256)mask
+mask  (256, 256)(256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label'] mask (256, 256, 3)img_dict['label'] (256, 256, 3)
+(256, 256)
+mask mask (256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)
+maskimg_dict['label'] (256, 256, 3)
+mask  (256, 256)(256, 256)
+img_dict['label']
+img_dict['label']img_dict['label']  (256, 256, 3) (256, 256, 3)(256, 256, 3)
+img_dict['label']
+mask (256, 256, 3)mask img_dict['label']
+mask(256, 256) (256, 256)
+mask(256, 256, 3)
+(256, 256)
+mask(256, 256) (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)img_dict['label']
+(256, 256, 3)
+maskimg_dict['label']mask   (256, 256)(256, 256, 3)(256, 256)
+img_dict['label']mask  (256, 256, 3)
+(256, 256)
+mask img_dict['label'](256, 256) (256, 256, 3)
+mask (256, 256)
+img_dict['label']img_dict['label']  (256, 256, 3)(256, 256, 3)
+img_dict['label'] mask
+(256, 256, 3)img_dict['label']
+ (256, 256)mask(256, 256, 3)img_dict['label']
+ mask
+(256, 256, 3) (256, 256)
+(256, 256)mask
+ mask(256, 256)
+img_dict['label'](256, 256)img_dict['label']
+img_dict['label'] (256, 256, 3) (256, 256, 3)
+(256, 256, 3)
+img_dict['label']
+maskimg_dict['label']mask    mask(256, 256, 3)(256, 256)(256, 256, 3)(256, 256)
+(256, 256)mask
+ (256, 256)mask
+ img_dict['label'](256, 256) img_dict['label']
+(256, 256, 3)
+(256, 256, 3)
+mask mask(256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] img_dict['label'](256, 256, 3)
+ (256, 256, 3)mask
+ (256, 256)img_dict['label']
+mask (256, 256, 3)
+(256, 256)
+mask (256, 256)img_dict['label']
+img_dict['label']  (256, 256, 3)(256, 256, 3)
+maskimg_dict['label']  mask (256, 256)
+img_dict['label'](256, 256)(256, 256, 3)
+(256, 256, 3)
+mask (256, 256)mask
+img_dict['label']  (256, 256)(256, 256, 3)
+img_dict['label'] (256, 256, 3)
+maskmask  img_dict['label'](256, 256) (256, 256)
+(256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label']mask  (256, 256, 3)(256, 256)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label'] (256, 256, 3)
+maskmask  (256, 256)(256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)img_dict['label']
+img_dict['label'] (256, 256, 3)(256, 256, 3)
+maskimg_dict['label']mask  (256, 256, 3)
+(256, 256)
+mask (256, 256)img_dict['label'] (256, 256, 3) img_dict['label']img_dict['label']
+(256, 256)
+(256, 256, 3)mask(256, 256, 3)
+(256, 256)mask
+ (256, 256)
+img_dict['label']maskimg_dict['label'] img_dict['label']  (256, 256, 3) (256, 256, 3)(256, 256)(256, 256, 3)
+img_dict['label']maskmask mask  (256, 256, 3) (256, 256)(256, 256)
+(256, 256)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)img_dict['label']
+ img_dict['label'] (256, 256, 3)
+(256, 256, 3)maskimg_dict['label']img_dict['label']
+mask    (256, 256)(256, 256, 3)mask(256, 256, 3)(256, 256)
+(256, 256)maskmask
+  (256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label']img_dict['label']  img_dict['label']img_dict['label'] (256, 256, 3)
+(256, 256, 3) (256, 256, 3)
+img_dict['label']mask
+(256, 256, 3)
+mask(256, 256, 3)(256, 256)
+mask
+mask(256, 256) mask
+(256, 256) (256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label']mask img_dict['label'] img_dict['label'](256, 256) (256, 256, 3)
+(256, 256, 3)
+(256, 256, 3)
+mask (256, 256)
+mask (256, 256)mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] img_dict['label'](256, 256, 3) (256, 256, 3)
+img_dict['label'] maskmask img_dict['label'](256, 256, 3) (256, 256)
+(256, 256)
+mask(256, 256, 3)
+img_dict['label']
+ (256, 256)(256, 256, 3)
+mask mask(256, 256)
+ (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)mask
+ (256, 256)img_dict['label']img_dict['label']
+ img_dict['label'] (256, 256, 3) (256, 256, 3)img_dict['label']
+(256, 256, 3)
+mask(256, 256, 3) mask
+mask(256, 256)  mask
+(256, 256)(256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)img_dict['label']
+ (256, 256, 3)
+mask img_dict['label'](256, 256)mask
+ (256, 256, 3)(256, 256)
+img_dict['label'] mask(256, 256, 3)
+(256, 256)maskimg_dict['label']
+  (256, 256)
+(256, 256, 3)img_dict['label']
+ (256, 256, 3)mask
+ (256, 256)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label']img_dict['label'] (256, 256, 3) (256, 256, 3)
+img_dict['label']img_dict['label']
+img_dict['label'] mask(256, 256, 3)mask (256, 256, 3)
+ (256, 256, 3)
+(256, 256)(256, 256)
+mask
+mask  mask(256, 256)(256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label']maskimg_dict['label'] img_dict['label']  (256, 256) img_dict['label'](256, 256, 3)(256, 256, 3)
+(256, 256, 3)
+(256, 256, 3)mask
+ mask (256, 256)maskmask(256, 256)
+(256, 256)(256, 256)
+img_dict['label'] img_dict['label'](256, 256, 3)
+(256, 256, 3)
+mask (256, 256)
+mask (256, 256)img_dict['label']
+ (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label']mask  (256, 256)(256, 256, 3)
+img_dict['label']mask  (256, 256)
+(256, 256, 3)
+img_dict['label'] maskimg_dict['label']img_dict['label'](256, 256, 3)
+(256, 256, 3)(256, 256)(256, 256, 3)
+mask
+ (256, 256)mask
+mask (256, 256) (256, 256)
+img_dict['label']
+ (256, 256, 3)img_dict['label']
+(256, 256, 3)
+img_dict['label'] mask(256, 256, 3)
+mask(256, 256) mask(256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)
+mask img_dict['label'](256, 256)
+img_dict['label'](256, 256, 3)
+img_dict['label'] (256, 256, 3)(256, 256, 3)mask
+mask
+ (256, 256) (256, 256)
+img_dict['label']mask
+  img_dict['label'](256, 256, 3)(256, 256)
+(256, 256, 3)
+maskmask  (256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label']img_dict['label']img_dict['label']   (256, 256, 3)(256, 256, 3)(256, 256, 3)
+img_dict['label'] (256, 256, 3)
+maskmask mask (256, 256)mask  (256, 256)img_dict['label']
+(256, 256)(256, 256)
+(256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask img_dict['label'](256, 256)img_dict['label']
+img_dict['label'] img_dict['label'](256, 256, 3) (256, 256, 3)
+(256, 256, 3)
+(256, 256, 3)
+mask
+mask(256, 256)
+(256, 256)maskmask
+  (256, 256)(256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label'] (256, 256, 3)
+mask
+mask  (256, 256)(256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label']img_dict['label']img_dict['label']   (256, 256, 3)(256, 256, 3)(256, 256, 3)
+img_dict['label']
+ maskmask(256, 256, 3)
+(256, 256)(256, 256)mask
+ mask(256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)img_dict['label']
+ (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+maskimg_dict['label'] img_dict['label']  (256, 256)
+(256, 256, 3)
+(256, 256, 3)img_dict['label']mask img_dict['label']
+ (256, 256, 3) img_dict['label'](256, 256)
+mask(256, 256, 3)
+ mask
+(256, 256, 3)(256, 256)
+(256, 256)mask
+ mask (256, 256)
+(256, 256)
+img_dict['label'] img_dict['label'](256, 256, 3)
+ (256, 256, 3)
+maskmaskimg_dict['label']  (256, 256) (256, 256, 3)(256, 256)
+img_dict['label']
+ img_dict['label'](256, 256, 3)
+(256, 256, 3)maskmask img_dict['label'](256, 256)
+img_dict['label']
+   (256, 256)
+mask (256, 256)
+(256, 256, 3)(256, 256, 3)img_dict['label']img_dict['label']
+ img_dict['label'](256, 256, 3) mask
+mask(256, 256, 3) (256, 256, 3)(256, 256)
+mask
+(256, 256) mask
+mask(256, 256)
+(256, 256)(256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)
+img_dict['label']mask  img_dict['label'](256, 256, 3)(256, 256) (256, 256, 3)
+img_dict['label']maskmaskimg_dict['label']  (256, 256, 3)  (256, 256, 3)
+(256, 256)(256, 256)
+maskimg_dict['label']  (256, 256)(256, 256, 3)mask
+img_dict['label']
+ (256, 256, 3)(256, 256)
+img_dict['label']
+ maskmaskimg_dict['label'](256, 256, 3)
+(256, 256)(256, 256)(256, 256, 3)mask
+ (256, 256)
+mask (256, 256)
+img_dict['label']img_dict['label']  img_dict['label'](256, 256, 3)(256, 256, 3)
+img_dict['label'](256, 256, 3) mask
+maskimg_dict['label'](256, 256, 3)  mask
+(256, 256)(256, 256) (256, 256, 3)
+(256, 256)mask
+ mask (256, 256)(256, 256)img_dict['label']
+(256, 256, 3)
+img_dict['label']mask  (256, 256, 3)(256, 256)
+img_dict['label'] (256, 256, 3)
+mask mask (256, 256)img_dict['label'](256, 256)
+img_dict['label']
+ (256, 256, 3)(256, 256, 3)
+maskmask (256, 256)
+(256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)img_dict['label'] (256, 256, 3)
+mask (256, 256)img_dict['label'] (256, 256, 3)
+img_dict['label'] img_dict['label'] (256, 256, 3)
+mask
+ (256, 256, 3)mask(256, 256)
+img_dict['label']img_dict['label']
+  (256, 256)(256, 256, 3)(256, 256, 3)
+mask (256, 256)
+maskmask  (256, 256)(256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)img_dict['label']
+ (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)img_dict['label']
+ (256, 256, 3)
+mask (256, 256)mask
+ (256, 256)
+img_dict['label'] (256, 256, 3)
+mask (256, 256)
+img_dict['label'] (256, 256, 3)

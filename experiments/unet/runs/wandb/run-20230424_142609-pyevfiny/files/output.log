@@ -1,0 +1,10 @@
+  | Name      | Type             | Params
+-----------------------------------------------
+0 | fcn       | base_resnet      | 25.6 M
+1 | aux_head  | Aux_Head         | 5.9 M
+2 | cls_seg   | Sequential       | 23.1 M
+3 | loss_func | CrossEntropyLoss | 0
+-----------------------------------------------
+54.5 M    Trainable params
+0         Non-trainable params
+54.5 M    Total params

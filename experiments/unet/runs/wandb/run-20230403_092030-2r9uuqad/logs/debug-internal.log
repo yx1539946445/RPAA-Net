@@ -1,0 +1,8 @@
+2023-04-03 09:20:30,665 INFO    StreamThr :8863 [internal.py:wandb_internal():88] W&B internal server running at pid: 8863, started at: 2023-04-03 09:20:30.663526
+2023-04-03 09:20:30,666 DEBUG   HandlerThread:8863 [handler.py:handle_request():139] handle_request: status
+2023-04-03 09:20:30,668 DEBUG   SenderThread:8863 [sender.py:send_request():317] send_request: status
+2023-04-03 09:20:30,669 DEBUG   SenderThread:8863 [sender.py:send():303] send: header
+2023-04-03 09:20:30,669 INFO    WriterThread:8863 [datastore.py:open_for_write():75] open: ./runs/wandb/run-20230403_092030-2r9uuqad/run-2r9uuqad.wandb
+2023-04-03 09:20:30,676 DEBUG   SenderThread:8863 [sender.py:send():303] send: run
+2023-04-03 09:20:30,681 INFO    SenderThread:8863 [sender.py:_maybe_setup_resume():593] checking resume status for None/segmentation/2r9uuqad
+2023-04-03 09:20:36,675 INFO    MainThread:8863 [internal.py:handle_exit():78] Internal process exited

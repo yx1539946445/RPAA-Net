@@ -1,0 +1,30 @@
+  | Name               | Type             | Params
+--------------------------------------------------------
+0 | u_encoder          | U_encoder        | 64.6 K
+1 | u_decoder          | U_decoder        | 776 K
+2 | SegmentationHead_1 | Sequential       | 66
+3 | loss_func          | CrossEntropyLoss | 0
+--------------------------------------------------------
+841 K     Trainable params
+0         Non-trainable params
+841 K     Total params
+3.366     Total estimated model params size (MB)
+Global seed set to 2202
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 84.69it/s]
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+Using native 16bit precision.
+Loading dataset: 100%|██████████| 50/50 [00:00<00:00, 120.40it/s]
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 104.52it/s]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+  | Name               | Type             | Params
+--------------------------------------------------------
+0 | u_encoder          | U_encoder        | 64.6 K
+1 | u_decoder          | U_decoder        | 776 K
+2 | SegmentationHead_1 | Sequential       | 66
+3 | loss_func          | CrossEntropyLoss | 0
+--------------------------------------------------------
+841 K     Trainable params
+0         Non-trainable params
+841 K     Total params
+3.366     Total estimated model params size (MB)

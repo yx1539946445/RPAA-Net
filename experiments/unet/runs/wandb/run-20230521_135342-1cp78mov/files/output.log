@@ -1,0 +1,8 @@
+  | Name      | Type             | Params
+-----------------------------------------------
+0 | resnet34  | resnet34         | 0
+1 | loss_func | CrossEntropyLoss | 0
+-----------------------------------------------
+0         Trainable params
+0         Non-trainable params
+0         Total params

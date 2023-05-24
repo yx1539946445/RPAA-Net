@@ -1,0 +1,31 @@
+2023-04-17 19:36:51,547 INFO    MainThread:25652 [wandb_setup.py:_flush():68] Configure stats pid to 25652
+2023-04-17 19:36:51,547 INFO    MainThread:25652 [wandb_setup.py:_flush():68] Loading settings from /home/yx/.config/wandb/settings
+2023-04-17 19:36:51,548 INFO    MainThread:25652 [wandb_setup.py:_flush():68] Loading settings from /mnt/c/kust/kust/python_code/python_code/code/experiments/unet/wandb/settings
+2023-04-17 19:36:51,548 INFO    MainThread:25652 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2023-04-17 19:36:51,548 INFO    MainThread:25652 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'myunet.py', 'program': '/mnt/c/kust/kust/python_code/python_code/code/experiments/unet/myunet.py'}
+2023-04-17 19:36:51,559 INFO    MainThread:25652 [wandb_init.py:_log_setup():476] Logging user logs to ./runs/wandb/run-20230417_193651-1nhjkzhk/logs/debug.log
+2023-04-17 19:36:51,560 INFO    MainThread:25652 [wandb_init.py:_log_setup():477] Logging internal logs to ./runs/wandb/run-20230417_193651-1nhjkzhk/logs/debug-internal.log
+2023-04-17 19:36:51,560 INFO    MainThread:25652 [wandb_init.py:init():516] calling init triggers
+2023-04-17 19:36:51,560 INFO    MainThread:25652 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2023-04-17 19:36:51,560 INFO    MainThread:25652 [wandb_init.py:init():569] starting backend
+2023-04-17 19:36:51,560 INFO    MainThread:25652 [wandb_init.py:init():573] setting up manager
+2023-04-17 19:36:51,563 INFO    MainThread:25652 [backend.py:_multiprocessing_setup():102] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-04-17 19:36:51,567 INFO    MainThread:25652 [wandb_init.py:init():580] backend started and connected
+2023-04-17 19:36:51,570 INFO    MainThread:25652 [wandb_init.py:init():658] updated telemetry
+2023-04-17 19:36:51,581 INFO    MainThread:25652 [wandb_init.py:init():693] communicating run to backend with 60 second timeout
+2023-04-17 19:36:52,778 INFO    MainThread:25652 [wandb_run.py:_on_init():2000] communicating current version
+2023-04-17 19:36:53,744 INFO    MainThread:25652 [wandb_run.py:_on_init():2004] got version response upgrade_message: "wandb version 0.14.2 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2023-04-17 19:36:53,745 INFO    MainThread:25652 [wandb_init.py:init():728] starting run threads in backend
+2023-04-17 19:36:55,019 INFO    MainThread:25652 [wandb_run.py:_console_start():1980] atexit reg
+2023-04-17 19:36:55,020 INFO    MainThread:25652 [wandb_run.py:_redirect():1838] redirect: SettingsConsole.WRAP_RAW
+2023-04-17 19:36:55,021 INFO    MainThread:25652 [wandb_run.py:_redirect():1903] Wrapping output streams.
+2023-04-17 19:36:55,021 INFO    MainThread:25652 [wandb_run.py:_redirect():1925] Redirects installed.
+2023-04-17 19:36:55,021 INFO    MainThread:25652 [wandb_init.py:init():765] run started, returning control to user process
+2023-04-17 19:36:55,022 INFO    MainThread:25652 [wandb_run.py:_config_callback():1160] config_cb None None {}
+2023-04-18 03:58:27,418 INFO    MainThread:25652 [wandb_run.py:_config_callback():1160] config_cb None None {}
+2023-04-18 12:14:52,684 INFO    MainThread:25652 [wandb_run.py:_config_callback():1160] config_cb None None {}
+2023-04-18 18:18:39,143 INFO    MainThread:25652 [wandb_run.py:_config_callback():1160] config_cb None None {}
+2023-04-18 23:17:28,786 INFO    MainThread:25652 [wandb_run.py:_config_callback():1160] config_cb None None {}
+2023-04-19 04:12:53,360 WARNING MsgRouterThr:25652 [router.py:message_loop():77] message_loop has been closed

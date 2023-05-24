@@ -1,0 +1,66 @@
+  | Name      | Type             | Params
+-----------------------------------------------
+0 | u_encoder | U_encoder_       | 261
+1 | loss_func | CrossEntropyLoss | 0
+-----------------------------------------------
+261       Trainable params
+0         Non-trainable params
+261       Total params
+0.001     Total estimated model params size (MB)
+Global seed set to 2202
+Traceback (most recent call last):
+  File "/mnt/c/kust/kust/python_code/python_code/code/experiments/unet/myunet.py", line 136, in <module>
+    trainer.fit(model, datamodule=data_module)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 458, in fit
+    self._run(model)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 756, in _run
+    self.dispatch()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 797, in dispatch
+    self.accelerator.start_training(self)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/accelerators/accelerator.py", line 96, in start_training
+    self.training_type_plugin.start_training(trainer)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 144, in start_training
+    self._results = trainer.run_stage()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 807, in run_stage
+    return self.run_train()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 869, in run_train
+    self.train_loop.run_training_epoch()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/training_loop.py", line 489, in run_training_epoch
+    batch_output = self.run_training_batch(batch, batch_idx, dataloader_idx)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/training_loop.py", line 729, in run_training_batch
+    self.optimizer_step(optimizer, opt_idx, batch_idx, train_step_and_backward_closure)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/training_loop.py", line 424, in optimizer_step
+    model_ref.optimizer_step(
+  File "/mnt/c/kust/kust/python_code/python_code/code/experiments/unet/../../asamseg/models/my_unet.py", line 538, in optimizer_step
+    optimizer.step(closure=optimizer_closure)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/core/optimizer.py", line 214, in step
+    self.__optimizer_step(*args, closure=closure, profiler_name=profiler_name, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/core/optimizer.py", line 134, in __optimizer_step
+    trainer.accelerator.optimizer_step(optimizer, self._optimizer_idx, lambda_closure=closure, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/accelerators/accelerator.py", line 325, in optimizer_step
+    make_optimizer_step = self.precision_plugin.pre_optimizer_step(
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/plugins/precision/native_amp.py", line 86, in pre_optimizer_step
+    lambda_closure()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/training_loop.py", line 723, in train_step_and_backward_closure
+    result = self.training_step_and_backward(
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/training_loop.py", line 825, in training_step_and_backward
+    self.backward(result, optimizer, opt_idx)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/training_loop.py", line 862, in backward
+    result.closure_loss = self.trainer.accelerator.backward(
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/accelerators/accelerator.py", line 308, in backward
+    output = self.precision_plugin.backward(
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/plugins/precision/native_amp.py", line 62, in backward
+    closure_loss = super().backward(model, closure_loss, optimizer, opt_idx, should_accumulate, *args, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/plugins/precision/precision_plugin.py", line 79, in backward
+    model.backward(closure_loss, optimizer, opt_idx)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/core/lightning.py", line 1275, in backward
+    loss.backward(*args, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/torch/tensor.py", line 221, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/torch/autograd/__init__.py", line 130, in backward
+    Variable._execution_engine.run_backward(
+RuntimeError: cuDNN error: CUDNN_STATUS_NOT_INITIALIZED
+x1 torch.Size([12, 1, 256, 256])
+x1 torch.Size([16, 1, 256, 256])
+x1 torch.Size([4, 1, 256, 256])
+x1 torch.Size([10, 1, 256, 256])

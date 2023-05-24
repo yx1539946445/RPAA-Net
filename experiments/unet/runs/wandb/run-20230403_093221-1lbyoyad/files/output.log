@@ -1,0 +1,11 @@
+  | Name               | Type             | Params
+--------------------------------------------------------
+0 | u_encoder          | U_encoder        | 56.2 K
+1 | u_decoder          | U_decoder        | 776 K
+2 | SegmentationHead_1 | Sequential       | 66
+3 | loss_func          | CrossEntropyLoss | 0
+--------------------------------------------------------
+832 K     Trainable params
+0         Non-trainable params
+832 K     Total params
+3.332     Total estimated model params size (MB)

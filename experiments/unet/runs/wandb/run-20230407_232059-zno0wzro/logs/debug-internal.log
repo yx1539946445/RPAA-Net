@@ -1,0 +1,16 @@
+2023-04-07 23:20:59,409 INFO    StreamThr :2594 [internal.py:wandb_internal():88] W&B internal server running at pid: 2594, started at: 2023-04-07 23:20:59.407615
+2023-04-07 23:20:59,410 DEBUG   HandlerThread:2594 [handler.py:handle_request():139] handle_request: status
+2023-04-07 23:20:59,412 DEBUG   SenderThread:2594 [sender.py:send_request():317] send_request: status
+2023-04-07 23:20:59,413 INFO    WriterThread:2594 [datastore.py:open_for_write():75] open: ./runs/wandb/run-20230407_232059-zno0wzro/run-zno0wzro.wandb
+2023-04-07 23:20:59,413 DEBUG   SenderThread:2594 [sender.py:send():303] send: header
+2023-04-07 23:20:59,420 DEBUG   SenderThread:2594 [sender.py:send():303] send: run
+2023-04-07 23:20:59,424 INFO    SenderThread:2594 [sender.py:_maybe_setup_resume():593] checking resume status for None/segmentation/zno0wzro
+2023-04-07 23:21:04,425 DEBUG   HandlerThread:2594 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-07 23:21:09,435 DEBUG   HandlerThread:2594 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-07 23:21:14,446 DEBUG   HandlerThread:2594 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-07 23:21:19,450 DEBUG   HandlerThread:2594 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-07 23:21:24,453 DEBUG   HandlerThread:2594 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-07 23:21:29,456 DEBUG   HandlerThread:2594 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-07 23:21:34,460 DEBUG   HandlerThread:2594 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-07 23:21:39,464 DEBUG   HandlerThread:2594 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-07 23:21:47,428 INFO    MainThread:2594 [internal.py:handle_exit():78] Internal process exited

@@ -1,0 +1,119 @@
+{
+    "os": "Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-glibc2.31",
+    "python": "3.9.15",
+    "heartbeatAt": "2023-04-07T14:11:01.140671",
+    "startedAt": "2023-04-07T14:10:49.905386",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/mnt/c/kust/kust/python_code/python_code/code/experiments/unet/myunet.py",
+    "codePath": "myunet.py",
+    "host": "yangxiao",
+    "username": "yx",
+    "executable": "/home/yx/miniconda3/envs/mat/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 3686.398999999999,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3686.399,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3686.399,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3686.399,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3686.399,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3686.399,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3686.399,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3686.399,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3686.399,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3686.399,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3686.399,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3686.399,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3686.399,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3686.399,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3686.399,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3686.399,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3686.399,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "total": 250.98248672485352,
+        "used": 16.91710662841797
+    },
+    "gpu": "NVIDIA GeForce RTX 3060",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3060",
+            "memory_total": 12884901888
+        }
+    ],
+    "memory": {
+        "total": 15.537948608398438
+    }
+}

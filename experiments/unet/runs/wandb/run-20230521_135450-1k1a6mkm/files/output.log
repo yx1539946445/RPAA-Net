@@ -1,0 +1,43 @@
+  | Name      | Type             | Params
+-----------------------------------------------
+0 | resnet34  | resnet34         | 0
+1 | loss_func | CrossEntropyLoss | 0
+-----------------------------------------------
+0         Trainable params
+0         Non-trainable params
+0         Total params
+0.000     Total estimated model params size (MB)
+C:\anaconda3\envs\mat\lib\site-packages\pytorch_lightning\utilities\distributed.py:69: UserWarning: The dataloader, val dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 16 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  warnings.warn(*args, **kwargs)
+Traceback (most recent call last):
+  File "C:\anaconda3\envs\mat\lib\contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\anaconda3\envs\mat\lib\site-packages\pytorch_lightning\profiler\profilers.py", line 103, in profile
+    yield action_name
+  File "C:\anaconda3\envs\mat\lib\site-packages\pytorch_lightning\trainer\trainer.py", line 962, in run_evaluation
+    output = self.evaluation_loop.evaluation_step(batch, batch_idx, dataloader_idx)
+  File "C:\anaconda3\envs\mat\lib\site-packages\pytorch_lightning\trainer\evaluation_loop.py", line 174, in evaluation_step
+    output = self.trainer.accelerator.validation_step(args)
+  File "C:\anaconda3\envs\mat\lib\site-packages\pytorch_lightning\accelerators\accelerator.py", line 226, in validation_step
+    return self.training_type_plugin.validation_step(*args)
+  File "C:\anaconda3\envs\mat\lib\site-packages\pytorch_lightning\plugins\training_type\training_type_plugin.py", line 161, in validation_step
+    return self.lightning_module.validation_step(*args, **kwargs)
+  File "C:\kust\kust\python_code\python_code\code\asamseg\models\my_cenet.py", line 340, in validation_step
+    loss = myut.cal_batch_loss(self, batch, self.loss_func, use_sliding_window=True)
+  File "C:\kust\kust\python_code\python_code\code\asamseg\utils.py", line 129, in cal_batch_loss
+    preds = inferer(inputs=images, network=model)
+  File "C:\anaconda3\envs\mat\lib\site-packages\monai\inferers\inferer.py", line 180, in __call__
+    return sliding_window_inference(
+  File "C:\anaconda3\envs\mat\lib\site-packages\monai\inferers\utils.py", line 130, in sliding_window_inference
+    seg_prob = predictor(window_data, *args, **kwargs).to(device)  # batched patch segmentation
+  File "C:\anaconda3\envs\mat\lib\site-packages\torch\nn\modules\module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\kust\kust\python_code\python_code\code\asamseg\models\my_cenet.py", line 293, in forward
+    x1, x2, x3, x4, x5 = self.resnet34(x)
+  File "C:\anaconda3\envs\mat\lib\site-packages\torch\nn\modules\module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\kust\kust\python_code\python_code\code\asamseg\models\my_cenet.py", line 21, in forward
+    x1, x2, x3, x4, x5 = self.resnet34(x)
+  File "C:\anaconda3\envs\mat\lib\site-packages\torch\nn\modules\module.py", line 1207, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'resnet34' object has no attribute 'resnet34'

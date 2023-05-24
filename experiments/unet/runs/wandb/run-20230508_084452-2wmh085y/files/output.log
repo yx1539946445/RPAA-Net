@@ -1,0 +1,98 @@
+  | Name      | Type             | Params
+-----------------------------------------------
+0 | fcn       | ResNet           | 23.6 M
+1 | cls_seg   | Sequential       | 23.9 M
+2 | loss_func | CrossEntropyLoss | 0
+-----------------------------------------------
+47.6 M    Trainable params
+0         Non-trainable params
+47.6 M    Total params
+190.224   Total estimated model params size (MB)
+Global seed set to 2202
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/data_loading.py:322: UserWarning: The number of training samples (5) is smaller than the logging interval Trainer(log_every_n_steps=50). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+  rank_zero_warn(
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:689: UserWarning: ModelCheckpoint(monitor='val_loss') not found in the returned metrics: ['train_loss', 'train_loss_step', 'train_loss_epoch']. HINT: Did you call self.log('val_loss', value) in the LightningModule?
+  warning_cache.warn(m)
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 49.56it/s]
+Using native 16bit precision.
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+Loading dataset: 100%|██████████| 50/50 [00:00<00:00, 100.19it/s]
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 88.38it/s]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+  | Name      | Type             | Params
+-----------------------------------------------
+0 | fcn       | ResNet           | 23.6 M
+1 | cls_seg   | Sequential       | 23.9 M
+2 | loss_func | CrossEntropyLoss | 0
+-----------------------------------------------
+47.6 M    Trainable params
+0         Non-trainable params
+47.6 M    Total params
+190.224   Total estimated model params size (MB)
+Global seed set to 2202
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/data_loading.py:322: UserWarning: The number of training samples (5) is smaller than the logging interval Trainer(log_every_n_steps=50). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+  rank_zero_warn(
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 64.92it/s]
+Using native 16bit precision.
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+Loading dataset: 100%|██████████| 50/50 [00:00<00:00, 106.86it/s]
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 88.60it/s]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+  | Name      | Type             | Params
+-----------------------------------------------
+0 | fcn       | ResNet           | 23.6 M
+1 | cls_seg   | Sequential       | 23.9 M
+2 | loss_func | CrossEntropyLoss | 0
+-----------------------------------------------
+47.6 M    Trainable params
+0         Non-trainable params
+47.6 M    Total params
+190.224   Total estimated model params size (MB)
+Global seed set to 2202
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/data_loading.py:322: UserWarning: The number of training samples (5) is smaller than the logging interval Trainer(log_every_n_steps=50). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+  rank_zero_warn(
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 35.98it/s]
+Using native 16bit precision.
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+Loading dataset: 100%|██████████| 50/50 [00:00<00:00, 67.73it/s]
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 96.49it/s]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+  | Name      | Type             | Params
+-----------------------------------------------
+0 | fcn       | ResNet           | 23.6 M
+1 | cls_seg   | Sequential       | 23.9 M
+2 | loss_func | CrossEntropyLoss | 0
+-----------------------------------------------
+47.6 M    Trainable params
+0         Non-trainable params
+47.6 M    Total params
+190.224   Total estimated model params size (MB)
+Global seed set to 2202
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/data_loading.py:322: UserWarning: The number of training samples (5) is smaller than the logging interval Trainer(log_every_n_steps=50). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+  rank_zero_warn(
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 37.84it/s]
+Using native 16bit precision.
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+Loading dataset: 100%|██████████| 50/50 [00:00<00:00, 63.19it/s]
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 59.73it/s]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+  | Name      | Type             | Params
+-----------------------------------------------
+0 | fcn       | ResNet           | 23.6 M
+1 | cls_seg   | Sequential       | 23.9 M
+2 | loss_func | CrossEntropyLoss | 0
+-----------------------------------------------
+47.6 M    Trainable params
+0         Non-trainable params
+47.6 M    Total params
+190.224   Total estimated model params size (MB)
+Global seed set to 2202
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/data_loading.py:322: UserWarning: The number of training samples (5) is smaller than the logging interval Trainer(log_every_n_steps=50). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.

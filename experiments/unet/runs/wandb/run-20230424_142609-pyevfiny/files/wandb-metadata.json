@@ -1,0 +1,44 @@
+{
+    "os": "Windows-10-10.0.22621-SP0",
+    "python": "3.9.15",
+    "heartbeatAt": "2023-04-24T06:26:11.745367",
+    "startedAt": "2023-04-24T06:26:09.611299",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "C:\\kust\\kust\\python_code\\python_code\\code\\experiments\\unet\\myunet.py",
+    "codePath": "myunet.py",
+    "host": "yangxiao",
+    "username": "yx",
+    "executable": "C:\\anaconda3\\envs\\mat\\python.exe",
+    "cpu_count": 10,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 3700.0,
+        "min": 0.0,
+        "max": 3700.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3700.0,
+            "min": 0.0,
+            "max": 3700.0
+        }
+    ],
+    "disk": {
+        "total": 364.05663681030273,
+        "used": 202.18224334716797
+    },
+    "gpu": "NVIDIA GeForce RTX 3060",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3060",
+            "memory_total": 12884901888
+        }
+    ],
+    "memory": {
+        "total": 31.8143310546875
+    }
+}

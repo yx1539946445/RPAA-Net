@@ -1,0 +1,65 @@
+  | Name               | Type             | Params
+--------------------------------------------------------
+0 | u_encoder          | U_encoder        | 406 K
+1 | u_decoder          | U_decoder        | 776 K
+2 | SegmentationHead_1 | Sequential       | 66
+3 | loss_func          | CrossEntropyLoss | 0
+--------------------------------------------------------
+1.2 M     Trainable params
+0         Non-trainable params
+1.2 M     Total params
+4.735     Total estimated model params size (MB)
+Traceback (most recent call last):
+  File "/mnt/c/kust/kust/python_code/python_code/code/experiments/unet/myunet.py", line 137, in <module>
+    trainer.fit(model, datamodule=data_module)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 458, in fit
+    self._run(model)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 756, in _run
+    self.dispatch()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 797, in dispatch
+    self.accelerator.start_training(self)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/accelerators/accelerator.py", line 96, in start_training
+    self.training_type_plugin.start_training(trainer)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 144, in start_training
+    self._results = trainer.run_stage()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 807, in run_stage
+    return self.run_train()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 842, in run_train
+    self.run_sanity_check(self.lightning_module)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 1107, in run_sanity_check
+    self.run_evaluation()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 962, in run_evaluation
+    output = self.evaluation_loop.evaluation_step(batch, batch_idx, dataloader_idx)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/evaluation_loop.py", line 174, in evaluation_step
+    output = self.trainer.accelerator.validation_step(args)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/accelerators/accelerator.py", line 226, in validation_step
+    return self.training_type_plugin.validation_step(*args)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 161, in validation_step
+    return self.lightning_module.validation_step(*args, **kwargs)
+  File "/mnt/c/kust/kust/python_code/python_code/code/experiments/unet/../../asamseg/models/my_unet.py", line 545, in validation_step
+    loss = myut.cal_batch_loss_gap(self, batch, self.loss_func, extra_gap_weight=self.extra_gap_weight,
+  File "/mnt/c/kust/kust/python_code/python_code/code/experiments/unet/../../asamseg/utils.py", line 143, in cal_batch_loss_gap
+    preds = inferer(inputs=images, network=model)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/monai/inferers/inferer.py", line 180, in __call__
+    return sliding_window_inference(
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/monai/inferers/utils.py", line 130, in sliding_window_inference
+    seg_prob = predictor(window_data, *args, **kwargs).to(device)  # batched patch segmentation
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/mnt/c/kust/kust/python_code/python_code/code/experiments/unet/../../asamseg/models/my_unet.py", line 512, in forward
+    encoder_x_first, encoder_skips_first = self.u_encoder(x)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/mnt/c/kust/kust/python_code/python_code/code/experiments/unet/../../asamseg/models/my_unet.py", line 360, in forward
+    x = self.layer_1(x)  # skip...
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/torch/nn/modules/container.py", line 117, in forward
+    input = module(input)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/mnt/c/kust/kust/python_code/python_code/code/experiments/unet/../../asamseg/models/my_unet.py", line 240, in forward
+    return self.act(channel_shuffle(torch.cat([output_1, output_2, x], dim=1)))
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/torch/nn/modules/module.py", line 778, in __getattr__
+    raise ModuleAttributeError("'{}' object has no attribute '{}'".format(
+torch.nn.modules.module.ModuleAttributeError: 'ResBolck' object has no attribute 'act'

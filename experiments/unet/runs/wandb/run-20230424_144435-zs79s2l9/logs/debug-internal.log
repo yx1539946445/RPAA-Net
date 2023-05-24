@@ -1,0 +1,81 @@
+2023-04-24 14:44:36,053 INFO    StreamThr :27477 [internal.py:wandb_internal():88] W&B internal server running at pid: 27477, started at: 2023-04-24 14:44:36.051945
+2023-04-24 14:44:36,054 DEBUG   HandlerThread:27477 [handler.py:handle_request():139] handle_request: status
+2023-04-24 14:44:36,055 DEBUG   SenderThread:27477 [sender.py:send_request():317] send_request: status
+2023-04-24 14:44:36,057 DEBUG   SenderThread:27477 [sender.py:send():303] send: header
+2023-04-24 14:44:36,057 INFO    WriterThread:27477 [datastore.py:open_for_write():75] open: ./runs/wandb/run-20230424_144435-zs79s2l9/run-zs79s2l9.wandb
+2023-04-24 14:44:36,064 DEBUG   SenderThread:27477 [sender.py:send():303] send: run
+2023-04-24 14:44:36,067 INFO    SenderThread:27477 [sender.py:_maybe_setup_resume():593] checking resume status for None/segmentation/zs79s2l9
+2023-04-24 14:44:41,071 DEBUG   HandlerThread:27477 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-24 14:44:46,076 DEBUG   HandlerThread:27477 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-24 14:44:51,086 DEBUG   HandlerThread:27477 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-24 14:44:56,094 DEBUG   HandlerThread:27477 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-24 14:45:01,099 DEBUG   HandlerThread:27477 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-24 14:45:06,111 DEBUG   HandlerThread:27477 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-24 14:45:11,123 DEBUG   HandlerThread:27477 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-24 14:45:16,126 DEBUG   HandlerThread:27477 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-24 14:45:16,971 ERROR   SenderThread:27477 [retry.py:__call__():154] Retry attempt failed:
+Traceback (most recent call last):
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connection.py", line 414, in connect
+    self.sock = ssl_wrap_socket(
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/ssl.py", line 501, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/ssl.py", line 1041, in _create
+    self.do_handshake()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/ssl.py", line 1310, in do_handshake
+    self._sslobj.do_handshake()
+socket.timeout: _ssl.c:1112: The handshake operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/packages/six.py", line 770, in reraise
+    raise value
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connectionpool.py", line 389, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=conn.timeout)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connectionpool.py", line 340, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Read timed out. (read timeout=10)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/wandb/sdk/lib/retry.py", line 113, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 210, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/transport/requests.py", line 38, in execute
+    request = requests.post(self.url, **post_args)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/requests/api.py", line 119, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/requests/adapters.py", line 529, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.wandb.ai', port=443): Read timed out. (read timeout=10)
+2023-04-24 14:45:21,137 DEBUG   HandlerThread:27477 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-24 14:45:26,145 DEBUG   HandlerThread:27477 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-24 14:45:32,087 INFO    MainThread:27477 [internal.py:handle_exit():78] Internal process exited

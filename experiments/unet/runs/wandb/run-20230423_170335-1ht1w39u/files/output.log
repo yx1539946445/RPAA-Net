@@ -1,0 +1,56 @@
+   | Name                     | Type                    | Params
+----------------------------------------------------------------------
+0  | resnet                   | base_resnet             | 21.8 M
+1  | dblock                   | DACblock                | 7.3 M
+2  | spp                      | SPPblock                | 513
+3  | decoder4                 | DecoderBlock            | 250 K
+4  | channelmeanmaxattention1 | ChannelMeanMaxAttention | 262 K
+5  | spatialattention1        | SpatialAttention        | 98
+6  | decoder3                 | DecoderBlock            | 230 K
+7  | channelmeanmaxattention2 | ChannelMeanMaxAttention | 65.9 K
+8  | spatialattention2        | SpatialAttention        | 98
+9  | decoder2                 | DecoderBlock            | 57.9 K
+10 | channelmeanmaxattention3 | ChannelMeanMaxAttention | 16.6 K
+11 | spatialattention3        | SpatialAttention        | 98
+12 | decoder1                 | DecoderBlock            | 15.7 K
+13 | finaldeconv1             | ConvTranspose2d         | 32.8 K
+14 | finalconv2               | Conv2d                  | 9.2 K
+15 | finalconv3               | Conv2d                  | 578
+16 | loss_func                | CrossEntropyLoss        | 0
+----------------------------------------------------------------------
+30.1 M    Trainable params
+0         Non-trainable params
+30.1 M    Total params
+120.310   Total estimated model params size (MB)
+Traceback (most recent call last):
+  File "/mnt/c/kust/kust/python_code/python_code/code/experiments/unet/myunet.py", line 141, in <module>
+    trainer.fit(model, datamodule=data_module)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 458, in fit
+    self._run(model)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 756, in _run
+    self.dispatch()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 797, in dispatch
+    self.accelerator.start_training(self)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/accelerators/accelerator.py", line 96, in start_training
+    self.training_type_plugin.start_training(trainer)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 144, in start_training
+    self._results = trainer.run_stage()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 807, in run_stage
+    return self.run_train()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 842, in run_train
+    self.run_sanity_check(self.lightning_module)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 1107, in run_sanity_check
+    self.run_evaluation()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 962, in run_evaluation
+    output = self.evaluation_loop.evaluation_step(batch, batch_idx, dataloader_idx)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/evaluation_loop.py", line 174, in evaluation_step
+    output = self.trainer.accelerator.validation_step(args)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/accelerators/accelerator.py", line 226, in validation_step
+    return self.training_type_plugin.validation_step(*args)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 161, in validation_step
+    return self.lightning_module.validation_step(*args, **kwargs)
+  File "/mnt/c/kust/kust/python_code/python_code/code/experiments/unet/../../asamseg/models/my_tanet.py", line 357, in validation_step
+    loss = myut.cal_batch_loss(self, batch, self.loss_func, use_sliding_window=True)
+  File "/mnt/c/kust/kust/python_code/python_code/code/experiments/unet/../../asamseg/utils.py", line 126, in cal_batch_loss
+    images, labels = get_batch_data(batch)
+ValueError: too many values to unpack (expected 2)

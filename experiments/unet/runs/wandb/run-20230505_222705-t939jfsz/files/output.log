@@ -1,0 +1,14 @@
+  | Name      | Type             | Params
+-----------------------------------------------
+0 | fcn       | ResNet           | 23.6 M
+1 | cls_seg   | Sequential       | 23.9 M
+2 | loss_func | CrossEntropyLoss | 0
+-----------------------------------------------
+47.6 M    Trainable params
+0         Non-trainable params
+47.6 M    Total params
+190.224   Total estimated model params size (MB)
+Global seed set to 2202
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/data_loading.py:322: UserWarning: The number of training samples (5) is smaller than the logging interval Trainer(log_every_n_steps=50). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+  rank_zero_warn(
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:689: UserWarning: ModelCheckpoint(monitor='val_loss') not found in the returned metrics: ['train_loss', 'train_loss_step', 'train_loss_epoch']. HINT: Did you call self.log('val_loss', value) in the LightningModule?

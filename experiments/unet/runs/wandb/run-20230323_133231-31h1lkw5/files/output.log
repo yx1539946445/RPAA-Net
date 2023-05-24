@@ -1,0 +1,13 @@
+  | Name               | Type             | Params
+--------------------------------------------------------
+0 | u_encoder          | U_encoder        | 361 K
+1 | u_decoder          | U_decoder        | 91.1 K
+2 | SegmentationHead_1 | Conv2d           | 66
+3 | loss_func          | CrossEntropyLoss | 0
+--------------------------------------------------------
+453 K     Trainable params
+0         Non-trainable params
+453 K     Total params
+1.812     Total estimated model params size (MB)
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/torch/nn/functional.py:1639: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")

@@ -1,0 +1,16 @@
+2023-04-07 23:44:54,147 INFO    MainThread:30770 [wandb_setup.py:_flush():68] Configure stats pid to 30770
+2023-04-07 23:44:54,147 INFO    MainThread:30770 [wandb_setup.py:_flush():68] Loading settings from /home/yx/.config/wandb/settings
+2023-04-07 23:44:54,148 INFO    MainThread:30770 [wandb_setup.py:_flush():68] Loading settings from /mnt/c/kust/kust/python_code/python_code/code/experiments/unet/wandb/settings
+2023-04-07 23:44:54,148 INFO    MainThread:30770 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2023-04-07 23:44:54,148 INFO    MainThread:30770 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'myunet.py', 'program': '/mnt/c/kust/kust/python_code/python_code/code/experiments/unet/myunet.py'}
+2023-04-07 23:44:54,159 INFO    MainThread:30770 [wandb_init.py:_log_setup():476] Logging user logs to ./runs/wandb/run-20230407_234454-z9v4yc04/logs/debug.log
+2023-04-07 23:44:54,159 INFO    MainThread:30770 [wandb_init.py:_log_setup():477] Logging internal logs to ./runs/wandb/run-20230407_234454-z9v4yc04/logs/debug-internal.log
+2023-04-07 23:44:54,160 INFO    MainThread:30770 [wandb_init.py:init():516] calling init triggers
+2023-04-07 23:44:54,160 INFO    MainThread:30770 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2023-04-07 23:44:54,160 INFO    MainThread:30770 [wandb_init.py:init():569] starting backend
+2023-04-07 23:44:54,160 INFO    MainThread:30770 [wandb_init.py:init():573] setting up manager
+2023-04-07 23:44:54,163 INFO    MainThread:30770 [backend.py:_multiprocessing_setup():102] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-04-07 23:44:54,165 INFO    MainThread:30770 [wandb_init.py:init():580] backend started and connected
+2023-04-07 23:44:54,167 INFO    MainThread:30770 [wandb_init.py:init():658] updated telemetry
+2023-04-07 23:44:54,176 INFO    MainThread:30770 [wandb_init.py:init():693] communicating run to backend with 60 second timeout

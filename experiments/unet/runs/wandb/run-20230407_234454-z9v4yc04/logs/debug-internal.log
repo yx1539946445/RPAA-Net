@@ -1,0 +1,15 @@
+2023-04-07 23:44:54,166 INFO    StreamThr :30853 [internal.py:wandb_internal():88] W&B internal server running at pid: 30853, started at: 2023-04-07 23:44:54.165684
+2023-04-07 23:44:54,167 DEBUG   HandlerThread:30853 [handler.py:handle_request():139] handle_request: status
+2023-04-07 23:44:54,169 DEBUG   SenderThread:30853 [sender.py:send_request():317] send_request: status
+2023-04-07 23:44:54,170 DEBUG   SenderThread:30853 [sender.py:send():303] send: header
+2023-04-07 23:44:54,170 INFO    WriterThread:30853 [datastore.py:open_for_write():75] open: ./runs/wandb/run-20230407_234454-z9v4yc04/run-z9v4yc04.wandb
+2023-04-07 23:44:54,177 DEBUG   SenderThread:30853 [sender.py:send():303] send: run
+2023-04-07 23:44:54,180 INFO    SenderThread:30853 [sender.py:_maybe_setup_resume():593] checking resume status for None/segmentation/z9v4yc04
+2023-04-07 23:44:59,195 DEBUG   HandlerThread:30853 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-07 23:45:04,199 DEBUG   HandlerThread:30853 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-07 23:45:09,201 DEBUG   HandlerThread:30853 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-07 23:45:14,208 DEBUG   HandlerThread:30853 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-07 23:45:19,195 WARNING StreamThr :30853 [internal.py:is_dead():385] Internal process exiting, parent pid 30770 disappeared
+2023-04-07 23:45:19,196 ERROR   StreamThr :30853 [internal.py:wandb_internal():147] Internal process shutdown.
+2023-04-07 23:45:19,215 INFO    HandlerThread:30853 [handler.py:finish():814] shutting down handler
+2023-04-07 23:45:20,177 INFO    MainThread:30853 [internal.py:handle_exit():78] Internal process exited

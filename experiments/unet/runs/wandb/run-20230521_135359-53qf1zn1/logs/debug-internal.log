@@ -1,0 +1,62 @@
+2023-05-21 13:53:59,674 INFO    StreamThr :67836 [internal.py:wandb_internal():88] W&B internal server running at pid: 67836, started at: 2023-05-21 13:53:59.673539
+2023-05-21 13:53:59,676 DEBUG   HandlerThread:67836 [handler.py:handle_request():139] handle_request: status
+2023-05-21 13:53:59,677 DEBUG   SenderThread:67836 [sender.py:send_request():317] send_request: status
+2023-05-21 13:53:59,678 INFO    WriterThread:67836 [datastore.py:open_for_write():75] open: ./runs\wandb\run-20230521_135359-53qf1zn1\run-53qf1zn1.wandb
+2023-05-21 13:53:59,678 DEBUG   SenderThread:67836 [sender.py:send():303] send: header
+2023-05-21 13:53:59,679 DEBUG   SenderThread:67836 [sender.py:send():303] send: run
+2023-05-21 13:53:59,681 INFO    SenderThread:67836 [sender.py:_maybe_setup_resume():593] checking resume status for None/segmentation/53qf1zn1
+2023-05-21 13:54:01,942 DEBUG   HandlerThread:67836 [handler.py:handle_request():139] handle_request: check_version
+2023-05-21 13:54:01,943 INFO    SenderThread:67836 [dir_watcher.py:__init__():216] watching files in: ./runs\wandb\run-20230521_135359-53qf1zn1\files
+2023-05-21 13:54:01,944 INFO    SenderThread:67836 [sender.py:_start_run_threads():928] run started: 53qf1zn1 with start time 1684648439.675848
+2023-05-21 13:54:01,944 DEBUG   SenderThread:67836 [sender.py:send():303] send: summary
+2023-05-21 13:54:01,944 INFO    SenderThread:67836 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-05-21 13:54:01,944 DEBUG   SenderThread:67836 [sender.py:send_request():317] send_request: check_version
+2023-05-21 13:54:02,949 INFO    Thread-32 :67836 [dir_watcher.py:_on_file_created():275] file/dir created: ./runs\wandb\run-20230521_135359-53qf1zn1\files\wandb-summary.json
+2023-05-21 13:54:06,966 DEBUG   HandlerThread:67836 [handler.py:handle_request():139] handle_request: run_start
+2023-05-21 13:54:06,976 DEBUG   HandlerThread:67836 [system_info.py:__init__():31] System info init
+2023-05-21 13:54:06,976 DEBUG   HandlerThread:67836 [system_info.py:__init__():46] System info init done
+2023-05-21 13:54:06,976 INFO    HandlerThread:67836 [system_monitor.py:start():150] Starting system monitor
+2023-05-21 13:54:06,977 INFO    SystemMonitor:67836 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2023-05-21 13:54:06,977 INFO    HandlerThread:67836 [system_monitor.py:probe():168] Collecting system info
+2023-05-21 13:54:06,983 INFO    SystemMonitor:67836 [interfaces.py:start():168] Started cpu
+2023-05-21 13:54:06,985 INFO    SystemMonitor:67836 [interfaces.py:start():168] Started disk
+2023-05-21 13:54:06,986 INFO    SystemMonitor:67836 [interfaces.py:start():168] Started gpu
+2023-05-21 13:54:06,986 INFO    SystemMonitor:67836 [interfaces.py:start():168] Started memory
+2023-05-21 13:54:06,995 INFO    SystemMonitor:67836 [interfaces.py:start():168] Started network
+2023-05-21 13:54:06,996 DEBUG   HandlerThread:67836 [system_info.py:probe():195] Probing system
+2023-05-21 13:54:06,996 DEBUG   HandlerThread:67836 [system_info.py:probe():241] Probing system done
+2023-05-21 13:54:06,996 DEBUG   HandlerThread:67836 [system_monitor.py:probe():177] {'os': 'Windows-10-10.0.22621-SP0', 'python': '3.9.15', 'heartbeatAt': '2023-05-21T05:54:06.996090', 'startedAt': '2023-05-21T05:53:59.650697', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '<python with no main file>', 'host': 'yangxiao', 'username': 'yx', 'executable': 'C:\\anaconda3\\envs\\mat\\python.exe', 'cpu_count': 10, 'cpu_count_logical': 16, 'cpu_freq': {'current': 3700.0, 'min': 0.0, 'max': 3700.0}, 'cpu_freq_per_core': [{'current': 3700.0, 'min': 0.0, 'max': 3700.0}], 'disk': {'total': 364.05663681030273, 'used': 289.00188064575195}, 'gpu': 'NVIDIA GeForce RTX 3060', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3060', 'memory_total': 12884901888}], 'memory': {'total': 31.8143310546875}}
+2023-05-21 13:54:06,996 INFO    HandlerThread:67836 [system_monitor.py:probe():178] Finished collecting system info
+2023-05-21 13:54:06,996 INFO    HandlerThread:67836 [system_monitor.py:probe():181] Publishing system info
+2023-05-21 13:54:06,996 DEBUG   HandlerThread:67836 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-05-21 13:54:06,997 DEBUG   HandlerThread:67836 [system_info.py:_save_pip():67] Saving pip packages done
+2023-05-21 13:54:06,997 DEBUG   HandlerThread:67836 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-05-21 13:54:07,997 INFO    Thread-32 :67836 [dir_watcher.py:_on_file_created():275] file/dir created: ./runs\wandb\run-20230521_135359-53qf1zn1\files\conda-environment.yaml
+2023-05-21 13:54:07,998 INFO    Thread-32 :67836 [dir_watcher.py:_on_file_created():275] file/dir created: ./runs\wandb\run-20230521_135359-53qf1zn1\files\requirements.txt
+2023-05-21 13:54:09,595 DEBUG   HandlerThread:67836 [system_info.py:_save_conda():86] Saving conda packages done
+2023-05-21 13:54:09,595 DEBUG   HandlerThread:67836 [system_info.py:_save_code():89] Saving code
+2023-05-21 13:54:09,595 WARNING HandlerThread:67836 [system_info.py:_save_code():91] unable to save code -- program entry not found
+2023-05-21 13:54:09,596 INFO    HandlerThread:67836 [system_monitor.py:probe():183] Finished publishing system info
+2023-05-21 13:54:09,597 DEBUG   SenderThread:67836 [sender.py:send():303] send: files
+2023-05-21 13:54:09,597 INFO    SenderThread:67836 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2023-05-21 13:54:09,602 DEBUG   HandlerThread:67836 [handler.py:handle_request():139] handle_request: stop_status
+2023-05-21 13:54:09,602 DEBUG   SenderThread:67836 [sender.py:send_request():317] send_request: stop_status
+2023-05-21 13:54:09,614 DEBUG   HandlerThread:67836 [handler.py:handle_request():139] handle_request: stop_status
+2023-05-21 13:54:09,615 DEBUG   SenderThread:67836 [sender.py:send_request():317] send_request: stop_status
+2023-05-21 13:54:09,919 DEBUG   SenderThread:67836 [sender.py:send():303] send: telemetry
+2023-05-21 13:54:09,919 DEBUG   SenderThread:67836 [sender.py:send():303] send: metric
+2023-05-21 13:54:09,920 DEBUG   SenderThread:67836 [sender.py:send():303] send: telemetry
+2023-05-21 13:54:09,920 DEBUG   SenderThread:67836 [sender.py:send():303] send: metric
+2023-05-21 13:54:09,920 WARNING SenderThread:67836 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-05-21 13:54:09,921 DEBUG   SenderThread:67836 [sender.py:send():303] send: config
+2023-05-21 13:54:10,019 INFO    Thread-32 :67836 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs\wandb\run-20230521_135359-53qf1zn1\files\conda-environment.yaml
+2023-05-21 13:54:10,020 INFO    Thread-32 :67836 [dir_watcher.py:_on_file_created():275] file/dir created: ./runs\wandb\run-20230521_135359-53qf1zn1\files\wandb-metadata.json
+2023-05-21 13:54:10,021 INFO    Thread-32 :67836 [dir_watcher.py:_on_file_created():275] file/dir created: ./runs\wandb\run-20230521_135359-53qf1zn1\files\output.log
+2023-05-21 13:54:11,636 INFO    Thread-35 :67836 [upload_job.py:push():143] Uploaded file C:\Users\yx\AppData\Local\Temp\tmp27d3qxd7wandb\1w8rmz8t-wandb-metadata.json
+2023-05-21 13:54:12,044 INFO    Thread-32 :67836 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs\wandb\run-20230521_135359-53qf1zn1\files\output.log
+2023-05-21 13:54:17,245 INFO    Thread-17 :67836 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs\wandb\run-20230521_135342-1cp78mov\files\config.yaml
+2023-05-21 13:54:24,929 DEBUG   HandlerThread:67836 [handler.py:handle_request():139] handle_request: stop_status
+2023-05-21 13:54:24,930 DEBUG   SenderThread:67836 [sender.py:send_request():317] send_request: stop_status
+2023-05-21 13:54:31,320 INFO    Thread-32 :67836 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./runs\wandb\run-20230521_135359-53qf1zn1\files\config.yaml
+2023-05-21 13:54:40,285 DEBUG   HandlerThread:67836 [handler.py:handle_request():139] handle_request: stop_status
+2023-05-21 13:54:40,285 DEBUG   SenderThread:67836 [sender.py:send_request():317] send_request: stop_status

@@ -1,0 +1,68 @@
+   | Name         | Type             | Params
+---------------------------------------------------
+0  | resnet       | base_resnet      | 21.3 M
+1  | DACBlock     | DACblock         | 7.3 M
+2  | RMPBlock     | SPPblock         | 513
+3  | decoder4     | DecoderBlock     | 250 K
+4  | decoder3     | DecoderBlock     | 62.2 K
+5  | decoder2     | DecoderBlock     | 15.7 K
+6  | decoder1     | DecoderBlock     | 4.6 K
+7  | finaldeconv1 | ConvTranspose2d  | 32.8 K
+8  | finalconv2   | Conv2d           | 9.2 K
+9  | finalconv3   | Conv2d           | 578
+10 | loss_func    | CrossEntropyLoss | 0
+---------------------------------------------------
+29.0 M    Trainable params
+0         Non-trainable params
+29.0 M    Total params
+115.988   Total estimated model params size (MB)
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/torch/nn/functional.py:2952: UserWarning: nn.functional.upsample is deprecated. Use nn.functional.interpolate instead.
+  warnings.warn("nn.functional.upsample is deprecated. Use nn.functional.interpolate instead.")
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/torch/nn/functional.py:3060: UserWarning: Default upsampling behavior when mode=bilinear is changed to align_corners=False since 0.4.0. Please specify align_corners=True if the old behavior is desired. See the documentation of nn.Upsample for details.
+  warnings.warn("Default upsampling behavior when mode={} is changed "
+Traceback (most recent call last):
+  File "/mnt/c/kust/kust/python_code/python_code/code/experiments/unet/myunet.py", line 146, in <module>
+    trainer.fit(model, datamodule=data_module)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 553, in fit
+    self._run(model)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 918, in _run
+    self._dispatch()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 986, in _dispatch
+    self.accelerator.start_training(self)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/accelerators/accelerator.py", line 92, in start_training
+    self.training_type_plugin.start_training(trainer)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 161, in start_training
+    self._results = trainer.run_stage()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 996, in run_stage
+    return self._run_train()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 1031, in _run_train
+    self._run_sanity_check(self.lightning_module)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 1115, in _run_sanity_check
+    self._evaluation_loop.run()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/loops/base.py", line 111, in run
+    self.advance(*args, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/loops/dataloader/evaluation_loop.py", line 110, in advance
+    dl_outputs = self.epoch_loop.run(
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/loops/base.py", line 111, in run
+    self.advance(*args, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/loops/epoch/evaluation_epoch_loop.py", line 110, in advance
+    output = self.evaluation_step(batch, batch_idx, dataloader_idx)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/loops/epoch/evaluation_epoch_loop.py", line 154, in evaluation_step
+    output = self.trainer.accelerator.validation_step(step_kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/accelerators/accelerator.py", line 211, in validation_step
+    return self.training_type_plugin.validation_step(*step_kwargs.values())
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 178, in validation_step
+    return self.model.validation_step(*args, **kwargs)
+  File "/mnt/c/kust/kust/python_code/python_code/code/experiments/unet/../../asamseg/models/my_cenet.py", line 250, in validation_step
+    loss = myut.cal_batch_loss(self, batch, self.loss_func, use_sliding_window=True)
+  File "/mnt/c/kust/kust/python_code/python_code/code/experiments/unet/../../asamseg/utils.py", line 129, in cal_batch_loss
+    preds = inferer(inputs=images, network=model)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/monai/inferers/inferer.py", line 178, in __call__
+    return sliding_window_inference(
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/monai/inferers/utils.py", line 130, in sliding_window_inference
+    seg_prob = predictor(window_data, *args, **kwargs).to(device)  # batched patch segmentation
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/mnt/c/kust/kust/python_code/python_code/code/experiments/unet/../../asamseg/models/my_cenet.py", line 221, in forward
+    d4 = self.decoder4(e4) + e3
+RuntimeError: The size of tensor a (64) must match the size of tensor b (32) at non-singleton dimension 3

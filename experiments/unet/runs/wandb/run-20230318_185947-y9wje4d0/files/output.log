@@ -1,0 +1,9 @@
+  | Name      | Type             | Params
+-----------------------------------------------
+0 | u_encoder | U_encoder_       | 167 K
+1 | loss_func | CrossEntropyLoss | 0
+-----------------------------------------------
+167 K     Trainable params
+0         Non-trainable params
+167 K     Total params
+0.669     Total estimated model params size (MB)

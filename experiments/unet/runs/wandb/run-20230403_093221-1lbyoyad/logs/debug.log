@@ -1,0 +1,25 @@
+2023-04-03 09:32:21,500 INFO    MainThread:9490 [wandb_setup.py:_flush():68] Configure stats pid to 9490
+2023-04-03 09:32:21,501 INFO    MainThread:9490 [wandb_setup.py:_flush():68] Loading settings from /home/yx/.config/wandb/settings
+2023-04-03 09:32:21,501 INFO    MainThread:9490 [wandb_setup.py:_flush():68] Loading settings from /mnt/c/kust/kust/python_code/python_code/code/experiments/unet/wandb/settings
+2023-04-03 09:32:21,501 INFO    MainThread:9490 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2023-04-03 09:32:21,501 INFO    MainThread:9490 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'myunet.py', 'program': '/mnt/c/kust/kust/python_code/python_code/code/experiments/unet/myunet.py'}
+2023-04-03 09:32:21,512 INFO    MainThread:9490 [wandb_init.py:_log_setup():476] Logging user logs to ./runs/wandb/run-20230403_093221-1lbyoyad/logs/debug.log
+2023-04-03 09:32:21,512 INFO    MainThread:9490 [wandb_init.py:_log_setup():477] Logging internal logs to ./runs/wandb/run-20230403_093221-1lbyoyad/logs/debug-internal.log
+2023-04-03 09:32:21,512 INFO    MainThread:9490 [wandb_init.py:init():516] calling init triggers
+2023-04-03 09:32:21,512 INFO    MainThread:9490 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2023-04-03 09:32:21,513 INFO    MainThread:9490 [wandb_init.py:init():569] starting backend
+2023-04-03 09:32:21,513 INFO    MainThread:9490 [wandb_init.py:init():573] setting up manager
+2023-04-03 09:32:21,516 INFO    MainThread:9490 [backend.py:_multiprocessing_setup():102] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-04-03 09:32:21,520 INFO    MainThread:9490 [wandb_init.py:init():580] backend started and connected
+2023-04-03 09:32:21,522 INFO    MainThread:9490 [wandb_init.py:init():658] updated telemetry
+2023-04-03 09:32:21,529 INFO    MainThread:9490 [wandb_init.py:init():693] communicating run to backend with 60 second timeout
+2023-04-03 09:32:22,555 INFO    MainThread:9490 [wandb_run.py:_on_init():2000] communicating current version
+2023-04-03 09:32:27,555 INFO    MainThread:9490 [wandb_run.py:_on_init():2004] got version response None
+2023-04-03 09:32:27,556 INFO    MainThread:9490 [wandb_init.py:init():728] starting run threads in backend
+2023-04-03 09:32:28,789 INFO    MainThread:9490 [wandb_run.py:_console_start():1980] atexit reg
+2023-04-03 09:32:28,790 INFO    MainThread:9490 [wandb_run.py:_redirect():1838] redirect: SettingsConsole.WRAP_RAW
+2023-04-03 09:32:28,790 INFO    MainThread:9490 [wandb_run.py:_redirect():1903] Wrapping output streams.
+2023-04-03 09:32:28,790 INFO    MainThread:9490 [wandb_run.py:_redirect():1925] Redirects installed.
+2023-04-03 09:32:28,791 INFO    MainThread:9490 [wandb_init.py:init():765] run started, returning control to user process
+2023-04-03 09:32:28,791 INFO    MainThread:9490 [wandb_run.py:_config_callback():1160] config_cb None None {}

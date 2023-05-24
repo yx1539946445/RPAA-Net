@@ -1,0 +1,22 @@
+  | Name               | Type             | Params
+--------------------------------------------------------
+0 | u_encoder          | U_encoder        | 1.2 M
+1 | u_decoder          | U_decoder        | 753 K
+2 | SegmentationHead_1 | Sequential       | 66
+3 | loss_func          | CrossEntropyLoss | 0
+--------------------------------------------------------
+2.0 M     Trainable params
+0         Non-trainable params
+2.0 M     Total params
+7.904     Total estimated model params size (MB)
+Global seed set to 2202
+result:              fold_1   mean
+Dice          92.90  92.90
+Jaccard       86.74  86.74
+Sensitivity   91.49  91.49
+Specificity   98.86  98.86
+Accuracy      97.60  97.60
+AJI           81.74  81.74
+ObjDice       92.02  92.02
+end:
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 80.38it/s]

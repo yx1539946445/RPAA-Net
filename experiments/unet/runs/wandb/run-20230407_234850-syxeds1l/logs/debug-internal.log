@@ -1,0 +1,14 @@
+2023-04-07 23:48:50,470 INFO    StreamThr :31258 [internal.py:wandb_internal():88] W&B internal server running at pid: 31258, started at: 2023-04-07 23:48:50.468868
+2023-04-07 23:48:50,471 DEBUG   HandlerThread:31258 [handler.py:handle_request():139] handle_request: status
+2023-04-07 23:48:50,472 DEBUG   SenderThread:31258 [sender.py:send_request():317] send_request: status
+2023-04-07 23:48:50,473 DEBUG   SenderThread:31258 [sender.py:send():303] send: header
+2023-04-07 23:48:50,473 INFO    WriterThread:31258 [datastore.py:open_for_write():75] open: ./runs/wandb/run-20230407_234850-syxeds1l/run-syxeds1l.wandb
+2023-04-07 23:48:50,480 DEBUG   SenderThread:31258 [sender.py:send():303] send: run
+2023-04-07 23:48:50,484 INFO    SenderThread:31258 [sender.py:_maybe_setup_resume():593] checking resume status for None/segmentation/syxeds1l
+2023-04-07 23:48:55,488 DEBUG   HandlerThread:31258 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-07 23:49:00,493 DEBUG   HandlerThread:31258 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-07 23:49:05,496 DEBUG   HandlerThread:31258 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-07 23:49:07,489 WARNING StreamThr :31258 [internal.py:is_dead():385] Internal process exiting, parent pid 31175 disappeared
+2023-04-07 23:49:07,490 ERROR   StreamThr :31258 [internal.py:wandb_internal():147] Internal process shutdown.
+2023-04-07 23:49:07,499 INFO    HandlerThread:31258 [handler.py:finish():814] shutting down handler
+2023-04-07 23:49:08,479 INFO    MainThread:31258 [internal.py:handle_exit():78] Internal process exited

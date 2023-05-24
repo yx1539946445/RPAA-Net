@@ -1,0 +1,156 @@
+2023-04-06 22:35:29,500 INFO    StreamThr :19238 [internal.py:wandb_internal():88] W&B internal server running at pid: 19238, started at: 2023-04-06 22:35:29.499012
+2023-04-06 22:35:29,502 DEBUG   HandlerThread:19238 [handler.py:handle_request():139] handle_request: status
+2023-04-06 22:35:29,505 DEBUG   SenderThread:19238 [sender.py:send_request():317] send_request: status
+2023-04-06 22:35:29,507 DEBUG   SenderThread:19238 [sender.py:send():303] send: header
+2023-04-06 22:35:29,507 INFO    WriterThread:19238 [datastore.py:open_for_write():75] open: ./runs/wandb/run-20230406_223529-2zzargz2/run-2zzargz2.wandb
+2023-04-06 22:35:29,514 DEBUG   SenderThread:19238 [sender.py:send():303] send: run
+2023-04-06 22:35:29,517 INFO    SenderThread:19238 [sender.py:_maybe_setup_resume():593] checking resume status for None/segmentation/2zzargz2
+2023-04-06 22:35:34,517 DEBUG   HandlerThread:19238 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-06 22:35:39,521 DEBUG   HandlerThread:19238 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-06 22:35:44,524 DEBUG   HandlerThread:19238 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-06 22:35:49,527 DEBUG   HandlerThread:19238 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-06 22:35:54,534 DEBUG   HandlerThread:19238 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-06 22:35:59,542 DEBUG   HandlerThread:19238 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-06 22:36:04,550 DEBUG   HandlerThread:19238 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-06 22:36:09,555 DEBUG   HandlerThread:19238 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-06 22:36:12,718 ERROR   SenderThread:19238 [retry.py:__call__():154] Retry attempt failed:
+Traceback (most recent call last):
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/http/client.py", line 1377, in getresponse
+    response.begin()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/http/client.py", line 320, in begin
+    version, status, reason = self._read_status()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/http/client.py", line 281, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/socket.py", line 704, in readinto
+    return self._sock.recv_into(b)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/ssl.py", line 1242, in recv_into
+    return self.read(nbytes, buffer)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/ssl.py", line 1100, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/packages/six.py", line 770, in reraise
+    raise value
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connectionpool.py", line 451, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connectionpool.py", line 340, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Read timed out. (read timeout=10)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/wandb/sdk/lib/retry.py", line 113, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 210, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/transport/requests.py", line 38, in execute
+    request = requests.post(self.url, **post_args)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/requests/api.py", line 119, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/requests/adapters.py", line 529, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.wandb.ai', port=443): Read timed out. (read timeout=10)
+2023-04-06 22:36:14,560 DEBUG   HandlerThread:19238 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-06 22:36:19,566 DEBUG   HandlerThread:19238 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-06 22:36:24,569 DEBUG   HandlerThread:19238 [handler.py:handle_request():139] handle_request: keepalive
+2023-04-06 22:36:30,581 DEBUG   HandlerThread:19238 [handler.py:handle_request():139] handle_request: poll_exit
+2023-04-06 22:36:34,576 WARNING StreamThr :19238 [internal.py:is_dead():385] Internal process exiting, parent pid 19155 disappeared
+2023-04-06 22:36:34,577 ERROR   StreamThr :19238 [internal.py:wandb_internal():147] Internal process shutdown.
+2023-04-06 22:36:34,581 INFO    WriterThread:19238 [datastore.py:close():279] close: ./runs/wandb/run-20230406_223529-2zzargz2/run-2zzargz2.wandb
+2023-04-06 22:36:34,586 INFO    HandlerThread:19238 [handler.py:finish():814] shutting down handler
+2023-04-06 22:37:07,066 INFO    SenderThread:19238 [dir_watcher.py:__init__():216] watching files in: ./runs/wandb/run-20230406_223529-2zzargz2/files
+2023-04-06 22:37:07,066 INFO    SenderThread:19238 [sender.py:_start_run_threads():928] run started: 2zzargz2 with start time 1680791729.500603
+2023-04-06 22:37:07,066 INFO    SenderThread:19238 [sender.py:finish():1331] shutting down sender
+2023-04-06 22:37:07,066 INFO    SenderThread:19238 [dir_watcher.py:finish():362] shutting down directory watcher
+2023-04-06 22:37:08,071 INFO    SenderThread:19238 [dir_watcher.py:finish():392] scan: ./runs/wandb/run-20230406_223529-2zzargz2/files
+2023-04-06 22:37:08,072 INFO    SenderThread:19238 [dir_watcher.py:finish():406] scan save: ./runs/wandb/run-20230406_223529-2zzargz2/files/config.yaml config.yaml
+2023-04-06 22:37:08,075 INFO    SenderThread:19238 [file_pusher.py:finish():168] shutting down file pusher
+2023-04-06 22:37:08,075 INFO    SenderThread:19238 [file_pusher.py:join():173] waiting for file pusher
+2023-04-06 22:37:49,699 ERROR   Thread-15 :19238 [retry.py:__call__():154] Retry attempt failed:
+Traceback (most recent call last):
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connection.py", line 179, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x7fdfb5045310>, 'Connection to api.wandb.ai timed out. (connect timeout=10)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fdfb5045310>, 'Connection to api.wandb.ai timed out. (connect timeout=10)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/wandb/sdk/lib/retry.py", line 113, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 210, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/transport/requests.py", line 38, in execute
+    request = requests.post(self.url, **post_args)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/requests/api.py", line 119, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/requests/adapters.py", line 504, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fdfb5045310>, 'Connection to api.wandb.ai timed out. (connect timeout=10)'))
+2023-04-06 22:38:52,397 INFO    Thread-15 :19238 [upload_job.py:push():143] Uploaded file ./runs/wandb/run-20230406_223529-2zzargz2/files/config.yaml

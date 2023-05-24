@@ -1,0 +1,208 @@
+  | Name               | Type             | Params
+--------------------------------------------------------
+0 | u_encoder          | U_encoder        | 1.0 M
+1 | u_decoder          | U_decoder        | 150 K
+2 | SegmentationHead_1 | Conv2d           | 64
+3 | loss_func          | CrossEntropyLoss | 0
+--------------------------------------------------------
+1.2 M     Trainable params
+0         Non-trainable params
+1.2 M     Total params
+4.798     Total estimated model params size (MB)
+Traceback (most recent call last):
+  File "/mnt/c/kust/kust/python_code/python_code/code/experiments/unet/myunet.py", line 136, in <module>
+    trainer.fit(model, datamodule=data_module)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 458, in fit
+    self._run(model)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 756, in _run
+    self.dispatch()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 797, in dispatch
+    self.accelerator.start_training(self)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/accelerators/accelerator.py", line 96, in start_training
+    self.training_type_plugin.start_training(trainer)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 144, in start_training
+    self._results = trainer.run_stage()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 807, in run_stage
+    return self.run_train()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 842, in run_train
+    self.run_sanity_check(self.lightning_module)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 1107, in run_sanity_check
+    self.run_evaluation()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 962, in run_evaluation
+    output = self.evaluation_loop.evaluation_step(batch, batch_idx, dataloader_idx)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/evaluation_loop.py", line 174, in evaluation_step
+    output = self.trainer.accelerator.validation_step(args)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/accelerators/accelerator.py", line 226, in validation_step
+    return self.training_type_plugin.validation_step(*args)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 161, in validation_step
+    return self.lightning_module.validation_step(*args, **kwargs)
+  File "/mnt/c/kust/kust/python_code/python_code/code/experiments/unet/../../asamseg/models/my_unet.py", line 460, in validation_step
+    loss = myut.cal_batch_loss_gap(self, batch, self.loss_func, extra_gap_weight=self.extra_gap_weight,
+  File "/mnt/c/kust/kust/python_code/python_code/code/experiments/unet/../../asamseg/utils.py", line 143, in cal_batch_loss_gap
+    preds = inferer(inputs=images, network=model)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/monai/inferers/inferer.py", line 180, in __call__
+    return sliding_window_inference(
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/monai/inferers/utils.py", line 130, in sliding_window_inference
+    seg_prob = predictor(window_data, *args, **kwargs).to(device)  # batched patch segmentation
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/mnt/c/kust/kust/python_code/python_code/code/experiments/unet/../../asamseg/models/my_unet.py", line 442, in forward
+    x1 = x1 - feature
+ValueError: operands could not be broadcast together with shapes (12,2,256,256) (12,2,256)
+xxxx [[[[ 7.6103e-04 -5.6458e-03 -2.2831e-03 ... -3.7689e-03 -1.0818e-02
+    -5.8441e-03]
+   [-1.1396e-03 -8.0185e-03 -3.1776e-03 ...  2.2411e-03  2.3918e-03
+    -1.4782e-03]
+   [-5.5847e-03 -1.1024e-02  6.0387e-03 ...  5.7144e-03  8.2321e-03
+     4.3297e-03]
+   ...
+   [-1.5211e-03 -4.5052e-03  2.2018e-04 ...  9.0714e-03 -5.3835e-04
+     3.8261e-03]
+   [ 2.1791e-04 -9.8586e-05 -9.9754e-04 ...  2.4719e-03 -6.7596e-03
+     3.2082e-03]
+   [ 4.5013e-03  5.5809e-03  5.4970e-03 ... -8.9111e-03 -2.2812e-03
+    -3.1261e-03]]
+  [[-1.6003e-03  6.8932e-03  1.0178e-02 ... -7.4339e-04  1.5854e-02
+     1.6693e-02]
+   [ 6.2141e-03  1.4801e-02  2.7496e-02 ...  1.2932e-02  1.0078e-02
+     2.5726e-02]
+   [ 1.1261e-02  1.9897e-02  1.6830e-02 ...  1.3710e-02  1.8066e-02
+     2.5757e-02]
+   ...
+   [ 3.9597e-03  6.5384e-03  9.8724e-03 ...  1.1169e-02  1.6479e-02
+     1.7441e-02]
+   [ 1.0328e-03  6.7940e-03  1.2428e-02 ...  1.8463e-02  6.4659e-03
+     1.3390e-02]
+   [-2.1477e-03  2.0027e-03  3.3951e-03 ...  1.4938e-02  1.1063e-02
+     1.3641e-02]]]
+ [[[ 1.0612e-02 -7.4310e-03 -8.4991e-03 ...  5.3444e-03 -4.2877e-03
+     1.4143e-03]
+   [ 1.1047e-02 -8.5678e-03  9.6207e-03 ...  6.8779e-03  4.2648e-03
+    -6.4945e-04]
+   [ 1.1658e-02 -5.7869e-03  8.1711e-03 ...  8.3303e-04  2.5101e-03
+    -1.5163e-03]
+   ...
+   [-7.2899e-03 -7.6637e-03 -4.2229e-03 ...  4.5242e-03  4.1733e-03
+     1.0757e-03]
+   [-2.7332e-03 -1.3916e-02 -1.1444e-02 ...  1.3723e-03  4.7035e-03
+    -6.6996e-04]
+   [ 3.1853e-03 -1.1358e-03  5.0306e-04 ...  2.4738e-03  1.7033e-03
+    -6.0558e-04]]
+  [[-8.1940e-03  5.6229e-03  3.6449e-03 ...  7.7286e-03  3.1147e-03
+     9.3384e-03]
+   [-1.2856e-02  6.9122e-03  3.0823e-03 ...  9.8190e-03  6.6223e-03
+     1.0406e-02]
+   [ 6.5660e-04  1.3542e-02  1.4740e-02 ...  8.4686e-03  4.4174e-03
+     6.0921e-03]
+   ...
+   [ 8.3160e-03  2.9449e-02  4.2694e-02 ...  2.5005e-03 -1.2312e-03
+     6.6643e-03]
+   [ 9.5749e-04  2.1713e-02  2.1423e-02 ...  1.4591e-03  5.0201e-03
+     6.8436e-03]
+   [ 1.3008e-03  1.0628e-02  8.4229e-03 ...  2.5940e-03  1.6899e-03
+     4.2458e-03]]]
+ [[[ 4.0245e-03  4.7684e-03  7.7362e-03 ... -1.2039e-02 -8.7051e-03
+    -1.3702e-02]
+   [-5.8174e-04  5.0201e-03  2.3087e-02 ...  1.0246e-02  3.6049e-03
+    -1.7471e-03]
+   [ 3.9711e-03  1.6449e-02  1.8951e-02 ...  3.2139e-03  3.3665e-03
+     2.8877e-03]
+   ...
+   [-6.4926e-03  1.2255e-03  3.0121e-02 ... -1.7033e-03 -9.4757e-03
+    -1.4198e-02]
+   [-4.3564e-03 -9.6359e-03  2.4438e-04 ... -4.6997e-03 -7.4196e-03
+    -1.2141e-04]
+   [ 2.3041e-03  1.3229e-02  1.0422e-02 ...  3.6192e-04  6.5002e-03
+     4.7836e-03]]
+  [[-2.3422e-03  1.4862e-02  1.7334e-02 ...  2.9419e-02  2.4734e-02
+     2.1896e-02]
+   [ 2.9545e-03  1.1612e-02  1.0353e-02 ...  2.2446e-02  1.7838e-02
+     1.4305e-02]
+   [ 7.0381e-03  3.5229e-03  1.4915e-02 ... -5.2977e-04 -2.2278e-03
+     1.2985e-02]
+   ...
+   [ 1.2543e-02  9.8648e-03  7.0610e-03 ...  4.2076e-03  2.5482e-03
+     2.5055e-02]
+   [ 5.9547e-03  2.0966e-02  2.1515e-02 ...  5.7793e-03  1.8631e-02
+     3.0884e-02]
+   [ 3.1185e-03  7.0457e-03  6.5460e-03 ...  1.8524e-02  2.9114e-02
+     2.3743e-02]]]
+ ...
+ [[[ 5.7373e-03 -4.2343e-03 -6.7406e-03 ...  1.1230e-02  1.0216e-02
+     4.3335e-03]
+   [ 6.9580e-03  3.3712e-04 -2.3651e-03 ...  5.3644e-04  1.4567e-04
+    -8.3303e-04]
+   [ 1.2909e-02 -8.0719e-03 -2.4815e-03 ... -3.2501e-03 -8.8358e-04
+    -1.3832e-02]
+   ...
+   [ 1.2222e-02 -5.0545e-03 -2.5520e-03 ...  4.6005e-03  1.0696e-02
+     1.0384e-02]
+   [ 2.4300e-03 -6.9122e-03 -7.7209e-03 ... -5.3864e-03 -4.4479e-03
+     1.1883e-03]
+   [-1.2445e-03 -6.2637e-03  2.4567e-03 ...  4.1161e-03  3.2063e-03
+    -5.7602e-04]]
+  [[-1.6060e-03  5.9843e-04  3.4370e-03 ... -4.5929e-03 -2.1286e-03
+     8.0261e-03]
+   [-4.3221e-03 -1.1902e-03  5.1880e-03 ...  3.6049e-03  7.9117e-03
+     2.1545e-02]
+   [ 5.5838e-04  1.2093e-02  7.7820e-03 ...  6.9771e-03  2.7130e-02
+     3.7628e-02]
+   ...
+   [-3.1853e-04  5.4321e-03  1.0017e-02 ...  6.3438e-03  5.6801e-03
+     1.6190e-02]
+   [ 8.2245e-03  2.1530e-02  1.8707e-02 ...  1.2131e-02  8.8425e-03
+     1.4488e-02]
+   [ 7.3891e-03  1.8829e-02  2.1149e-02 ...  9.0103e-03  2.4948e-03
+     1.0910e-02]]]
+ [[[ 1.3054e-02 -3.7956e-03 -8.6060e-03 ... -7.9803e-03 -5.9128e-03
+    -4.0932e-03]
+   [ 8.3237e-03 -9.8877e-03  2.7103e-03 ... -1.0368e-02 -6.9199e-03
+    -4.4417e-04]
+   [ 8.7814e-03 -1.4099e-02 -5.7297e-03 ... -1.2527e-02  2.2163e-03
+     1.8015e-03]
+   ...
+   [-1.6232e-03  6.7558e-03  6.4468e-03 ... -7.7477e-03  1.8951e-02
+     1.9470e-02]
+   [-3.4046e-04 -2.1744e-03  4.8103e-03 ... -1.4656e-02  3.0479e-03
+     2.7027e-03]
+   [ 4.8027e-03  1.1894e-02  1.3535e-02 ...  3.9635e-03  4.7760e-03
+    -2.9259e-03]]
+  [[-8.0109e-03  3.0651e-03  1.3863e-02 ...  6.6299e-03  7.0190e-03
+     9.8724e-03]
+   [-2.5959e-03  9.9258e-03  1.1650e-02 ...  3.5000e-03  1.0353e-02
+     1.7685e-02]
+   [ 7.2718e-04  1.4427e-02  9.3460e-03 ... -2.2602e-04  8.4457e-03
+     1.8097e-02]
+   ...
+   [-6.9046e-04  1.5396e-02  1.2650e-02 ...  3.5828e-02  1.2695e-02
+     3.1891e-02]
+   [ 4.0131e-03  1.0262e-02  1.5190e-02 ...  3.8483e-02  2.1378e-02
+     2.9327e-02]
+   [-5.4550e-03 -4.0703e-03 -2.2526e-03 ...  1.6846e-02  7.9575e-03
+     2.3605e-02]]]
+ [[[ 4.0436e-03 -6.1302e-03 -2.2640e-03 ... -4.4365e-03 -6.8665e-03
+    -3.6583e-03]
+   [ 4.7951e-03 -5.8975e-03  5.0087e-03 ...  3.8872e-03 -1.2245e-03
+    -1.7345e-05]
+   [ 1.4198e-02  2.0409e-03  1.2558e-02 ...  6.0539e-03 -1.0765e-02
+    -9.9277e-04]
+   ...
+   [-4.8470e-04 -7.7438e-03 -7.3051e-03 ... -8.0109e-03  1.8921e-02
+     1.9547e-02]
+   [ 1.4248e-03 -7.2861e-03 -8.9645e-03 ... -1.4847e-02  3.0403e-03
+     2.7065e-03]
+   [ 4.4861e-03  5.5656e-03  3.9635e-03 ...  3.9597e-03  4.8752e-03
+    -2.9202e-03]]
+  [[-9.7427e-03  4.9744e-03  3.2806e-03 ...  1.4526e-02  1.9241e-02
+     1.1391e-02]
+   [-5.9242e-03  1.5898e-03  2.6646e-03 ...  1.9745e-02  1.8188e-02
+     1.1208e-02]
+   [-3.5534e-03  1.0742e-02  1.4351e-02 ... -2.2812e-03  1.2077e-02
+     1.9012e-02]
+   ...
+   [ 6.1150e-03  1.9608e-02  2.1347e-02 ...  3.6224e-02  1.2619e-02
+     3.2196e-02]
+   [ 1.6966e-03  1.1177e-02  1.4694e-02 ...  3.8788e-02  2.1591e-02
+     2.9770e-02]
+   [-3.3903e-04  2.2602e-03  2.7733e-03 ...  1.6968e-02  8.0414e-03
+     2.3926e-02]]]]

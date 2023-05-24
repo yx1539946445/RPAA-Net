@@ -1,0 +1,25 @@
+  | Name               | Type             | Params
+--------------------------------------------------------
+0 | u_encoder          | U_encoder        | 56.2 K
+1 | u_decoder          | U_decoder        | 776 K
+2 | SegmentationHead_1 | Sequential       | 66
+3 | loss_func          | CrossEntropyLoss | 0
+--------------------------------------------------------
+832 K     Trainable params
+0         Non-trainable params
+832 K     Total params
+3.332     Total estimated model params size (MB)
+Global seed set to 2202
+Traceback (most recent call last):
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/multiprocessing/resource_sharer.py", line 138, in _serve
+    with self._listener.accept() as conn:
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/multiprocessing/connection.py", line 470, in accept
+    deliver_challenge(c, self._authkey)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/multiprocessing/connection.py", line 745, in deliver_challenge
+    response = connection.recv_bytes(256)        # reject large message
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/multiprocessing/connection.py", line 221, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/multiprocessing/connection.py", line 419, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/multiprocessing/connection.py", line 384, in _recv
+    chunk = read(handle, remaining)

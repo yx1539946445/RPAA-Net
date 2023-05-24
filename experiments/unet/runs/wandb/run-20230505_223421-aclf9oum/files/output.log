@@ -1,0 +1,109 @@
+  | Name      | Type             | Params
+-----------------------------------------------
+0 | fcn       | ResNet           | 23.6 M
+1 | cls_seg   | Sequential       | 23.9 M
+2 | loss_func | CrossEntropyLoss | 0
+-----------------------------------------------
+47.6 M    Trainable params
+0         Non-trainable params
+47.6 M    Total params
+190.224   Total estimated model params size (MB)
+Global seed set to 2202
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/data_loading.py:322: UserWarning: The number of training samples (5) is smaller than the logging interval Trainer(log_every_n_steps=50). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+  rank_zero_warn(
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:689: UserWarning: ModelCheckpoint(monitor='val_loss') not found in the returned metrics: ['train_loss', 'train_loss_step', 'train_loss_epoch']. HINT: Did you call self.log('val_loss', value) in the LightningModule?
+  warning_cache.warn(m)
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 82.56it/s]
+Using native 16bit precision.
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+Loading dataset: 100%|██████████| 50/50 [00:00<00:00, 106.91it/s]
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 96.85it/s]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+  | Name      | Type             | Params
+-----------------------------------------------
+0 | fcn       | ResNet           | 23.6 M
+1 | cls_seg   | Sequential       | 23.9 M
+2 | loss_func | CrossEntropyLoss | 0
+-----------------------------------------------
+47.6 M    Trainable params
+0         Non-trainable params
+47.6 M    Total params
+190.224   Total estimated model params size (MB)
+Global seed set to 2202
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/data_loading.py:322: UserWarning: The number of training samples (5) is smaller than the logging interval Trainer(log_every_n_steps=50). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+  rank_zero_warn(
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 38.58it/s]
+Using native 16bit precision.
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+Loading dataset: 100%|██████████| 50/50 [00:00<00:00, 82.20it/s]
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 74.91it/s]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+  | Name      | Type             | Params
+-----------------------------------------------
+0 | fcn       | ResNet           | 23.6 M
+1 | cls_seg   | Sequential       | 23.9 M
+2 | loss_func | CrossEntropyLoss | 0
+-----------------------------------------------
+47.6 M    Trainable params
+0         Non-trainable params
+47.6 M    Total params
+190.224   Total estimated model params size (MB)
+Global seed set to 2202
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/data_loading.py:322: UserWarning: The number of training samples (5) is smaller than the logging interval Trainer(log_every_n_steps=50). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+  rank_zero_warn(
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 30.33it/s]
+Using native 16bit precision.
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+Loading dataset: 100%|██████████| 50/50 [00:00<00:00, 67.33it/s]
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 72.32it/s]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+  | Name      | Type             | Params
+-----------------------------------------------
+0 | fcn       | ResNet           | 23.6 M
+1 | cls_seg   | Sequential       | 23.9 M
+2 | loss_func | CrossEntropyLoss | 0
+-----------------------------------------------
+47.6 M    Trainable params
+0         Non-trainable params
+47.6 M    Total params
+190.224   Total estimated model params size (MB)
+Global seed set to 2202
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/data_loading.py:322: UserWarning: The number of training samples (5) is smaller than the logging interval Trainer(log_every_n_steps=50). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+  rank_zero_warn(
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 85.22it/s]
+Using native 16bit precision.
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+Loading dataset: 100%|██████████| 50/50 [00:00<00:00, 92.62it/s]
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 78.68it/s]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+  | Name      | Type             | Params
+-----------------------------------------------
+0 | fcn       | ResNet           | 23.6 M
+1 | cls_seg   | Sequential       | 23.9 M
+2 | loss_func | CrossEntropyLoss | 0
+-----------------------------------------------
+47.6 M    Trainable params
+0         Non-trainable params
+47.6 M    Total params
+190.224   Total estimated model params size (MB)
+Global seed set to 2202
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/data_loading.py:322: UserWarning: The number of training samples (5) is smaller than the logging interval Trainer(log_every_n_steps=50). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+  rank_zero_warn(
+Loading dataset: 100%|██████████| 7/7 [00:00<00:00, 69.99it/s]
+result:              fold_1  fold_2  fold_3  fold_4  fold_5   mean
+Dice          94.65   95.35   93.68   95.10   93.65  94.49
+Jaccard       89.84   91.11   88.12   90.66   88.05  89.56
+Sensitivity   93.03   96.47   93.26   94.38   92.66  93.96
+Specificity   99.06   98.73   99.14   98.95   98.91  98.96
+Accuracy      97.80   98.32   98.39   98.01   97.84  98.07
+AJI           70.87   65.36   74.29   67.89   68.33  69.35
+ObjDice       88.69   89.19   89.08   89.49   87.93  88.88
+end:

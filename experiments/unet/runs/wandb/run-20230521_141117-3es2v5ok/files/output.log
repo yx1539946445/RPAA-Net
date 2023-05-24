@@ -1,0 +1,58 @@
+  | Name      | Type             | Params
+-----------------------------------------------
+0 | resnet    | base_resnet      | 21.3 M
+1 | loss_func | CrossEntropyLoss | 0
+-----------------------------------------------
+21.3 M    Trainable params
+0         Non-trainable params
+21.3 M    Total params
+85.114    Total estimated model params size (MB)
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/data_loading.py:105: UserWarning: The dataloader, val dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 16 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+Traceback (most recent call last):
+  File "/mnt/c/kust/kust/python_code/python_code/code/experiments/unet/myunet.py", line 144, in <module>
+    trainer.fit(model, datamodule=data_module)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 553, in fit
+    self._run(model)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 918, in _run
+    self._dispatch()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 986, in _dispatch
+    self.accelerator.start_training(self)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/accelerators/accelerator.py", line 92, in start_training
+    self.training_type_plugin.start_training(trainer)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 161, in start_training
+    self._results = trainer.run_stage()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 996, in run_stage
+    return self._run_train()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 1031, in _run_train
+    self._run_sanity_check(self.lightning_module)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 1115, in _run_sanity_check
+    self._evaluation_loop.run()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/loops/base.py", line 111, in run
+    self.advance(*args, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/loops/dataloader/evaluation_loop.py", line 110, in advance
+    dl_outputs = self.epoch_loop.run(
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/loops/base.py", line 111, in run
+    self.advance(*args, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/loops/epoch/evaluation_epoch_loop.py", line 110, in advance
+    output = self.evaluation_step(batch, batch_idx, dataloader_idx)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/loops/epoch/evaluation_epoch_loop.py", line 154, in evaluation_step
+    output = self.trainer.accelerator.validation_step(step_kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/accelerators/accelerator.py", line 211, in validation_step
+    return self.training_type_plugin.validation_step(*step_kwargs.values())
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 178, in validation_step
+    return self.model.validation_step(*args, **kwargs)
+  File "/mnt/c/kust/kust/python_code/python_code/code/experiments/unet/../../asamseg/models/my_cenet.py", line 331, in validation_step
+    loss = myut.cal_batch_loss(self, batch, self.loss_func, use_sliding_window=True)
+  File "/mnt/c/kust/kust/python_code/python_code/code/experiments/unet/../../asamseg/utils.py", line 129, in cal_batch_loss
+    preds = inferer(inputs=images, network=model)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/monai/inferers/inferer.py", line 178, in __call__
+    return sliding_window_inference(
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/monai/inferers/utils.py", line 142, in sliding_window_inference
+    output_image[original_idx] += importance_map * seg_prob[idx - slice_g]
+RuntimeError: The size of tensor a (256) must match the size of tensor b (8) at non-singleton dimension 2
+e1 torch.Size([16, 64, 128, 128])
+e2 torch.Size([16, 64, 64, 64])
+e3 torch.Size([16, 128, 32, 32])
+e4 torch.Size([16, 256, 16, 16])
+e4 torch.Size([16, 512, 8, 8])

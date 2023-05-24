@@ -1,0 +1,28 @@
+   | Name         | Type             | Params
+---------------------------------------------------
+0  | resnet       | base_resnet      | 21.8 M
+1  | DACBlock     | DACblock         | 7.3 M
+2  | RMPBlock     | SPPblock         | 513
+3  | decoder4     | DecoderBlock     | 250 K
+4  | decoder3     | DecoderBlock     | 62.2 K
+5  | decoder2     | DecoderBlock     | 15.7 K
+6  | decoder1     | DecoderBlock     | 4.6 K
+7  | finaldeconv1 | ConvTranspose2d  | 32.8 K
+8  | finalconv2   | Conv2d           | 9.2 K
+9  | finalconv3   | Conv2d           | 578
+10 | loss_func    | CrossEntropyLoss | 0
+---------------------------------------------------
+29.5 M    Trainable params
+0         Non-trainable params
+29.5 M    Total params
+118.041   Total estimated model params size (MB)
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/torch/nn/functional.py:2952: UserWarning: nn.functional.upsample is deprecated. Use nn.functional.interpolate instead.
+  warnings.warn("nn.functional.upsample is deprecated. Use nn.functional.interpolate instead.")
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/torch/nn/functional.py:3060: UserWarning: Default upsampling behavior when mode=bilinear is changed to align_corners=False since 0.4.0. Please specify align_corners=True if the old behavior is desired. See the documentation of nn.Upsample for details.
+  warnings.warn("Default upsampling behavior when mode={} is changed "
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/torch/nn/functional.py:1639: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+Global seed set to 2202
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/data_loading.py:322: UserWarning: The number of training samples (5) is smaller than the logging interval Trainer(log_every_n_steps=50). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+  rank_zero_warn(
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:689: UserWarning: ModelCheckpoint(monitor='val_loss') not found in the returned metrics: ['train_loss', 'train_loss_step', 'train_loss_epoch']. HINT: Did you call self.log('val_loss', value) in the LightningModule?

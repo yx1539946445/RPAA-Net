@@ -1,0 +1,125 @@
+   | Name         | Type             | Params
+---------------------------------------------------
+0  | resnet       | base_resnet      | 21.3 M
+1  | DACBlock     | DACblock         | 7.3 M
+2  | RMPBlock     | SPPblock         | 513
+3  | decoder4     | DecoderBlock     | 250 K
+4  | decoder3     | DecoderBlock     | 62.2 K
+5  | decoder2     | DecoderBlock     | 15.7 K
+6  | decoder1     | DecoderBlock     | 4.6 K
+7  | finaldeconv1 | ConvTranspose2d  | 32.8 K
+8  | finalconv2   | Conv2d           | 9.2 K
+9  | finalconv3   | Conv2d           | 578
+10 | loss_func    | CrossEntropyLoss | 0
+---------------------------------------------------
+29.0 M    Trainable params
+0         Non-trainable params
+29.0 M    Total params
+115.988   Total estimated model params size (MB)
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/data_loading.py:105: UserWarning: The dataloader, val dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 16 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/torch/nn/functional.py:2952: UserWarning: nn.functional.upsample is deprecated. Use nn.functional.interpolate instead.
+  warnings.warn("nn.functional.upsample is deprecated. Use nn.functional.interpolate instead.")
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/torch/nn/functional.py:3060: UserWarning: Default upsampling behavior when mode=bilinear is changed to align_corners=False since 0.4.0. Please specify align_corners=True if the old behavior is desired. See the documentation of nn.Upsample for details.
+  warnings.warn("Default upsampling behavior when mode={} is changed "
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/torch/nn/functional.py:1639: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+e1 torch.Size([16, 64, 64, 64])
+e2 torch.Size([16, 128, 32, 32])
+e3 torch.Size([16, 256, 16, 16])
+e4 torch.Size([16, 516, 8, 8])
+e4 torch.Size([16, 516, 8, 8])
+e3 torch.Size([16, 256, 16, 16])
+e1 torch.Size([4, 64, 64, 64])
+e2 torch.Size([4, 128, 32, 32])
+e3 torch.Size([4, 256, 16, 16])
+e4 torch.Size([4, 516, 8, 8])
+e4 torch.Size([4, 516, 8, 8])
+e3 torch.Size([4, 256, 16, 16])
+e1 torch.Size([16, 64, 64, 64])
+e2 torch.Size([16, 128, 32, 32])
+e3 torch.Size([16, 256, 16, 16])
+e4 torch.Size([16, 516, 8, 8])
+e4 torch.Size([16, 516, 8, 8])
+e3 torch.Size([16, 256, 16, 16])
+e1 torch.Size([8, 64, 64, 64])
+e2 torch.Size([8, 128, 32, 32])
+e3 torch.Size([8, 256, 16, 16])
+e4 torch.Size([8, 516, 8, 8])
+e4 torch.Size([8, 516, 8, 8])
+e3 torch.Size([8, 256, 16, 16])
+Global seed set to 2202
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/data_loading.py:105: UserWarning: The dataloader, train dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 16 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/data_loading.py:322: UserWarning: The number of training samples (5) is smaller than the logging interval Trainer(log_every_n_steps=50). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+  rank_zero_warn(
+Traceback (most recent call last):
+  File "/mnt/c/kust/kust/python_code/python_code/code/experiments/unet/myunet.py", line 144, in <module>
+    trainer.fit(model, datamodule=data_module)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 553, in fit
+    self._run(model)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 918, in _run
+    self._dispatch()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 986, in _dispatch
+    self.accelerator.start_training(self)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/accelerators/accelerator.py", line 92, in start_training
+    self.training_type_plugin.start_training(trainer)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 161, in start_training
+    self._results = trainer.run_stage()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 996, in run_stage
+    return self._run_train()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 1045, in _run_train
+    self.fit_loop.run()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/loops/base.py", line 111, in run
+    self.advance(*args, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/loops/fit_loop.py", line 200, in advance
+    epoch_output = self.epoch_loop.run(train_dataloader)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/loops/base.py", line 111, in run
+    self.advance(*args, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/loops/epoch/training_epoch_loop.py", line 130, in advance
+    batch_output = self.batch_loop.run(batch, self.iteration_count, self._dataloader_idx)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/loops/batch/training_batch_loop.py", line 101, in run
+    super().run(batch, batch_idx, dataloader_idx)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/loops/base.py", line 111, in run
+    self.advance(*args, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/loops/batch/training_batch_loop.py", line 148, in advance
+    result = self._run_optimization(batch_idx, split_batch, opt_idx, optimizer)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/loops/batch/training_batch_loop.py", line 202, in _run_optimization
+    self._optimizer_step(optimizer, opt_idx, batch_idx, closure)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/loops/batch/training_batch_loop.py", line 396, in _optimizer_step
+    model_ref.optimizer_step(
+  File "/mnt/c/kust/kust/python_code/python_code/code/experiments/unet/../../asamseg/models/my_cenet.py", line 272, in optimizer_step
+    optimizer.step(closure=optimizer_closure)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/core/optimizer.py", line 209, in step
+    self.__optimizer_step(*args, closure=closure, profiler_name=profiler_name, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/core/optimizer.py", line 129, in __optimizer_step
+    trainer.accelerator.optimizer_step(optimizer, self._optimizer_idx, lambda_closure=closure, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/accelerators/accelerator.py", line 292, in optimizer_step
+    make_optimizer_step = self.precision_plugin.pre_optimizer_step(
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/plugins/precision/native_amp.py", line 59, in pre_optimizer_step
+    result = lambda_closure()
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/loops/batch/training_batch_loop.py", line 236, in _training_step_and_backward_closure
+    result = self.training_step_and_backward(split_batch, batch_idx, opt_idx, optimizer, hiddens)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/loops/batch/training_batch_loop.py", line 549, in training_step_and_backward
+    self.backward(result, optimizer, opt_idx)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/loops/batch/training_batch_loop.py", line 590, in backward
+    result.closure_loss = self.trainer.accelerator.backward(result.closure_loss, optimizer, *args, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/accelerators/accelerator.py", line 276, in backward
+    self.precision_plugin.backward(self.lightning_module, closure_loss, *args, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/plugins/precision/precision_plugin.py", line 78, in backward
+    model.backward(closure_loss, optimizer, *args, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/pytorch_lightning/core/lightning.py", line 1481, in backward
+    loss.backward(*args, **kwargs)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/torch/tensor.py", line 221, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/torch/autograd/__init__.py", line 126, in backward
+    grad_tensors_ = _make_grads(tensors, grad_tensors_)
+  File "/home/yx/miniconda3/envs/mat/lib/python3.9/site-packages/torch/autograd/__init__.py", line 50, in _make_grads
+    raise RuntimeError("grad can be implicitly created only for scalar outputs")
+RuntimeError: grad can be implicitly created only for scalar outputs
+e1 torch.Size([10, 64, 64, 64])
+e2 torch.Size([10, 128, 32, 32])
+e3 torch.Size([10, 256, 16, 16])
+e4 torch.Size([10, 516, 8, 8])
+e4 torch.Size([10, 516, 8, 8])
+e3 torch.Size([10, 256, 16, 16])
