@@ -1,5 +1,3 @@
-
-
 import os
 import cv2
 import math
@@ -19,7 +17,6 @@ import skimage.color as color
 import skimage.measure as measure
 import asamseg.models as my_models
 import skimage.morphology as morph
-
 from PIL import Image
 from torch import optim
 from torchvision import transforms
@@ -32,6 +29,8 @@ from monai.transforms import LoadImage
 from monai.inferers import SlidingWindowInferer, SimpleInferer
 from monai.networks.utils import predict_segmentation, eval_mode
 from monai.data import CacheDataset, DataLoader, list_data_collate
+import numpy
+import gala.evaluate as gala_ev
 
 # 避免除零
 _SMOOTH = 1e-06
@@ -128,6 +127,7 @@ def cal_batch_loss_aux(model, batch, loss_func, num_classes=2, use_sliding_windo
     '''
     Calculate loss of one batch.
     '''
+
     images, labels, gap_maps = get_batch_data(batch, ('image', 'label', 'gap_map'))
     images, labels, gap_maps = images.float(), labels.long(), gap_maps.long()
     inferer = get_inferer(use_sliding_window=use_sliding_window)
@@ -159,12 +159,51 @@ def cal_batch_loss_gap(model, batch, loss_func, extra_gap_weight=0., n_classes=2
         loss_func: reduction must be none.
     '''
     images, labels, gap_maps = get_batch_data(batch, ('image', 'label', 'gap_map'))
+    # gap_maps_list = []
+    # for i in range(gap_maps.shape[0]):
+    #     gap_map = gap_maps.cpu()[i]
+    #     # gap_maps_numpy = np.array(gap_maps_cpu)
+    #     # gap_maps_numpy = gap_maps_numpy.data.numpy().transpose(1,2,0)
+    #     # image = cv2.imread(gap_maps_numpy)
+    #     gap_map = np.uint8(gap_map * 255)
+    #     gap_map = binary_label_to_readable_image(gap_map)
+    #     # gap_map = gap_map.transpose(1, 2, 0)
+    #     # gray = cv2.cvtColor(gap_map, cv2.COLOR_BGR2GRAY)
+    #     ret, threshold = cv2.threshold(gap_map, 127, 255, cv2.THRESH_BINARY)
+    #     contours, hierarchy = cv2.findContours(threshold, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    #     gap_maps_list.append(len(contours))
+    # b, h, w = gap_maps.shape
+    # gap_maps_cpu = gap_maps.cpu()
+    # gap_maps_numpy = np.array(gap_maps_cpu)
+    # gap_maps_numpy = gap_maps_numpy.data.numpy()
     images, labels, gap_maps = images.float(), labels.long(), gap_maps.long()
     inferer = get_inferer(use_sliding_window=use_sliding_window)
     preds = inferer(inputs=images, network=model)
-    loss = loss_func(preds.contiguous(), labels.contiguous())
-    loss = loss + loss * gap_maps * extra_gap_weight
+    loss_main = loss_func(preds.contiguous(), labels.contiguous())  # 0.6631
+    # zero_gaps = torch.ones([b, h, w])
+    # zero_gaps = zero_gaps.data.numpy()
+
+    # zero_gaps_0 = torch.zeros([b, h, w]).cuda(0)
+    # zero_gaps_1 = torch.ones([b, h, w]).cuda(0)
+    # zero_gaps = torch.stack([zero_gaps_1, zero_gaps_0], dim=0).transpose(0, 1)
+
+    # loss_aux = loss_func(zero_gaps.contiguous(), gap_maps.contiguous())  # 0.3334
+    # # loss_aux = F.nll_loss(zero_gaps.contiguous(), gap_maps.contiguous())
+    # loss = loss + loss * extra_gap_weight * gap_maps
+    # print("loss_main", loss_main.mean())
+    # # loss_aux = gap_maps * loss_main * np.mean(gap_maps_list)
+    # loss_aux = loss_func(zero_gaps.contiguous(), gap_maps.contiguous()) * gap_maps * loss_main * np.mean(gap_maps_list)  # 0.3334
+    # print("loss_aux", loss_aux.mean())
+    # loss = loss_main + loss_aux
+    loss = loss_main + loss_main * gap_maps * extra_gap_weight
     return loss.mean()
+
+
+def get_losses_weights(losses: [list, numpy.ndarray, torch.Tensor]):
+    if type(losses) != torch.Tensor:
+        losses = torch.tensor(losses)
+    weights = torch.div(losses, torch.sum(losses)) * losses.shape[0]
+    return weights
 
 
 def cal_mean_std(image_list, rgb=False):
@@ -412,7 +451,7 @@ def show_result(
                         os.makedirs(ground_truth_dir, exist_ok=True)
                         os.makedirs(predict_dir, exist_ok=True)
 
-                        file_num = file_start_num + i * batch_size + j
+                        file_num = file_start_num + i * batch_size + j + 1
                         tmp_image = Image.fromarray((image * 255).astype(np.uint8))
                         tmp_ground_truth = Image.fromarray((ground_truth * 255).astype(np.uint8))
                         tmp_predict = Image.fromarray((predict * 255).astype(np.uint8))
@@ -556,7 +595,9 @@ def evaluate(model, dataloader, class_list, device, use_sliding_window=False, ne
     confusion_matrix = torchmetrics.ConfusionMatrix(num_classes=len(class_list)).to(device)
     objDice = ev.ObjectDice().to(device)
     aji = Accumulator()
-
+    merger_error_ = Accumulator()
+    split_error_ = Accumulator()
+    vi_ = Accumulator()
     with eval_mode(model):
         for batch in dataloader:
             images, labels = get_batch_data(batch, ('image', 'label'))
@@ -571,6 +612,10 @@ def evaluate(model, dataloader, class_list, device, use_sliding_window=False, ne
             for i in range(preds.size()[0]):
                 pred = preds[i].detach().cpu().numpy()
                 label = labels[i].detach().cpu().numpy()
+                merger_error, split_error, vi = get_vi(pred, label)
+                merger_error_.addData(merger_error)
+                split_error_.addData(split_error)
+                vi_.addData(vi)
                 objDice(
                     torch.from_numpy(measure.label(pred)),
                     torch.from_numpy(measure.label(label))
@@ -579,17 +624,43 @@ def evaluate(model, dataloader, class_list, device, use_sliding_window=False, ne
                 label = morph.label(label, connectivity=2)
                 pred = su.remap_label(pred, by_size=False)
                 label = su.remap_label(label, by_size=False)
-                aji.addData(su.get_fast_aji(label, pred))
 
+                aji.addData(su.get_fast_aji(label, pred))
     d = {}
     d['AJI'] = aji.mean()
+    d['VI'] = vi_.mean()
+    d['ME'] = merger_error_.mean()
+    d['SE'] = split_error_.mean()
     instance_level_metrics = pd.Series(d)
     metrics = classification_metrics_calculator.get_metrics(confusion_matrix.compute())
-
-    #     return metrics.append(instance_level_metrics).append(objDice.compute())
+    # return metrics.append(instance_level_metrics).append(objDice.compute())
     metrics = pd.concat([metrics, instance_level_metrics])
     metrics = pd.concat([metrics, objDice.compute()])
     return metrics
+
+
+def get_vi(pred: np.ndarray, mask: np.ndarray, bg_value: int = 0, method: int = 1) -> Tuple:
+    """
+    Referenced by:
+    Marina Meilă (2007), Comparing clusterings—an information based distance,
+    Journal of Multivariate Analysis, Volume 98, Issue 5, Pages 873-895, ISSN 0047-259X, DOI:10.1016/j.jmva.2006.11.013.
+    :param method: 0: skimage implementation and 1: gala implementation (https://github.com/janelia-flyem/gala.)
+    :return Tuple = (VI, merger_error, split_error)
+    """
+    vi, merger_error, split_error = 0.0, 0.0, 0.0
+
+    label_pred, num_pred = measure.label(pred, connectivity=2, background=bg_value, return_num=True)
+    label_mask, num_mask = measure.label(mask, connectivity=2, background=bg_value, return_num=True)
+    if method == 0:
+        # scikit-image
+        split_error, merger_error = skimage.variation_of_information(label_mask, label_pred)
+    elif method == 1:
+        # gala
+        merger_error, split_error = gala_ev.split_vi(label_pred, label_mask)
+    vi = merger_error + split_error
+    if math.isnan(vi):
+        return 10, 5, 5
+    return merger_error, split_error, vi
 
 
 def get_readable_eval_result(
@@ -615,6 +686,8 @@ def get_model_type(model_name: str):
         'my_segnet': my_models.my_segnet,
         'my_ccnet': my_models.my_ccnet,
         'my_spnet': my_models.my_spnet,
+        'unet': my_models.unet,
+        'my_msdrnet': my_models.my_msdrnet,
     }
     if type(model_name) != str or model_name not in model_dict.keys():
         raise ValueError('get_model(): invalid model_name!')
